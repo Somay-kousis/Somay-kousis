@@ -1,163 +1,68 @@
-<svg width="850" height="350" viewBox="0 0 850 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Cyan glow -->
-    <filter id="neon-glow-cyan" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="280" fill="#000000"/>
 
-    <!-- Magenta glow -->
-    <filter id="neon-glow-magenta" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+  <!-- Thin border -->
+  <rect x="1" y="1" width="898" height="278" rx="0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
-      
-      .term-text {
-        font-family: 'Fira Code', monospace;
-      }
-      
-      .cursor-blink {
-        animation: blink 0.8s infinite steps(2);
-      }
-      
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      
-      /* Progress bar pulse */
-      .pulse-cyan {
-        animation: pulse-c 2s infinite ease-in-out alternate;
-      }
-      .pulse-magenta {
-        animation: pulse-m 2s infinite ease-in-out alternate;
-      }
-      
-      @keyframes pulse-c {
-        0% { filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.4)); }
-        100% { filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.9)); }
-      }
-      @keyframes pulse-m {
-        0% { filter: drop-shadow(0 0 2px rgba(255, 0, 255, 0.4)); }
-        100% { filter: drop-shadow(0 0 6px rgba(255, 0, 255, 0.9)); }
-      }
-    </style>
-  </defs>
+  <!-- Window bar -->
+  <rect x="0" y="0" width="900" height="36" fill="rgba(255,255,255,0.03)"/>
+  <line x1="0" y1="36" x2="900" y2="36" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
-  <!-- Terminal Window Background (Dark glassmorphic style) -->
-  <rect x="5" y="5" width="840" height="340" rx="10" fill="#080911" stroke="#1f2235" stroke-width="1.5" />
-  
-  <!-- Subtle Outer Neon Border Glow -->
-  <rect x="4" y="4" width="842" height="342" rx="11" fill="none" stroke="#ff00ff" stroke-width="1.5" opacity="0.3" filter="url(#neon-glow-magenta)" />
+  <!-- Traffic lights -->
+  <circle cx="20" cy="18" r="6" fill="#FF5F57"/>
+  <circle cx="40" cy="18" r="6" fill="#FEBC2E"/>
+  <circle cx="60" cy="18" r="6" fill="#28C840"/>
 
-  <!-- Terminal Header Bar -->
-  <path d="M 5,37 L 845,37" stroke="#1f2235" stroke-width="1.5" />
-  <rect x="5" y="5" width="840" height="32" rx="10" fill="#111222" />
-  
-  <!-- Window Control Buttons (macOS Style) -->
-  <circle cx="22" cy="21" r="6" fill="#ff5f56" />
-  <circle cx="42" cy="21" r="6" fill="#ffbd2e" />
-  <circle cx="62" cy="21" r="6" fill="#27c93f" />
-  
-  <!-- Window Title -->
-  <text x="50%" y="25" text-anchor="middle" font-size="12" fill="#8f93a2" class="term-text" font-weight="500">somay@terminal: ~ (zsh)</text>
+  <!-- Window title -->
+  <text x="450" y="23" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.3)" letter-spacing="1">somay@blink — zsh</text>
 
-  <!-- Terminal Shell Input Line -->
+  <!-- PROMPT LINE + typewriter -->
+  <text x="32" y="74" font-family="'Courier New', Courier, monospace" font-size="14" fill="rgba(255,255,255,0.5)">~</text>
+  <text x="50" y="74" font-family="'Courier New', Courier, monospace" font-size="14" fill="rgba(255,255,255,0.25)"> % </text>
+  <text x="76" y="74" font-family="'Courier New', Courier, monospace" font-size="14" fill="rgba(255,255,255,0.9)">
+    cat about.txt
+    <!-- Typewriter reveal mask -->
+  </text>
+
+  <!-- Typewriter mask over command -->
+  <rect x="76" y="58" width="130" height="20" fill="#000">
+    <animate attributeName="x" values="76;210;210;76" keyTimes="0;0.3;0.95;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="130;0;0;130" keyTimes="0;0.3;0.95;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Blinking cursor -->
+  <rect x="76" y="61" width="8" height="14" fill="rgba(255,255,255,0.85)">
+    <animate attributeName="x" values="76;210;210;76" keyTimes="0;0.3;0.95;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Output: fades in after typing -->
   <g>
-    <!-- Prompt symbol -->
-    <text x="25" y="65" font-size="14" fill="#ff00ff" class="term-text" font-weight="700">somay ~ % </text>
-    
-    <!-- Typing command -->
-    <text x="110" y="65" font-size="14" fill="#00ffff" class="term-text">./sys_diagnostics.sh
-      <!-- Character typing reveal mask -->
-      <animate attributeName="clip-path" />
-    </text>
-    
-    <!-- Revealing Black Rect to simulate typewriter -->
-    <rect x="110" y="50" width="200" height="20" fill="#080911">
-      <animate attributeName="x" values="110;305;305" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite" />
-      <animate attributeName="width" values="200;0;0" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite" />
-    </rect>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.32;0.38;0.93;1" dur="6s" repeatCount="indefinite"/>
 
-    <!-- Blinking Cursor -->
-    <text x="110" y="65" font-size="14" fill="#00ffff" class="term-text cursor-blink">_
-      <animate attributeName="x" values="110;305;305" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite" />
-    </text>
-  </g>
+    <!-- About content in clean mono -->
+    <text x="32" y="108" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.35)">──────────────────────────────────────────────────────────────────</text>
 
-  <!-- Diagnostics Output (Fades in after typing completes) -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.38;0.42;1" dur="5s" repeatCount="indefinite" />
-    
-    <!-- ASCII LOGO ("BLINK" - Somay's Alias) -->
-    <g fill="#ff00ff" font-size="10" font-weight="700" class="term-text" opacity="0.8">
-      <text x="25" y="100">██████╗ ██╗     ██╗███╗   ██╗██╗  ██╗</text>
-      <text x="25" y="112">██╔══██╗██║     ██║████╗  ██║██║  ██╔╝</text>
-      <text x="25" y="124">██████╔╝██║     ██║██╔██╗ ██║█████╔╝ </text>
-      <text x="25" y="136">██╔══██╗██║     ██║██║╚██╗██║██╔═██╗ </text>
-      <text x="25" y="148">██████╔╝███████╗██║██║ ╚████║██║  ██╗</text>
-      <text x="25" y="160">╚══════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝</text>
-      <text x="25" y="175" fill="#8f93a2" font-size="10">[Alias: Blink/Somay]</text>
-    </g>
+    <text x="32" y="136" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="rgba(255,255,255,0.85)">  Frontend Developer  ·  ML Engineer  ·  ABV-IIITM Gwalior</text>
 
-    <!-- Specs List (Right Column) -->
-    <g font-size="12" fill="#ffffff" class="term-text">
-      <text x="360" y="98"><tspan fill="#ffbd2e">OS: </tspan>macOS / Linux Hybrid Core</text>
-      <text x="360" y="116"><tspan fill="#ffbd2e">HOST: </tspan>ABV-IIITM Gwalior (Node v21.0)</text>
-      <text x="360" y="134"><tspan fill="#ffbd2e">UPTIME: </tspan>Level 21 Achieved</text>
-      <text x="360" y="152"><tspan fill="#ffbd2e">SHELL: </tspan>zsh (overriding bash since 2019)</text>
-      <text x="360" y="170"><tspan fill="#ffbd2e">MISSION: </tspan>Craft interfaces that breathe &amp; models that think</text>
-    </g>
+    <text x="32" y="162" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.45)">  Building things that feel alive. Human-first UI, models that think.</text>
 
-    <!-- Grid Divider -->
-    <line x1="25" y1="195" x2="825" y2="195" stroke="#1f2235" stroke-width="1" />
+    <text x="32" y="186" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.35)">──────────────────────────────────────────────────────────────────</text>
 
-    <!-- Meme Metrics (Diagnostic Progress Bars) -->
-    <g class="term-text" font-size="11">
-      <!-- Row 1: Coffee Level (Green Neon) -->
-      <text x="25" y="222" fill="#8f93a2">COFFEE_INPUT</text>
-      <text x="140" y="222" fill="#39ff14" font-weight="700">[████████░░]</text>
-      <text x="245" y="222" fill="#39ff14">80% (Hyperactive)</text>
-      <!-- Visual Fill Graphic -->
-      <rect x="390" y="213" width="430" height="8" rx="4" fill="#161824" />
-      <rect x="390" y="213" width="344" height="8" rx="4" fill="#39ff14" class="pulse-cyan" />
+    <!-- Stats row -->
+    <text x="32" y="214" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.5)">  ☕  Coffee  </text>
+    <rect x="140" y="204" width="140" height="7" rx="3" fill="rgba(255,255,255,0.08)"/>
+    <rect x="140" y="204" width="112" height="7" rx="3" fill="rgba(255,255,255,0.85)"/>
+    <text x="290" y="214" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.35)">80%</text>
 
-      <!-- Row 2: Sleep Level (Red/Orange Alert) -->
-      <text x="25" y="252" fill="#8f93a2">SLEEP_STATE</text>
-      <text x="140" y="252" fill="#ff5f56" font-weight="700">[██░░░░░░░░]</text>
-      <text x="245" y="252" fill="#ff5f56">20% (Compile-Time Sleep)</text>
-      <!-- Visual Fill Graphic -->
-      <rect x="390" y="243" width="430" height="8" rx="4" fill="#161824" />
-      <rect x="390" y="243" width="86" height="8" rx="4" fill="#ff5f56" />
+    <text x="355" y="214" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.5)">  💤  Sleep  </text>
+    <rect x="460" y="204" width="140" height="7" rx="3" fill="rgba(255,255,255,0.08)"/>
+    <rect x="460" y="204" width="28" height="7" rx="3" fill="rgba(255,255,255,0.85)"/>
+    <text x="610" y="214" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.35)">20%</text>
 
-      <!-- Row 3: Creativity / Overclocked Metric (Pinks/Purple Overflowing Bracket) -->
-      <text x="25" y="282" fill="#8f93a2">CREATIVITY</text>
-      <text x="140" y="282" fill="#ff00ff" font-weight="700">[██████████]███</text>
-      <text x="270" y="282" fill="#ff00ff">130% (SYSTEM OVERRUN)</text>
-      <!-- Visual Fill Graphic (Overflows container to emphasize impact!) -->
-      <rect x="390" y="273" width="430" height="8" rx="4" fill="#161824" />
-      <rect x="390" y="273" width="430" height="8" rx="4" fill="url(#fill-gradient)" class="pulse-magenta" />
-      <!-- Overflow extra bar -->
-      <rect x="822" y="273" width="10" height="8" rx="2" fill="#ff00ff" class="pulse-magenta" />
-      
-      <!-- Linear Gradient for Overflow -->
-      <linearGradient id="fill-gradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#7000ff" />
-        <stop offset="80%" stop-color="#ff007f" />
-        <stop offset="100%" stop-color="#ff00ff" />
-      </linearGradient>
-    </g>
-
-    <!-- Footer System Status -->
-    <text x="25" y="325" fill="#39ff14" class="term-text" font-size="11">&gt; DIAGNOSTICS: STABLE // ALL SYSTEMS GO. READY TO CRUSH IDEAS.</text>
+    <text x="32" y="248" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.5)">  ⚡  Vibe  </text>
+    <rect x="130" y="238" width="240" height="7" rx="3" fill="rgba(255,255,255,0.08)"/>
+    <rect x="130" y="238" width="240" height="7" rx="3" fill="rgba(255,255,255,0.85)"/>
+    <text x="378" y="248" font-family="'Courier New', Courier, monospace" font-size="13" fill="rgba(255,255,255,0.35)">∞</text>
   </g>
 </svg>

@@ -1,242 +1,80 @@
-<svg width="850" height="400" viewBox="0 0 850 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Card Backing Glows -->
-    <filter id="card-glow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+<svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="380" fill="#000000"/>
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Orbitron:wght@500;700&amp;display=swap');
-      
-      .proj-title {
-        font-family: 'Orbitron', -apple-system, sans-serif;
-        font-weight: 700;
-        font-size: 15px;
-      }
-      .proj-text {
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 12px;
-      }
-      .tag-text {
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 11px;
-        font-weight: 700;
-      }
+  <!-- Section label -->
+  <text x="28" y="30" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4" fill="rgba(255,255,255,0.3)">SELECTED WORK</text>
+  <line x1="28" y1="38" x2="872" y2="38" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
-      /* Hogwarts Sparkles */
-      .sparkle {
-        animation: spark 1.5s infinite ease-in-out alternate;
-      }
-      @keyframes spark {
-        0% { opacity: 0.1; transform: scale(0.8) translate(0, 0); }
-        100% { opacity: 1; transform: scale(1.2) translate(1px, -2px); }
-      }
+  <!-- ── CARD 1: Zuuush ── -->
+  <g transform="translate(28, 54)">
+    <rect width="406" height="140" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-      /* Mutiny node pulses */
-      .pulse-node {
-        animation: p-node 1.8s infinite ease-in-out alternate;
-      }
-      @keyframes p-node {
-        0% { fill: rgba(255, 0, 255, 0.2); stroke-width: 1.5; }
-        100% { fill: rgba(255, 0, 255, 0.8); stroke-width: 3; }
-      }
+    <!-- Index number -->
+    <text x="22" y="34" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" letter-spacing="2">01</text>
 
-      /* Pulse Status Indicators */
-      .status-pulse {
-        animation: pulse-dot 1.2s infinite ease-in-out alternate;
-      }
-      @keyframes pulse-dot {
-        0% { opacity: 0.3; }
-        100% { opacity: 1; }
-      }
-    </style>
-  </defs>
+    <!-- Name -->
+    <text x="22" y="72" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="-1">ZUUUSH</text>
 
-  <!-- BACKGROUND CANVAS (Matches overall theme) -->
-  <rect width="850" height="400" fill="#05020a" rx="10" />
-
-  <!-- ============================================== -->
-  <!-- CARD A: Hogwarts Luggage (Harry Potter themed) -->
-  <!-- ============================================== -->
-  <g transform="translate(20, 20)">
-    <!-- Base -->
-    <rect width="395" height="170" rx="8" fill="#0d0a16" stroke="#231b35" stroke-width="1.5" />
-    <!-- Golden Accent Top Border -->
-    <path d="M 0,4 L 0,8 A 8,8 0 0 0 8,16 L 387,16 A 8,8 0 0 0 395,8 L 395,4 L 0,4 Z" fill="#ffd700" opacity="0.85" />
-    
-    <!-- Magic Chest Icon Frame -->
-    <rect x="20" y="40" width="80" height="80" rx="6" fill="#140f24" stroke="#ffd700" stroke-width="1" opacity="0.6" />
-    
-    <!-- Suitcase Graphic -->
-    <g stroke="#ffd700" stroke-width="1.8" fill="none">
-      <!-- Body -->
-      <rect x="35" y="65" width="50" height="38" rx="3" />
-      <!-- Top Handle -->
-      <path d="M 52,65 L 52,58 L 68,58 L 68,65" />
-      <!-- Locks -->
-      <circle cx="46" cy="74" r="2.5" fill="#ffd700" />
-      <circle cx="74" cy="74" r="2.5" fill="#ffd700" />
-      <!-- Straps -->
-      <line x1="46" y1="77" x2="46" y2="103" />
-      <line x1="74" y1="77" x2="74" y2="103" />
-    </g>
-
-    <!-- Sparkles -->
-    <path d="M 28,45 L 30,48 L 33,45 L 30,42 Z" fill="#ffe600" class="sparkle" style="animation-delay: 0s" />
-    <path d="M 92,50 L 93.5,52 L 95,50 L 93.5,48 Z" fill="#ffe600" class="sparkle" style="animation-delay: 0.5s" />
-    <path d="M 88,110 L 89.5,112 L 91,110 L 89.5,108 Z" fill="#ffe600" class="sparkle" style="animation-delay: 1s" />
-
-    <!-- Text Metadata -->
-    <text x="120" y="52" fill="#ffffff" class="proj-title">HOGWARTS_LUGGAGE</text>
-    
-    <g fill="#a6accd" class="proj-text">
-      <text x="120" y="74">&gt; Harry Potter themed MuggleProof</text>
-      <text x="120" y="92">  inventory &amp; luggage sorting system.</text>
-      <text x="120" y="110">&gt; Sorting-hat quiz integration.</text>
-    </g>
-    
-    <!-- Tags -->
-    <text x="120" y="142" fill="#ffd700" class="tag-text">React • SCSS • GSAP Animations</text>
-
-    <!-- Status -->
-    <circle cx="370" cy="46" r="4" fill="#39ff14" class="status-pulse" />
-    <text x="360" y="49" fill="#8f93a2" class="tag-text" text-anchor="end">STABLE</text>
-  </g>
-
-  <!-- ============================================== -->
-  <!-- CARD B: Zuuush (Rocket speed onboarding) -->
-  <!-- ============================================== -->
-  <g transform="translate(435, 20)">
-    <!-- Base -->
-    <rect width="395" height="170" rx="8" fill="#0a0e18" stroke="#17243c" stroke-width="1.5" />
-    <!-- Cyan Accent Top Border -->
-    <path d="M 0,4 L 0,8 A 8,8 0 0 0 8,16 L 387,16 A 8,8 0 0 0 395,8 L 395,4 L 0,4 Z" fill="#00f3ff" opacity="0.85" />
-
-    <!-- Rocket Icon Frame -->
-    <rect x="20" y="40" width="80" height="80" rx="6" fill="#0e1728" stroke="#00f3ff" stroke-width="1" opacity="0.6" />
-
-    <!-- Rocket Graphic -->
-    <g stroke="#00f3ff" stroke-width="1.8" fill="none">
-      <!-- Rocket Body -->
-      <path d="M 60,52 C 60,52 50,62 50,80 L 50,98 L 70,98 L 70,80 C 70,62 60,52 60,52 Z" />
-      <!-- Window -->
-      <circle cx="60" cy="70" r="4.5" />
-      <!-- Fins -->
-      <path d="M 50,88 L 42,98 L 50,98 Z" />
-      <path d="M 70,88 L 78,98 L 70,98 Z" />
-      <!-- Thrust flame -->
-      <path d="M 55,102 L 60,114 L 65,102 Z" stroke="#ff007f" fill="#ff007f" opacity="0.8">
-        <animate attributeName="d" values="M 55,102 L 60,114 L 65,102 Z; M 55,102 L 60,120 L 65,102 Z; M 55,102 L 60,114 L 65,102 Z" dur="0.6s" repeatCount="indefinite" />
-      </path>
-    </g>
-
-    <!-- Text Metadata -->
-    <text x="120" y="52" fill="#ffffff" class="proj-title">ZUUUSH</text>
-    
-    <g fill="#a6accd" class="proj-text">
-      <text x="120" y="74">&gt; High-fidelity, ultra-fluid landing</text>
-      <text x="120" y="92">  and user onboarding experience.</text>
-      <text x="120" y="110">&gt; Crafted focusing on premium motion.</text>
-    </g>
+    <!-- Description -->
+    <text x="22" y="96" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Ultra-fluid onboarding &amp; landing experience.</text>
+    <text x="22" y="112" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Built for premium motion &amp; feel.</text>
 
     <!-- Tags -->
-    <text x="120" y="142" fill="#00f3ff" class="tag-text">React • TypeScript • Tailwind • Motion</text>
+    <text x="22" y="133" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">REACT  ·  TYPESCRIPT  ·  MOTION</text>
 
-    <!-- Status -->
-    <circle cx="370" cy="46" r="4" fill="#39ff14" class="status-pulse" />
-    <text x="360" y="49" fill="#8f93a2" class="tag-text" text-anchor="end">ACTIVE</text>
+    <!-- Arrow indicator -->
+    <text x="378" y="26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" text-anchor="end">↗</text>
   </g>
 
-  <!-- ============================================== -->
-  <!-- CARD C: Mutiny & SteelCareer (Networks) -->
-  <!-- ============================================== -->
-  <g transform="translate(20, 210)">
-    <!-- Base -->
-    <rect width="395" height="170" rx="8" fill="#0e0a16" stroke="#251a37" stroke-width="1.5" />
-    <!-- Violet/Magenta Accent Top Border -->
-    <path d="M 0,4 L 0,8 A 8,8 0 0 0 8,16 L 387,16 A 8,8 0 0 0 395,8 L 395,4 L 0,4 Z" fill="#ff00ff" opacity="0.85" />
+  <!-- ── CARD 2: Hogwarts Luggage ── -->
+  <g transform="translate(466, 54)">
+    <rect width="406" height="140" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-    <!-- Node Icon Frame -->
-    <rect x="20" y="40" width="80" height="80" rx="6" fill="#171026" stroke="#ff00ff" stroke-width="1" opacity="0.6" />
+    <text x="22" y="34" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" letter-spacing="2">02</text>
 
-    <!-- Network Graph Graphic -->
-    <g stroke="#ff00ff" stroke-width="1.5" fill="none">
-      <!-- Links -->
-      <line x1="45" y1="80" x2="75" y2="55" stroke-dasharray="3 2" />
-      <line x1="45" y1="80" x2="75" y2="105" stroke-dasharray="3 2" />
-      <line x1="75" y1="55" x2="75" y2="105" stroke-dasharray="1 1" />
-      
-      <!-- Nodes -->
-      <circle cx="45" cy="80" r="7" stroke="#00ffff" stroke-width="2" />
-      <circle cx="75" cy="55" r="5" fill="#ff00ff" class="pulse-node" />
-      <circle cx="75" cy="105" r="5" fill="#ff00ff" class="pulse-node" style="animation-delay: 0.9s" />
-    </g>
+    <text x="22" y="72" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff" letter-spacing="-0.5">HOGWARTS_LUGGAGE</text>
 
-    <!-- Text Metadata -->
-    <text x="120" y="52" fill="#ffffff" class="proj-title">MUTINY &amp; STEELCAREER</text>
-    
-    <g fill="#a6accd" class="proj-text">
-      <text x="120" y="74">&gt; Interactive collaborative ecosystems</text>
-      <text x="120" y="92">  and custom career tools for devs.</text>
-      <text x="120" y="110">&gt; Building robust fullstack platforms.</text>
-    </g>
+    <text x="22" y="96" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Wizarding-world themed luggage &amp; sorting</text>
+    <text x="22" y="112" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">system with interactive sorting-hat quiz.</text>
 
-    <!-- Tags -->
-    <text x="120" y="142" fill="#ff00ff" class="tag-text">NextJS • NodeJS • Express • PostgreSQL</text>
+    <text x="22" y="133" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">REACT  ·  SCSS  ·  GSAP</text>
 
-    <!-- Status -->
-    <circle cx="370" cy="46" r="4" fill="#39ff14" class="status-pulse" />
-    <text x="360" y="49" fill="#8f93a2" class="tag-text" text-anchor="end">ONLINE</text>
+    <text x="378" y="26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" text-anchor="end">↗</text>
   </g>
 
-  <!-- ============================================== -->
-  <!-- CARD D: ML Engine (Analytics & Predictions) -->
-  <!-- ============================================== -->
-  <g transform="translate(435, 210)">
-    <!-- Base -->
-    <rect width="395" height="170" rx="8" fill="#080e0c" stroke="#162721" stroke-width="1.5" />
-    <!-- Green Accent Top Border -->
-    <path d="M 0,4 L 0,8 A 8,8 0 0 0 8,16 L 387,16 A 8,8 0 0 0 395,8 L 395,4 L 0,4 Z" fill="#39ff14" opacity="0.85" />
+  <!-- ── CARD 3: Mutiny / SteelCareer ── -->
+  <g transform="translate(28, 210)">
+    <rect width="406" height="140" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-    <!-- ML Icon Frame -->
-    <rect x="20" y="40" width="80" height="80" rx="6" fill="#0f1915" stroke="#39ff14" stroke-width="1" opacity="0.6" />
+    <text x="22" y="34" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" letter-spacing="2">03</text>
 
-    <!-- ML Regression Curve Graphic -->
-    <g stroke="#39ff14" stroke-width="1.5" fill="none">
-      <!-- Chart Axes -->
-      <path d="M 35,50 L 35,105 L 85,105" />
-      
-      <!-- Regression Line -->
-      <path d="M 35,100 C 45,95 55,75 85,55" stroke="#00f3ff" stroke-width="2" />
-      
-      <!-- Scattered Data Points -->
-      <circle cx="45" cy="88" r="2.5" fill="#39ff14" />
-      <circle cx="58" cy="80" r="2.5" fill="#39ff14" />
-      <circle cx="68" cy="65" r="2.5" fill="#39ff14" />
-      <circle cx="78" cy="62" r="2.5" fill="#39ff14" />
+    <text x="22" y="72" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="-1">MUTINY</text>
 
-      <!-- Scan Bar -->
-      <line x1="35" y1="50" x2="35" y2="105" stroke="#39ff14" stroke-width="1" opacity="0.7">
-        <animate attributeName="x1" values="35;85;35" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="35;85;35" dur="3s" repeatCount="indefinite" />
-      </line>
-    </g>
+    <text x="22" y="96" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Collaborative ecosystem &amp; career tooling</text>
+    <text x="22" y="112" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">platform built for developers.</text>
 
-    <!-- Text Metadata -->
-    <text x="120" y="52" fill="#ffffff" class="proj-title">ML DIAGNOSTIC PIPELINES</text>
-    
-    <g fill="#a6accd" class="proj-text">
-      <text x="120" y="74">&gt; House Price Estimation &amp; Customer</text>
-      <text x="120" y="92">  Churn analytics pipelines.</text>
-      <text x="120" y="110">&gt; Feature engineering &amp; tuning models.</text>
-    </g>
+    <text x="22" y="133" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">NEXT.JS  ·  NODE  ·  POSTGRES</text>
 
-    <!-- Tags -->
-    <text x="120" y="142" fill="#39ff14" class="tag-text">Python • Scikit-Learn • Pandas • NumPy</text>
-
-    <!-- Status -->
-    <circle cx="370" cy="46" r="4" fill="#00ffff" class="status-pulse" />
-    <text x="360" y="49" fill="#8f93a2" class="tag-text" text-anchor="end">LOADED</text>
+    <text x="378" y="26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" text-anchor="end">↗</text>
   </g>
+
+  <!-- ── CARD 4: ML Pipelines ── -->
+  <g transform="translate(466, 210)">
+    <rect width="406" height="140" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+    <text x="22" y="34" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" letter-spacing="2">04</text>
+
+    <text x="22" y="66" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#ffffff" letter-spacing="-0.5">ML PIPELINES</text>
+
+    <text x="22" y="96" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">House price estimation &amp; customer churn</text>
+    <text x="22" y="112" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">analytics with end-to-end feature engineering.</text>
+
+    <text x="22" y="133" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">PYTHON  ·  SKLEARN  ·  PANDAS</text>
+
+    <text x="378" y="26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" text-anchor="end">↗</text>
+  </g>
+
+  <!-- Bottom label -->
+  <line x1="28" y1="362" x2="872" y2="362" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="28" y="376" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.15)" letter-spacing="3">github.com/Somay-kousis</text>
 </svg>
