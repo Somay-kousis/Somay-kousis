@@ -1,0 +1,276 @@
+<svg width="850" height="300" viewBox="0 0 850 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a12" />
+      <stop offset="60%" stop-color="#140b24" />
+      <stop offset="100%" stop-color="#05020a" />
+    </linearGradient>
+
+    <!-- Sun Gradient -->
+    <linearGradient id="sun-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe600" />
+      <stop offset="50%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#7000ff" />
+    </linearGradient>
+
+    <!-- Cyan Glow -->
+    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Pink Glow -->
+    <filter id="pink-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Sun Mask for Retro Stripes -->
+    <mask id="sun-mask">
+      <rect x="325" y="30" width="200" height="150" fill="white" />
+      <rect x="325" y="105" width="200" height="4" fill="black" />
+      <rect x="325" y="115" width="200" height="6" fill="black" />
+      <rect x="325" y="127" width="200" height="8" fill="black" />
+      <rect x="325" y="141" width="200" height="10" fill="black" />
+      <rect x="325" y="157" width="200" height="12" fill="black" />
+      <rect x="325" y="175" width="200" height="15" fill="black" />
+    </mask>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;family=Share+Tech+Mono&amp;display=swap');
+      
+      .font-orbitron {
+        font-family: 'Orbitron', -apple-system, sans-serif;
+      }
+      .font-mono {
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      /* Glitch Animation */
+      .glitch {
+        animation: glitch-anim 4s infinite linear alternate-reverse;
+      }
+      
+      @keyframes glitch-anim {
+        0% {
+          text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff;
+        }
+        5% {
+          text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff;
+        }
+        6% {
+          text-shadow: 3px 0 #00ffff, -3px 0 #ff00ff;
+          transform: skew(0.5deg);
+        }
+        7% {
+          text-shadow: -1px 0 #00ffff, 1px 0 #ff00ff;
+          transform: skew(-1deg);
+        }
+        8% {
+          text-shadow: 0 0 #00ffff, 0 0 #ff00ff;
+          transform: skew(0deg);
+        }
+        100% {
+          text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff;
+        }
+      }
+
+      /* Scanning Line Animation */
+      .scanner {
+        animation: scan 6s linear infinite;
+      }
+      @keyframes scan {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(300px); }
+        100% { transform: translateY(0); }
+      }
+
+      /* Stars Twinkling */
+      .star {
+        animation: blink 2s infinite ease-in-out;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+
+      /* Cyber HUD rotation */
+      .hud-spin {
+        transform-origin: 100px 75px;
+        animation: spin 20s linear infinite;
+      }
+      .hud-spin-reverse {
+        transform-origin: 750px 75px;
+        animation: spin-back 15s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spin-back {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Rect -->
+  <rect width="850" height="300" fill="url(#bg-gradient)" />
+
+  <!-- Stars backdrop -->
+  <g fill="#ffffff">
+    <circle cx="50" cy="40" r="1" class="star" style="animation-delay: 0.1s" />
+    <circle cx="120" cy="90" r="1.5" class="star" style="animation-delay: 0.7s" />
+    <circle cx="180" cy="30" r="1" class="star" style="animation-delay: 0.3s" />
+    <circle cx="280" cy="80" r="1" class="star" style="animation-delay: 1.2s" />
+    <circle cx="310" cy="50" r="1.5" class="star" style="animation-delay: 0.5s" />
+    <circle cx="540" cy="40" r="1" class="star" style="animation-delay: 0.9s" />
+    <circle cx="620" cy="90" r="1" class="star" style="animation-delay: 1.5s" />
+    <circle cx="690" cy="30" r="1.5" class="star" style="animation-delay: 0.2s" />
+    <circle cx="780" cy="70" r="1" class="star" style="animation-delay: 1.1s" />
+    <circle cx="810" cy="40" r="1" class="star" style="animation-delay: 0.6s" />
+  </g>
+
+  <!-- Synthwave Sunset -->
+  <circle cx="425" cy="110" r="70" fill="url(#sun-gradient)" mask="url(#sun-mask)" filter="url(#pink-glow)" opacity="0.85" />
+
+  <!-- Holographic HUD - Left Side -->
+  <g stroke="#00ffff" stroke-width="1" opacity="0.3" class="hud-spin">
+    <circle cx="100" cy="75" r="30" stroke-dasharray="10 5 2 5" />
+    <circle cx="100" cy="75" r="24" stroke-dasharray="5 5" />
+    <line x1="70" y1="75" x2="130" y2="75" />
+    <line x1="100" y1="45" x2="100" y2="105" />
+  </g>
+  <g stroke="#ff00ff" stroke-width="1" opacity="0.3" class="hud-spin-reverse">
+    <circle cx="750" cy="75" r="35" stroke-dasharray="15 8 5 8" />
+    <circle cx="750" cy="75" r="28" stroke-dasharray="4 4" />
+    <line x1="715" y1="75" x2="785" y2="75" />
+    <line x1="750" y1="40" x2="750" y2="110" />
+  </g>
+
+  <!-- Side Borders (Cyberpunk HUD Framing) -->
+  <path d="M 20,40 L 20,20 L 60,20" stroke="#00ffff" stroke-width="2" opacity="0.6" />
+  <path d="M 830,40 L 830,20 L 790,20" stroke="#00ffff" stroke-width="2" opacity="0.6" />
+  <path d="M 20,140 L 20,160 L 40,160" stroke="#00ffff" stroke-width="1.5" opacity="0.4" />
+  <path d="M 830,140 L 830,160 L 810,160" stroke="#00ffff" stroke-width="1.5" opacity="0.4" />
+
+  <!-- 3D Perspective Grid Area -->
+  <g>
+    <!-- Horizon Line -->
+    <line x1="0" y1="180" x2="850" y2="180" stroke="#00ffff" stroke-width="2" filter="url(#cyan-glow)" />
+
+    <!-- Grid Horizon Glow -->
+    <rect x="0" y="179" width="850" height="2" fill="#00ffff" filter="url(#cyan-glow)" />
+
+    <!-- Perspective Lines (Verticals) -->
+    <g stroke="#ff007f" stroke-width="1.5" opacity="0.7">
+      <line x1="425" y1="180" x2="-250" y2="300" />
+      <line x1="425" y1="180" x2="-100" y2="300" />
+      <line x1="425" y1="180" x2="50" y2="300" />
+      <line x1="425" y1="180" x2="170" y2="300" />
+      <line x1="425" y1="180" x2="270" y2="300" />
+      <line x1="425" y1="180" x2="350" y2="300" />
+      <line x1="425" y1="180" x2="425" y2="300" stroke="#00ffff" stroke-width="2" filter="url(#cyan-glow)" /> <!-- Center Line -->
+      <line x1="425" y1="180" x2="500" y2="300" />
+      <line x1="425" y1="180" x2="580" y2="300" />
+      <line x1="425" y1="180" x2="680" y2="300" />
+      <line x1="425" y1="180" x2="800" y2="300" />
+      <line x1="425" y1="180" x2="950" y2="300" />
+      <line x1="425" y1="180" x2="1100" y2="300" />
+    </g>
+
+    <!-- Animated Horizontals (Staggered to create 3D scrolling illusion) -->
+    <g stroke="#ff007f" stroke-width="1.5" opacity="0.8">
+      <!-- Line 1 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="0s" repeatCount="indefinite" />
+      </line>
+      
+      <!-- Line 2 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Line 3 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Line 4 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Line 5 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="1.6s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="1.6s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="1.6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="1.6s" repeatCount="indefinite" />
+      </line>
+
+      <!-- Line 6 -->
+      <line x1="0" y1="180" x2="850" y2="180">
+        <animate attributeName="y1" values="180;182;188;198;215;245;300" dur="2.4s" begin="2.0s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="180;182;188;198;215;245;300" dur="2.4s" begin="2.0s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="1;1;1.2;1.5;1.8;2;2.5" dur="2.4s" begin="2.0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0.3;0.6;0.9;0.9;0.4;0" dur="2.4s" begin="2.0s" repeatCount="indefinite" />
+      </line>
+    </g>
+  </g>
+
+  <!-- Glowing Laser Scanline across the screen -->
+  <line x1="0" y1="0" x2="850" y2="0" stroke="#00ffff" stroke-width="1.5" opacity="0.35" class="scanner" filter="url(#cyan-glow)" />
+
+  <!-- Center Text / Glitch Glowing Titles -->
+  <g class="font-orbitron">
+    <!-- Main Name Glitch -->
+    <text x="50%" y="105" text-anchor="middle" font-size="44" font-weight="900" fill="#ffffff" class="glitch" letter-spacing="4">SOMAY KOUSIS</text>
+
+    <!-- Futuristic Subtitle -->
+    <text x="50%" y="145" text-anchor="middle" font-size="14" font-weight="700" fill="#00ffff" letter-spacing="8" filter="url(#cyan-glow)">CREATIVE FRONTEND &amp; ML DEVELOPER</text>
+  </g>
+
+  <!-- Floating HUD Stats Ticker -->
+  <g class="font-mono" font-size="11" fill="#ff00ff">
+    <rect x="25" y="245" width="800" height="26" rx="4" fill="#0a0a14" stroke="#ff00ff" stroke-width="1" opacity="0.8" filter="url(#pink-glow)" />
+    
+    <!-- Moving Grid Text / Ticker Animation -->
+    <svg x="35" y="245" width="780" height="26">
+      <text y="17" font-size="12" fill="#39ff14" letter-spacing="2">
+        SYSTEM.STATUS: ACTIVE // COFFEE_INPUT: OPTIMAL // CURRENT_STACK: React • NextJS • Tailwind • TypeScript • NodeJS • Python • PyTorch • TensorFlow • Scikit-Learn
+        <animate attributeName="x" values="780;-950" dur="18s" repeatCount="indefinite" />
+      </text>
+    </svg>
+  </g>
+
+  <!-- Interactive/Meme HUD Overlay details -->
+  <g class="font-mono" font-size="10" fill="#00ffff" opacity="0.7">
+    <text x="35" y="45">&gt; CONNECTING...</text>
+    <text x="35" y="60">&gt; PORT_8080: OPEN</text>
+    <text x="35" y="75">&gt; SECURITY: BYPASS</text>
+    
+    <text x="815" y="45" text-anchor="end">SYS.LOC: ABV-IIITM</text>
+    <text x="815" y="60" text-anchor="end">NODE_ID: BLINK_01</text>
+    <text x="815" y="75" text-anchor="end">MEM_USAGE: 42%</text>
+  </g>
+</svg>
