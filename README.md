@@ -6,9 +6,9 @@
 
 <div align="center">
 
-  ![Profile Views](https://komarev.com/ghpvc/?username=Somay-kousis&style=flat-square&color=blueviolet&label=PROFILE+VIEWS)&nbsp;&nbsp;
-  ![Stars](https://img.shields.io/github/stars/Somay-kousis?style=flat-square&color=yellow&label=STARS)&nbsp;&nbsp;
-  ![Followers](https://img.shields.io/github/followers/Somay-kousis?style=flat-square&color=blue&label=FOLLOWERS)
+![Profile Views](https://komarev.com/ghpvc/?username=Somay-kousis&style=flat-square&color=blueviolet&label=LOST+SOULS)&nbsp;&nbsp;
+![Stars](https://img.shields.io/github/stars/Somay-kousis?style=flat-square&color=yellow&label=LITTLE+DOPAMINE)&nbsp;&nbsp;
+![Followers](https://img.shields.io/github/followers/Somay-kousis?style=flat-square&color=blue&label=WATCHING+THE+SPIRAL)
 
 </div>
 
@@ -16,104 +16,139 @@
 
 ---
 
-## 👤 Who Am I?
+## somewhere between interfaces and machine learning
 
 <img align="left" src="assets/knight.png" width="190" alt="the knight" />
 
 &nbsp;
 
-okay so. I build interfaces that feel like they have a pulse — and train ML models on the side because apparently one obsession isn't enough.
+hi. blink here.
 
-studying at **ABV-IIITM Gwalior**, trying not to let the coursework get in the way of the actual work.
+I build interfaces that breathe a little  
+and ML models because one obsession clearly wasn't enough.
 
-got obsessed early with the idea that code could *look* good. not just run — actually feel like something. then I fell into ML and now I'm here, confidently confused, bridging both worlds.
+currently studying at **ABV-IIITM Gwalior**, though most of my real learning happens somewhere between late night debugging sessions and random ideas that refuse to leave me alone.
 
-every project is a small bet that the thing I imagine can actually exist. most of the time it does. sometimes it does not and I learn something embarrassing about myself.
+I care too much about motion, silence, spacing, transitions — tiny details nobody consciously notices but everybody feels.
+
+half my projects start with:
+> “what if this felt different?”
+
+and the other half start with:
+> “wait... can a model predict this?”
+
+most things I make are just attempts at turning a feeling into something interactive.
+
+sometimes it works beautifully.  
+sometimes I create horrors beyond human comprehension.
 
 <br clear="left"/>
 
 ---
 
-## 🔗 a little more about me
+## small fragments
 
 <img align="right" src="assets/hornet.png" width="190" alt="hornet" />
 
-- surrounded by people smarter than me. on purpose. it's my whole strategy.
-- ☑ currently building **[Mutiny](https://github.com/Somay-kousis/Mutiny)** — don't ask how it's going, ask how it ends.
-- will talk about frontend or ML at any hour. genuinely zero chill about it.
-- ☑ the kind of person who gets too excited about a loading animation. unironically.
-- minimalism or nothing. if a page is too loud, I close the tab and feel sad.
+- surrounded by people smarter than me on purpose
+- frontend and ML permanently fighting for control of my brain
+- I believe loading animations deserve emotional depth
+- minimalism or death
+- if a website feels too corporate I physically recoil
+- I like projects that feel slightly haunted
+- probably overthinking typography right now
 
 <br/>
 
 <a href="https://github.com/Somay-kousis">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 <a href="https://linkedin.com/in/somay-kousis-630ab1313">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a href="https://x.com/somaykousis">
-  <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
+  <img src="https://img.shields.io/badge/x-000000?style=for-the-badge&logo=x&logoColor=white" />
 </a>
 
 <br clear="right"/>
 
 ---
 
-## 📊 GitHub Status
 
 <div align="center">
 
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Somay-kousis&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  &nbsp;
-  <img height="160" src="https://github-readme-streak-stats.herokuapp.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d" />
+<img height="160" src="https://github-readme-streak-stats.herokuapp.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d" />
+
+
 
 </div>
 
 ---
 
-## 🛠 My Stacks
+## tools I use to build strange little things
 
 <div align="center">
 
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,redux&perline=8" />
-  <br/><br/>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,python,sklearn,tensorflow,pandas,postgres,git&perline=8" />
-  <br/><br/>
-  <img src="https://skillicons.dev/icons?i=figma,vercel,github,vscode,linux,sass,c,cpp&perline=8" />
+<img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,redux,js,html,css&theme=dark&perline=8" />
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=python,tensorflow,sklearn,nodejs,express,postgres,git&theme=dark&perline=7" />
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=linux,cpp,github,vercel,vscode,figma&theme=dark&perline=6" />
 
 </div>
 
 ---
 
-## 📌 things I've shipped
+## things that escaped my machine
 
-**[🌐 Portfolio](https://github.com/Somay-kousis/Portfolio)** &nbsp;·&nbsp; `JS` `React`
+### [portfolio](https://github.com/Somay-kousis/Portfolio?utm_source=chatgpt.com) · `React` `JavaScript`
 
-> my corner of the internet. basically a proof that I exist and have opinions about whitespace.
+> my corner of the internet. mostly thoughts pretending to be a website.
 
-**[🏴‍☠️ Mutiny](https://github.com/Somay-kousis/Mutiny)** &nbsp;·&nbsp; `TypeScript` `Next.js`
+---
 
-> building the thing I wish existed when I started. still figuring it out. that's kind of the point.
+### [mutiny](https://github.com/Somay-kousis/Mutiny?utm_source=chatgpt.com) · `Next.js` `TypeScript`
 
-**[⚡ Zuuush](https://github.com/Somay-kousis/Zuuush)** &nbsp;·&nbsp; `React` `TypeScript`
+> building the thing I wish existed when I first started creating online.
 
-> built this to prove onboarding can feel like opening a really good gift. I think it worked.
+---
 
-**[🧙‍♂️ Hogwarts Luggage](https://github.com/Somay-kousis/Hogwarts_Luggage)** &nbsp;·&nbsp; `JS` `GSAP`
+### [zuuush](https://github.com/Somay-kousis/Zuuush.git?utm_source=chatgpt.com) · `React` `TypeScript`
 
-> someone had to make a harry potter luggage system. the sorting hat quiz is real. I'm not sorry.
+> proof that onboarding doesn't have to feel emotionally exhausting.
 
-**[🏡 House Price Prediction](https://github.com/Somay-kousis/House-Price-Prediction-System)** &nbsp;·&nbsp; `Python` `Scikit-Learn`
+---
 
-> turns out houses have a price and ML can guess it. got a solid R². that's my personality now.
+### [hogwarts luggage](https://github.com/Somay-kousis/Hogwarts_Luggage.git?utm_source=chatgpt.com) · `JavaScript` `GSAP`
 
-**[📊 Customer Churn](https://github.com/Somay-kousis/Customer-Churn)** &nbsp;·&nbsp; `Python` `Pandas`
+> whimsical for absolutely no practical reason. exactly how it should be.
 
-> companies pay a lot to know when customers are about to leave. I built the thing that tells them.
+---
+
+### [steel career](https://github.com/Somay-kousis/SteelCareer.git?utm_source=chatgpt.com) · `Next.js` `TypeScript`
+
+> trying to make career platforms feel less corporate and more human.
+
+---
+
+### [house price prediction system](https://github.com/Somay-kousis/House-Price-Prediction-System?utm_source=chatgpt.com) · `Python` `Scikit-Learn`
+
+> taught a machine to estimate house prices and accidentally got attached to feature engineering.
+
+---
+
+### [customer churn prediction](https://github.com/Somay-kousis/Customer-Churn?utm_source=chatgpt.com) · `Python` `Pandas`
+
+> trying to predict when users are emotionally preparing to disappear.
 
 <br/>
 
 <div align="center">
-  <sub>⚡ building things that feel alive — somay / blink</sub>
+  <sub>
+    building things that feel like echoes from another tab
+    <br/>
+    — blink
+  </sub>
 </div>
