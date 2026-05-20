@@ -108,34 +108,50 @@
 
 ## 📌 My Best Repositories
 
-<div align="center">
-
-  <a href="https://github.com/Somay-kousis/Portfolio">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=Portfolio&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-  <a href="https://github.com/Somay-kousis/Mutiny">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=Mutiny&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-
-  <br/>
-
-  <a href="https://github.com/Somay-kousis/Zuuush">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=Zuuush&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-  <a href="https://github.com/Somay-kousis/Hogwarts_Luggage">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=Hogwarts_Luggage&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-
-  <br/>
-
-  <a href="https://github.com/Somay-kousis/House-Price-Prediction-System">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=House-Price-Prediction-System&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-  <a href="https://github.com/Somay-kousis/Customer-Churn">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Somay-kousis&repo=Customer-Churn&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e&icon_color=ffffff" />
-  </a>
-
-</div>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/Portfolio">🌐 Portfolio</a></h3>
+      <p>My personal interactive portfolio showcasing works, UI experiments and design iterations.</p>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+      <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/Mutiny">🏴‍☠️ Mutiny</a></h3>
+      <p>A collaborative developer ecosystem — tools, community, and career infrastructure built for builders.</p>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/Zuuush">⚡ Zuuush</a></h3>
+      <p>Ultra-fluid onboarding and landing experience. Built for premium motion and feel-first design.</p>
+      <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/Hogwarts_Luggage">🧙‍♂️ Hogwarts Luggage</a></h3>
+      <p>Wizarding-world themed inventory system with an interactive sorting-hat quiz experience.</p>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+      <img src="https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=black" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/House-Price-Prediction-System">🏡 House Price Prediction</a></h3>
+      <p>End-to-end ML regression pipeline analyzing market variables to estimate property prices.</p>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+      <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Somay-kousis/Customer-Churn">📊 Customer Churn</a></h3>
+      <p>Classification model for predicting client retention — full feature engineering pipeline included.</p>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+      <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+    </td>
+  </tr>
+</table>
 
 <br/>
 
