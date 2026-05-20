@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+    <style>
+      @keyframes floatCard1 {
+        0%, 100% { transform: translateY(0px) rotate(-2deg); }
+        50% { transform: translateY(-10px) rotate(2deg); }
+      }
+      @keyframes floatCard2 {
+        0%, 100% { transform: translateY(0px) rotate(1deg); }
+        50% { transform: translateY(-12px) rotate(-1deg); }
+      }
+      @keyframes floatCard3 {
+        0%, 100% { transform: translateY(0px) rotate(-1deg); }
+        50% { transform: translateY(-8px) rotate(1deg); }
+      }
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 5px #38bdf8); }
+        50% { filter: drop-shadow(0 0 15px #38bdf8); }
+      }
+      
+      .bg { fill: url(#bg2); }
+      .card-bg { 
+        fill: #0f172a; 
+        stroke: #38bdf8; 
+        stroke-width: 2; 
+        rx: 12;
+      }
+      .card-bg-2 { stroke: #f43f5e; }
+      .card-bg-3 { stroke: #a855f7; }
+      .card-bg-4 { stroke: #4ade80; }
+      
+      .card-title { 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        font-size: 16px; 
+        font-weight: 800; 
+        fill: #f1f5f9; 
+        text-anchor: middle; 
+      }
+      
+      .c1 { animation: floatCard1 4s ease-in-out infinite; }
+      .c2 { animation: floatCard2 5s ease-in-out infinite; animation-delay: 0.5s; }
+      .c3 { animation: floatCard3 6s ease-in-out infinite; animation-delay: 1.2s; }
+      .c4 { animation: floatCard1 4.5s ease-in-out infinite; animation-delay: 0.8s; }
+      .c5 { animation: floatCard2 5.5s ease-in-out infinite; animation-delay: 1.5s; }
+      .c6 { animation: floatCard3 4.2s ease-in-out infinite; animation-delay: 2.2s; }
+      .c7 { animation: floatCard1 5.2s ease-in-out infinite; animation-delay: 1.8s; }
+    </style>
+  </defs>
+
+  <rect width="800" height="400" class="bg" rx="10" />
+  
+  <text x="400" y="50" font-family="sans-serif" font-size="28" font-weight="900" fill="#e2e8f0" text-anchor="middle" style="animation: glow 2s infinite">✨ HIGHLIGHTED MISSIONS ✨</text>
+
+  <!-- Background decorative lines -->
+  <path d="M0,80 Q400,20 800,80" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="10,5" style="animation: floatCard1 10s infinite;" />
+  <path d="M0,350 Q400,400 800,350" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="10,5" style="animation: floatCard2 12s infinite;" />
+
+  <!-- 3D style layers using group transforms -->
+  <g transform="translate(60, 100)" class="c1">
+    <rect width="180" height="60" class="card-bg" />
+    <text x="90" y="36" class="card-title">📁 Portfolio</text>
+  </g>
+
+  <g transform="translate(310, 80)" class="c2">
+    <rect width="180" height="60" class="card-bg card-bg-2" />
+    <text x="90" y="36" class="card-title">🏴‍☠️ Mutiny</text>
+  </g>
+
+  <g transform="translate(560, 110)" class="c3">
+    <rect width="180" height="60" class="card-bg card-bg-3" />
+    <text x="90" y="36" class="card-title">⚙️ SteelCareer</text>
+  </g>
+
+  <g transform="translate(150, 190)" class="c4">
+    <rect width="220" height="60" class="card-bg card-bg-4" />
+    <text x="110" y="36" class="card-title">🏠 House-Price-Prediction</text>
+  </g>
+
+  <g transform="translate(450, 180)" class="c5">
+    <rect width="200" height="60" class="card-bg" />
+    <text x="100" y="36" class="card-title">👥 Customer-Churn</text>
+  </g>
+
+  <g transform="translate(230, 280)" class="c6">
+    <rect width="160" height="60" class="card-bg card-bg-2" />
+    <text x="80" y="36" class="card-title">⚡ Zuuush</text>
+  </g>
+
+  <g transform="translate(430, 290)" class="c7">
+    <rect width="200" height="60" class="card-bg card-bg-3" />
+    <text x="100" y="36" class="card-title">🧳 Hogwarts_Luggage</text>
+  </g>
+
+</svg>
