@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.png" width="100%" alt="Hey, I'm Somay" />
+  <img src="assets/header.png" width="100%" alt="blink" />
 </div>
 
 <br/>
@@ -12,18 +12,19 @@
 
 </div>
 
----
-
 <br/>
+
+---
 
 ## 👤 Who Am I?
 
 <table>
   <tr>
-    <td width="200" align="center" valign="top">
-      <img src="assets/character.png" width="180" alt="Blink character" />
+    <td width="220" align="center" valign="bottom">
+      <!-- Knight faces RIGHT → sits on the LEFT, looking toward the text -->
+      <img src="assets/knight.png" width="200" alt="The Knight" />
     </td>
-    <td valign="top" style="padding-left: 20px;">
+    <td valign="middle" style="padding-left: 16px;">
       <p>
         I'm a <strong>Frontend Developer & ML Engineer</strong> studying at <strong>ABV-IIITM Gwalior</strong>. My journey into tech started early — I was always obsessed with the intersection of design and technology, the idea that code could look and feel like art.
       </p>
@@ -45,7 +46,7 @@
 
 <table>
   <tr>
-    <td valign="top" width="60%">
+    <td valign="middle" width="60%">
       <ul>
         <li>I love being surrounded by people who challenge me to grow.</li>
         <li>☑ Currently building <strong>@ Mutiny</strong> — a dev collaboration ecosystem.</li>
@@ -64,8 +65,9 @@
         <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
       </a>
     </td>
-    <td valign="top" align="center" width="40%">
-      <img src="assets/character.png" width="150" alt="Blink" />
+    <td width="220" align="center" valign="bottom">
+      <!-- Hornet faces LEFT → sits on the RIGHT, looking toward the text -->
+      <img src="assets/hornet.png" width="200" alt="Hornet" />
     </td>
   </tr>
 </table>
@@ -96,7 +98,7 @@
   <br/><br/>
   <img src="https://skillicons.dev/icons?i=nodejs,express,python,sklearn,tensorflow,pandas,postgres,git&perline=8" />
   <br/><br/>
-  <img src="https://skillicons.dev/icons?i=figma,vercel,github,vscode,linux,sass,framermotion,gsap&perline=8" />
+  <img src="https://skillicons.dev/icons?i=figma,vercel,github,vscode,linux,sass,c,cpp&perline=8" />
 
 </div>
 
@@ -138,5 +140,5 @@
 <br/>
 
 <div align="center">
-  <sub>⚡ Building things that feel alive — Somay Kousis</sub>
+  <sub>⚡ Building things that feel alive — Somay Kousis / blink</sub>
 </div>
