@@ -16,47 +16,37 @@
 
 ---
 
-## somewhere between interfaces and machine learning
+## Somewhere Between Interfaces, Memory, and Things That Shouldn't Be Alive
 
 <img align="left" src="assets/knight.png" width="190" alt="the knight" />
 
 &nbsp;
 
-hi. blink here.
+Hiiii. blink here.
 
-I build interfaces that breathe a little  
-and ML models because one obsession clearly wasn't enough.
+I like building things that feel alive — sometimes that's an interface, sometimes it's an AI system with enough memory to become mildly concerning. I'm currently studying at ABV-IIITM Gwalior, but most of my real learning happens somewhere between curiosity, bad ideas, good ideas pretending to be bad ideas, and projects that get wildly out of hand.
 
-currently studying at **ABV-IIITM Gwalior**, though most of my real learning happens somewhere between late night debugging sessions and random ideas that refuse to leave me alone.
+a lot of people build products by asking "can this be built?"
+I usually start with "wouldn't it be interesting if..." and then spend the next three weeks dealing with the consequences.
 
-I care too much about motion, silence, spacing, transitions — tiny details nobody consciously notices but everybody feels.
-
-half my projects start with:
-> “what if this felt different?”
-
-and the other half start with:
-> “wait... can a model predict this?”
-
-most things I make are just attempts at turning a feeling into something interactive.
-
-sometimes it works beautifully.  
-sometimes I create horrors beyond human comprehension.
+lately I've been obsessed with memory. not databases. not storage. *memory.* the idea that software should remember things, that conversations should continue, that systems should notice patterns, that technology should feel a little less like a tool and a little more like a collaborator. some days it works beautifully. some days I accidentally create new species of bugs. either way, I keep building.
 
 <br clear="left"/>
 
 ---
 
-## small fragments
+## Small Fragments
 
 <img align="right" src="assets/hornet.png" width="190" alt="hornet" />
 
-- surrounded by people smarter than me on purpose
-- frontend and ML permanently fighting for control of my brain
-- I believe loading animations deserve emotional depth
-- minimalism or death
-- if a website feels too corporate I physically recoil
-- I like projects that feel slightly haunted
-- probably overthinking typography right now
+- Permanently one idea away from destroying my sleep schedule
+- Frontend and AI have been fighting for custody of me for months
+- I obsess over tiny things — the half-second delay before a card appears, the feeling of a page before you read it, the difference between something working and something *feeling* right
+- if a product feels company like I immediately lose interest
+- I trust curiosity more than plans
+- Currently teaching machines to remember while forgetting where I left my charger
+- Overengineering is just optimism with bad consequences
+- Probably drawing agent workflows on paper right now
 
 <br/>
 
@@ -74,12 +64,9 @@ sometimes I create horrors beyond human comprehension.
 
 ---
 
-
 <div align="center">
 
 <img height="160" src="https://github-readme-streak-stats.herokuapp.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d" />
-
-
 
 </div>
 
@@ -87,68 +74,64 @@ sometimes I create horrors beyond human comprehension.
 
 ## tools I use to build strange little things
 
+**interfaces**
+
 <div align="center">
-
 <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,redux,js,html,css&theme=dark&perline=8" />
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=python,tensorflow,sklearn,nodejs,express,postgres,git&theme=dark&perline=7" />
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=linux,cpp,github,vercel,vscode,figma&theme=dark&perline=6" />
-
 </div>
-
----
-
-## things that escaped my machine
-
-### [portfolio](https://github.com/Somay-kousis/Portfolio?utm_source=chatgpt.com) · `React` `JavaScript`
-
-> my corner of the internet. mostly thoughts pretending to be a website.
-
----
-
-### [mutiny](https://github.com/Somay-kousis/Mutiny?utm_source=chatgpt.com) · `Next.js` `TypeScript`
-
-> building the thing I wish existed when I first started creating online.
-
----
-
-### [zuuush](https://github.com/Somay-kousis/Zuuush.git?utm_source=chatgpt.com) · `React` `TypeScript`
-
-> proof that onboarding doesn't have to feel emotionally exhausting.
-
----
-
-### [hogwarts luggage](https://github.com/Somay-kousis/Hogwarts_Luggage.git?utm_source=chatgpt.com) · `JavaScript` `GSAP`
-
-> whimsical for absolutely no practical reason. exactly how it should be.
-
----
-
-### [steel career](https://github.com/Somay-kousis/SteelCareer.git?utm_source=chatgpt.com) · `Next.js` `TypeScript`
-
-> trying to make career platforms feel less corporate and more human.
-
----
-
-### [house price prediction system](https://github.com/Somay-kousis/House-Price-Prediction-System?utm_source=chatgpt.com) · `Python` `Scikit-Learn`
-
-> taught a machine to estimate house prices and accidentally got attached to feature engineering.
-
----
-
-### [customer churn prediction](https://github.com/Somay-kousis/Customer-Churn?utm_source=chatgpt.com) · `Python` `Pandas`
-
-> trying to predict when users are emotionally preparing to disappear.
 
 <br/>
 
+**intelligence**
+
 <div align="center">
-  <sub>
-    building things that feel like echoes from another tab
-    <br/>
-    — blink
-  </sub>
+<img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn&theme=dark&perline=6" />
 </div>
+
+<br/>
+
+**infrastructure**
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,postgres,git,linux,vercel,figma&theme=dark&perline=8" />
+</div>
+
+<br/>
+
+**and the invisible stack**
+
+`LangGraph` · `LangChain` · `RAG` · `CRAG` · `Agentic AI` · `MCP` · 
+
+---
+
+## Things That Escaped My Machine
+
+**[Co-Founder Memory](https://github.com/Somay-kousis/Co-Founder-Memory)** 
+a second brain that never sleeps. stateful, self-correcting, multi-agent. wakes up every day asking: *what happened while you were gone, and what should we do next?*
+
+**[Oeuvre](https://github.com/Somay-kousis/Oeuvre)** 
+a portfolio that talks back. RAG built on top of actual memory — identity, values, projects, contradictions. ask it something. it answers like a person would.
+
+**[Portfolio](https://github.com/Somay-kousis/Portfolio)**
+my corner of the internet. mostly thoughts pretending to be a website.
+
+**[Something](https://github.com/Somay-kousis/Something)** 
+a startup platform that treats ideas like evolving organisms. two AI personas — one critical, one empathetic — pressure-test your idea before it becomes a company.
+
+**[Steel Career](https://github.com/Somay-kousis/SteelCareer)**
+trying to make career platforms feel less corporate and more human. concierge hiring, not algorithms.
+
+**[Customer Churn Prediction](https://github.com/Somay-kousis/Customer-Churn)**
+ROC-AUC: 0.9176. the model doesn't predict who leaves. it estimates who has already started leaving.
+
+**[House Price Prediction System](https://github.com/Somay-kousis/House-Price-Prediction-System)** `Python` `XGBoost` `CatBoost`
+end-to-end ML pipeline. accidentally got attached to feature engineering.
+
+**[the last library](https://github.com/Somay-kousis/The-Last-Library) and [rabbithole](https://github.com/Somay-kousis/RabbitHole) ** *(in progress)*
+
+
+**[Zuuush](https://github.com/Somay-kousis/Zuuush)**
+proof that onboarding doesn't have to feel emotionally exhausting.
+
+**[Hogwarts Luggage](https://github.com/Somay-kousis/Hogwarts_Luggage)** 
+whimsical for absolutely no practical reason. exactly how it should be.
