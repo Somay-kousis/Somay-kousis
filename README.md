@@ -20,7 +20,7 @@
 
 Hi, I am **Somay Kousis**. I also go by **Blink**.
 
-I am a student at **ABV-IIITM Gwalior** building in the overlap between **GenAI, RAG, agentic AI, memory systems, and weird interfaces**.
+I am a student at **ABV-IIITM Gwalior** building in the overlap between **GenAI, RAG, agentic AI, MCP-style tool orchestration, memory systems, and weird interfaces**.
 
 The thing I keep coming back to: software should not feel like a dead form. It should remember context, adapt to the person using it, and make collaboration feel less mechanical. That is the lane I am trying to get good at.
 
@@ -32,14 +32,20 @@ Right now I am focused on becoming internship-ready for AI/GenAI roles by shippi
 
 ## Current Focus
 
+- **Agentic AI systems**: LangGraph routing, multi-agent debates, critique loops, background schedulers, and self-correcting pipelines.
 - **Memory for AI systems**: long-term user memory, project memory, profile extraction, recall, and update flows.
-- **Agentic workflows**: LangGraph-style routing, critique loops, background schedulers, and self-correcting pipelines.
 - **RAG that has personality**: retrieval that separates factual context from tone/style context.
+- **MCP-style tool use**: connecting models to tools, repositories, documents, and product workflows.
 - **Interfaces for AI tools**: dashboards, cockpit views, state visualization, and products that feel human without becoming vague.
 
 ---
 
 ## Main Proof Of Work
+
+### [RabbitHole](https://github.com/Somay-kousis/RabbitHole)
+An AI exploration engine for messy questions: it stages issues as a courtroom-style multi-agent debate, runs perspectives in parallel, lets a judiciary reason over public statements, and supports human-in-the-loop continuation or final conclusions.
+
+**Signal:** Python, LangGraph, LangChain, Ollama, agentic AI, RAG direction, MCP-style orchestration, FastAPI direction, Docker direction, DSPy direction, graph state design.
 
 ### [Co-Founder Memory](https://github.com/Somay-kousis/Co-Founder-Memory)
 A stateful co-founder assistant that captures engineering logs, extracts persistent developer preferences, builds project dossiers, and runs self-correcting retrieval loops.
@@ -72,7 +78,7 @@ My interactive portfolio: part website, part environment, part proof that I care
 
 **AI / Backend**
 
-`Python` · `FastAPI` · `LangGraph` · `LangChain` · `RAG` · `Chroma` · `Supabase` · `pgvector` · `Groq` · `Llama` · `Jina Embeddings`
+`Python` · `FastAPI` · `LangGraph` · `LangChain` · `Agentic AI` · `MCP` · `RAG` · `DSPy` · `Chroma` · `Supabase` · `pgvector` · `Groq` · `Llama` · `Jina Embeddings` · `Ollama`
 
 **Frontend / Product**
 
@@ -80,7 +86,7 @@ My interactive portfolio: part website, part environment, part proof that I care
 
 **Tools / Infra**
 
-`Git` · `Linux` · `Vercel` · `Postgres` · `Node.js` · `Express` · `MongoDB`
+`Git` · `Linux` · `Docker` · `Vercel` · `Postgres` · `Node.js` · `Express` · `MongoDB`
 
 ---
 
