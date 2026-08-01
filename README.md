@@ -232,11 +232,13 @@ Teaching math, English, and life skills to underprivileged children most weeks w
 
 <div align="center">
 
-<img height="160" src="https://github-readme-streak-stats.herokuapp.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d" />
+<!-- demolab is the maintained domain for streak-stats; the old herokuapp host is
+     unmaintained. github-readme-stats.vercel.app is DEPLOYMENT_PAUSED, so the
+     stats and top-langs cards are replaced by the activity graph until it is
+     either self-hosted or comes back. -->
+<img height="160" src="https://streak-stats.demolab.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d&v=2" />
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Somay-kousis&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&icon_color=8b949e&text_color=8b949e" />
-
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Somay-kousis&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=8b949e" />
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Somay-kousis&custom_title=Contribution%20history&bg_color=0d1117&color=ffffff&line=8b949e&point=ffffff&area=true&area_color=30363d&hide_border=true" />
 
 </div>
 
