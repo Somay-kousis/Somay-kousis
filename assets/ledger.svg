@@ -1,0 +1,77 @@
+<svg width="900" height="430" viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Consolidation log: beliefs added, updated, invalidated, and left alone">
+  <defs>
+    <style>
+      .mono { font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace; }
+      .lbl  { font-size: 10px; letter-spacing: 4px; fill: rgba(255,255,255,0.30); }
+      .op   { font-size: 10px; letter-spacing: 1.5px; font-weight: 600; }
+      .txt  { font-size: 12.5px; fill: rgba(255,255,255,0.86); }
+      .sub  { font-size: 10.5px; fill: rgba(255,255,255,0.34); }
+      .rule { stroke: rgba(255,255,255,0.08); stroke-width: 1; }
+      .strike { stroke: rgba(255,255,255,0.30); stroke-width: 1; }
+      @media (prefers-reduced-motion: reduce) {
+        .blink { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <rect width="900" height="430" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="899" height="429" fill="none" stroke="#30363d"/>
+
+  <!-- header -->
+  <text x="28" y="32" class="mono lbl" letter-spacing="4">CONSOLIDATION LOG</text>
+  <text x="232" y="32" class="mono lbl" letter-spacing="4" fill="rgba(255,255,255,0.16)">/</text>
+  <text x="252" y="32" class="mono lbl" letter-spacing="4">NON-DESTRUCTIVE</text>
+  <line x1="28" y1="44" x2="872" y2="44" class="rule"/>
+
+  <!-- ADD -->
+  <g transform="translate(28, 78)">
+    <rect x="0" y="-14" width="72" height="19" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)"/>
+    <text x="10" y="0" class="mono op" fill="#4ADE80">ADD</text>
+    <text x="92" y="0" class="mono txt">Orchestration across a 3,000+ subagent registry.</text>
+    <text x="92" y="18" class="mono sub">RYSE Technologies / intent to capability to dispatch / ~120ms</text>
+  </g>
+  <line x1="28" y1="108" x2="872" y2="108" class="rule"/>
+
+  <!-- ADD -->
+  <g transform="translate(28, 142)">
+    <rect x="0" y="-14" width="72" height="19" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)"/>
+    <text x="10" y="0" class="mono op" fill="#4ADE80">ADD</text>
+    <text x="92" y="0" class="mono txt">Abstention is a verdict, not a failure to answer.</text>
+    <text x="92" y="18" class="mono sub">podman-flake-agent / a confident wrong answer costs more than silence</text>
+  </g>
+  <line x1="28" y1="172" x2="872" y2="172" class="rule"/>
+
+  <!-- UPDATE -->
+  <g transform="translate(28, 206)">
+    <rect x="0" y="-14" width="72" height="19" fill="rgba(96,165,250,0.12)" stroke="rgba(96,165,250,0.45)"/>
+    <text x="10" y="0" class="mono op" fill="#60A5FA">UPDATE</text>
+    <text x="92" y="0" class="mono txt">Prompts are requests. Schemas are constraints.</text>
+    <text x="92" y="18" class="mono sub">RabbitHole / asked for 2 perspectives, got 6 to 8 / 19.8s to 9.8s</text>
+  </g>
+  <line x1="28" y1="236" x2="872" y2="236" class="rule"/>
+
+  <!-- INVALIDATE -->
+  <g transform="translate(28, 270)">
+    <rect x="0" y="-14" width="72" height="19" fill="rgba(248,113,113,0.12)" stroke="rgba(248,113,113,0.45)"/>
+    <text x="10" y="0" class="mono op" fill="#F87171">INVALID</text>
+    <text x="92" y="0" class="mono txt" fill="rgba(255,255,255,0.34)">A vector store plus a chatbot is a memory system.</text>
+    <line x1="92" y1="-4" x2="452" y2="-4" class="strike"/>
+    <text x="92" y="18" class="mono sub">superseded by PaperPlanes / 25 of 25 writes held where a flat file kept 1</text>
+  </g>
+  <line x1="28" y1="300" x2="872" y2="300" class="rule"/>
+
+  <!-- NOOP -->
+  <g transform="translate(28, 334)">
+    <rect x="0" y="-14" width="72" height="19" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+    <text x="10" y="0" class="mono op" fill="rgba(255,255,255,0.42)">NOOP</text>
+    <text x="92" y="0" class="mono txt">Ship the version that survives contact.</text>
+    <text x="92" y="18" class="mono sub">reinforced, not rewritten / valid_from 2024, still open</text>
+  </g>
+  <line x1="28" y1="364" x2="872" y2="364" class="rule"/>
+
+  <!-- footer -->
+  <text x="28" y="394" class="mono sub">every row closed with valid_to, never overwritten</text>
+  <rect class="blink" x="344" y="385" width="7" height="11" fill="rgba(255,255,255,0.50)">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.15s" repeatCount="indefinite"/>
+  </rect>
+</svg>
