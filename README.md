@@ -242,7 +242,4 @@ Teaching math, English, and life skills to underprivileged children most weeks w
 
 </div>
 
-<div align="center">
-<br />
-<sub><code>valid_from 2024. no row here has been overwritten, only closed.</code></sub>
-</div>
+
