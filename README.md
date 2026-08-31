@@ -231,15 +231,11 @@ Teaching math, English, and life skills to underprivileged children most weeks w
 ---
 
 <div align="center">
-
-<!-- demolab is the maintained domain for streak-stats; the old herokuapp host is
-     unmaintained. github-readme-stats.vercel.app is DEPLOYMENT_PAUSED, so the
-     stats and top-langs cards are replaced by the activity graph until it is
-     either self-hosted or comes back. -->
-<img height="160" src="https://streak-stats.demolab.com?user=Somay-kousis&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=8b949e&currStreakLabel=8b949e&sideLabels=8b949e&dates=30363d&v=88" />
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Somay-kousis&custom_title=Contribution%20history&bg_color=0d1117&color=ffffff&line=8b949e&point=ffffff&area=true&area_color=30363d&hide_border=true" />
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/github-contribution-grid-snake.svg">
+  </picture>
 </div>
 
 
