@@ -66,6 +66,25 @@ There is a test in there asserting the decision model is real Nova and not stubb
 ![MCP](https://img.shields.io/badge/MCP-111111?style=flat-square)
 ![FastAPI](https://img.shields.io/badge/FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white)
 
+### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
+
+Capability-based authorization for AI agents. Ed25519 Biscuit tokens with monotonic attenuation enforce 7 deterministic bounds across 121-node recursive delegation trees, so a sub-agent can never inherit more authority than its parent held. A caller-supplied flag is safe where a caller-supplied key is not, because its only reachable effect is to demand more authorization, never less.
+
+| Claim | Result | Baseline |
+|---|---|---|
+| 12 documented agentic-commerce attack vectors | **10 / 12** defended by a 4-suite adversarial harness | an undefended gateway: 0 |
+| Full test suite | **400 tests**, fully offline, zero model calls or API keys | most eval suites need a live key to prove anything |
+| Idempotent settlement under replay | request-derived key, **sub-200ms**, self-verifying audit log | a naive retry double-spends the release window |
+
+I made a payment agent the parent of a page-reading agent. All 400 tests passed. It silently inherited read access to attacker-controlled text, because a parent has to hold everything it confers, so capability isolation has to sit sideways, not stack. Found it weeks later, re-reading my own threat model, not from a failing test.
+
+Deployed on Google Cloud Run with Vertex AI and Firestore. [Live](https://pocket-change-klwjhco2ta-el.a.run.app).
+
+![Python](https://img.shields.io/badge/Python-111111?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-111111?style=flat-square&logo=googlecloud&logoColor=white)
+![Cryptography](https://img.shields.io/badge/Applied_Cryptography-111111?style=flat-square)
+
 ### [podman-flake-agent](https://github.com/Somay-kousis/podman-flake-agent)
 
 Prototype for the **LFX Mentorship on agentic CI flake categorization**. Podman's migration off Cirrus orphaned `logformatter`, the 38KB Perl script that used to classify every subtest, so triage fell back to a human reading a bar graph.
