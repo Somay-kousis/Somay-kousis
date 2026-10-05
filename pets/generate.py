@@ -74,8 +74,36 @@ SPRITES = {
     },
 }
 
-# Which rows each critter grazes (every row belongs to exactly one critter).
-LANES = [("ghost", [0, 1]), ("cat", [2, 3, 4]), ("axolotl", [5, 6])]
+# The real Pixels pets, as small frames baked by art/pets.py. Without that file, fall back to the drawn critters.
+FRAMES_FILE = Path(__file__).with_name("frames.json")
+FRAMES = json.loads(FRAMES_FILE.read_text()) if FRAMES_FILE.exists() else {}
+
+# Which rows each walker grazes (every row belongs to exactly one walker).
+LANES = ([("mew", [0, 1]), ("cat", [2, 3, 4]), ("gengar", [5, 6])] if FRAMES
+         else [("ghost", [0, 1]), ("cat", [2, 3, 4]), ("axolotl", [5, 6])])
+
+
+def walker_size(name: str) -> tuple[int, int]:
+    if name in FRAMES:
+        return FRAMES[name]["w"], FRAMES[name]["h"]
+    art = SPRITES[name]["art"]
+    return len(art[0]) * PX, len(art) * PX
+
+
+def walker_body(name: str, css: list[str]) -> str:
+    """The pet's own GIF frames, each shown in turn; or the drawn sprite."""
+    if name not in FRAMES:
+        return f'<use href="#{name}"/>'
+    f = FRAMES[name]
+    n, d = len(f["frames"]), f["delay"]
+    period = n * d
+    css.append(f"@keyframes fr{name}{{0%{{opacity:1}}{100 / n:.4f}%{{opacity:0}}100%{{opacity:0}}}}")
+    imgs = []
+    for k, b64 in enumerate(f["frames"]):
+        imgs.append(f'<image width="{f["w"]}" height="{f["h"]}" href="data:image/png;base64,{b64}" '
+                    f'style="opacity:0;animation:fr{name} {period:.2f}s steps(1,end) infinite;'
+                    f'animation-delay:-{(n - k) * d:.2f}s"/>')
+    return "".join(imgs)
 
 
 def fetch_levels(user: str) -> list[dict[int, int]]:
@@ -156,8 +184,7 @@ def render(weeks: list[dict[int, int]], palette: list[str]) -> str:
         for n, cell in enumerate(path):
             eaten_at[cell] = n * step
 
-        art = SPRITES[name]["art"]
-        w, h = len(art[0]) * PX, len(art) * PX
+        w, h = walker_size(name)
 
         def where(c: int, r: int) -> tuple[float, float]:
             x = SIDE + c * PITCH + CELL / 2 - w / 2
@@ -183,7 +210,7 @@ def render(weeks: list[dict[int, int]], palette: list[str]) -> str:
         css.append(f".c{idx}{{animation:walk{idx} {LOOP}s linear infinite,show{idx} {LOOP}s linear infinite}}")
         critters.append(
             f'<g class="c{idx}"><g class="bob" style="animation-delay:-{idx * 0.13:.2f}s">'
-            f'<use href="#{name}"/></g></g>'
+            f'{walker_body(name, css)}</g></g>'
         )
 
     css.append("@keyframes bob{0%,49%{transform:translateY(0)}50%,100%{transform:translateY(-2px)}}")
@@ -200,8 +227,8 @@ def render(weeks: list[dict[int, int]], palette: list[str]) -> str:
 
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
-        f'role="img" aria-label="Contribution grid with pixel pets eating the squares">'
-        f'<defs>{"".join(sprite_svg(n) for n in SPRITES)}<style>{"".join(css)}</style></defs>'
+        f'role="img" aria-label="Contribution grid with the Pixels pets eating the squares">'
+        f'<defs>{"".join(sprite_svg(n) for n in SPRITES if not FRAMES)}<style>{"".join(css)}</style></defs>'
         f'{"".join(cells)}{"".join(critters)}</svg>'
     )
 
