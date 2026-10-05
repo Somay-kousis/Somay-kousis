@@ -1,24 +1,21 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Somay Kousis, aka Blink: a pair of pixel eyes blinking over a night sky" />
+  <img src="assets/header.gif" width="100%" alt="Somay Kousis: I build AI agents and the parts that keep them honest. Five pixel pets stand on the floor and chat." />
 </p>
 
-hey, i'm **somay**. most people call me **blink**.
+<p>
+  <img src="assets/pets/cat.gif" width="24%" alt="the cat" />
+  <img src="assets/say-intro.svg" width="73%" alt="The cat: hmph. fine. I'll do the intro. This is Somay, third-year CS at ABV-IIITM Gwalior. He builds AI agents and the parts that keep them honest. CEO at aye aye, intern at RYSE Technologies." />
+</p>
 
-i build ai agents, and then the boring parts that keep them honest: memory that stays right after it's proven wrong, permissions a sub-agent can't sneak around, a check that the human actually read the diff before shipping it. third year cs at abv-iiitm gwalior. ceo at aye aye. intern at ryse technologies, where my orchestrator routes work across 3,000+ subagents.
+<p align="right">
+  <a href="https://ayeayecaptain.vercel.app"><img src="assets/say-now.svg" width="80%" alt="Mew: look what he's making now. aye aye makes the person shipping a risky AI-written change explain it out loud, graded against the real diff." /></a>
+  <img src="assets/pets/mew.gif" width="17%" alt="Mew" />
+</p>
 
-i also write poetry, teach kids most weekends, and recently built desktop pets that guilt-trip me into drinking water. so. range.
-
-<br />
-
-<img src="assets/title-now.svg" height="52" alt="now" />
-
-<a href="https://ayeayecaptain.vercel.app"><img src="assets/card-ayeaye.svg" width="100%" alt="aye aye: makes sure the person shipping AI-written code can explain it, graded against the real diff" /></a>
-
-the name does two jobs. an aye-aye finds food by tapping on wood and listening for the hollow spot, it doesn't trust the surface. and "aye aye" is what a crew says when an order was heard *and* understood. no numbers here yet, the code isn't public. when it is, they'll come with the commands that prove them.
-
-<br />
-
-<img src="assets/title-built.svg" height="52" alt="things i built" />
+<p>
+  <img src="assets/pets/gengar.gif" width="17%" alt="Gengar" />
+  <img src="assets/say-built.svg" width="80%" alt="Gengar: hehe. look at all the stuff he made." />
+</p>
 
 <p align="center">
   <a href="https://github.com/Somay-kousis/PaperPlanes"><img src="assets/card-paperplanes.svg" width="49%" alt="PaperPlanes" /></a>
@@ -26,7 +23,7 @@ the name does two jobs. an aye-aye finds food by tapping on wood and listening f
   <a href="https://github.com/Somay-kousis/Apocalypse"><img src="assets/card-apocalypse.svg" width="49%" alt="Apocalypse" /></a>
   <a href="https://github.com/Somay-kousis/podman-flake-agent"><img src="assets/card-podman.svg" width="49%" alt="podman-flake-agent" /></a>
   <a href="https://github.com/Somay-kousis/Perceived-Oversight"><img src="assets/card-oversight.svg" width="49%" alt="Perceived Oversight" /></a>
-  <img src="assets/card-graduation.svg" width="49%" alt="Graduation, client work (private)" />
+  <img src="assets/card-graduation.svg" width="49%" alt="Graduation (client work, private)" />
   <a href="https://github.com/Somay-kousis/RabbitHole"><img src="assets/card-rabbithole.svg" width="49%" alt="RabbitHole" /></a>
   <a href="https://github.com/Somay-kousis/Co-op-Purchase-Coordinator"><img src="assets/card-coop.svg" width="49%" alt="Co-op Purchase Coordinator" /></a>
   <a href="https://github.com/Somay-kousis/Co-Founder-Memory"><img src="assets/card-cofounder-memory.svg" width="49%" alt="Co-Founder Memory" /></a>
@@ -35,38 +32,26 @@ the name does two jobs. an aye-aye finds food by tapping on wood and listening f
   <a href="https://github.com/Somay-kousis/Portfolio"><img src="assets/card-portfolio.svg" width="49%" alt="Portfolio" /></a>
 </p>
 
-every card links to its repo, except graduation, which is client work. the stuff that didn't make the cut is in [repositories](https://github.com/Somay-kousis?tab=repositories), including my first ml project, which i keep around on purpose.
+<p align="right">
+  <img src="assets/say-wins.svg" width="80%" alt="Lapras sings his wins: 1st Egoist Machines ideathon, 2nd Hacksagon 2024, 3rd CockroachDB x AWS hackathon, 6th Smart India Hackathon 2025." />
+  <img src="assets/pets/lapras.gif" width="17%" alt="Lapras" />
+</p>
 
-<br />
-
-<img src="assets/title-shelf.svg" height="52" alt="trophy shelf" />
-
-<img src="assets/shelf.svg" width="100%" alt="1st Egoist Machines ideathon, 2nd Hacksagon 2024, 3rd CockroachDB x AWS hackathon, 6th Smart India Hackathon 2025" />
-
-plus an entry in the apart x cesia ai incident response sprint (that's apocalypse), and anthropic's mcp course.
-
-<br />
-
-<img src="assets/title-offscreen.svg" height="52" alt="off-screen" />
-
-- published in **cama magazine** (canada). poetry, performed to rooms of 350+.
-- teaching math, english, and life skills with the sgm social initiative, most weeks.
-- ran logistics for a 1000+ person college fest.
-- **7,000+ people** follow my writing on dev.to.
-
-things i'm still bad at: finishing one thing before starting five more (see above), dsa consistency, and writing the limitations section before someone else finds it for me.
-
-<br />
-
-<img src="assets/title-inventory.svg" height="52" alt="inventory" />
-
-<img src="assets/inventory.svg" width="100%" alt="python, langgraph, fastapi, claude api, mcp, cockroachdb, postgres, supabase, pinecone, next.js, typescript, tailwind, swift, chrome mv3, docker, cloud run" />
-
-<br />
-
-<img src="assets/title-hi.svg" height="52" alt="say hi" />
+<p align="right">
+  <img src="assets/say-stack.svg" width="80%" alt="Lapras carries his toolbox: Python, LangGraph, FastAPI, Claude API, MCP, CockroachDB, Postgres, Supabase, Pinecone, Next.js, TypeScript, Tailwind, Swift, Chrome extensions, Docker, Cloud Run." />
+</p>
 
 <p>
+  <img src="assets/pets/vaporeon.gif" width="17%" alt="Vaporeon" />
+  <img src="assets/say-offscreen.svg" width="80%" alt="Vaporeon: the off-screen stuff. Poetry published in CAMA Magazine, teaching kids with SGM, fest logistics, 7,000+ followers on dev.to." />
+</p>
+
+<p>
+  <img src="assets/pets/cat.gif" width="24%" alt="the cat" />
+  <img src="assets/say-hi.svg" width="60%" alt="The cat: ...anyway. say hi. or don't." />
+</p>
+
+<p align="center">
   <a href="https://ayeayecaptain.vercel.app"><img src="assets/btn-aye.svg" height="52" alt="aye aye" /></a>
   <a href="https://portfolio-sable-psi-56.vercel.app"><img src="assets/btn-portfolio.svg" height="52" alt="portfolio" /></a>
   <a href="https://linkedin.com/in/somay-kousis-630ab1313"><img src="assets/btn-linkedin.svg" height="52" alt="linkedin" /></a>
@@ -79,8 +64,10 @@ things i'm still bad at: finishing one thing before starting five more (see abov
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/pixel-pets-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/pixel-pets-light.svg">
-    <img alt="A ghost, a cat and an axolotl eating my contribution grid" src="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/pixel-pets-dark.svg">
+    <img alt="Mew, the cat and Gengar eating my contribution grid" src="https://raw.githubusercontent.com/Somay-kousis/Somay-kousis/output/pixel-pets-dark.svg">
   </picture>
   <br />
-  <sub>a ghost, a cat, and an axolotl eat a year of my commits every 26 seconds. they grow back.</sub>
+  <sub>mew, the cat and gengar eat a year of my commits every 26 seconds. they grow back.</sub>
+  <br />
+  <sub>the pets live in <a href="https://github.com/Somay-kousis/pixels">pixels</a>. the pokémon are © nintendo / game freak, the cat belongs to its artist. i just gave them jobs.</sub>
 </div>
