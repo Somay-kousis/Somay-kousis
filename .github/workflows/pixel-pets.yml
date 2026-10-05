@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate Pixel Pets
 
 on:
   schedule:
@@ -12,14 +12,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      
-      - uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            
+
+      - name: Draw the contribution grid with pixel pets
+        run: python3 pets/generate.py ${{ github.repository_owner }} dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
