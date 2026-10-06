@@ -274,13 +274,12 @@ SECTIONS = {
         ("typescript", SKY), ("tailwind", PINK), ("swift", YELLOW), ("chrome extensions", MINT), ("docker", SKY),
         ("cloud run", PINK)]),
     "offscreen": dict(voice="~ BLUB. THE OFF-SCREEN STUFF", tail="left", bullets=[
-        "writes poetry. published in cama magazine (canada), performed to rooms of 350+.",
-        "teaches math, english and life skills to kids with the sgm social initiative, most weeks.",
+        "writes poetry. published in camas (linfield university), performed to rooms of 350+.",
+        "teaches math, english and life skills to kids with the sgm social initiative, every week.",
         "ran logistics for a 1000+ person college fest.",
-        "7,000+ people follow his writing on dev.to.",
     ], paragraphs=[
-        "still bad at: finishing one thing before starting five more (see gengar's pile), dsa consistency, and "
-        "writing the limitations section before someone else finds it.",
+        "still bad at: sticking with dsa. he opens a problem, gets an idea, and builds that instead. "
+        "that's how gengar's pile happened.",
     ]),
     "hi": dict(voice="...ANYWAY. SAY HI. OR DON'T.", tail="left", W=560, wrap_at=62, paragraphs=[
         "he answers faster than i come when called.",
