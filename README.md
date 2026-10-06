@@ -8,7 +8,7 @@
 </p>
 
 <p align="right">
-  <a href="https://ayeayecaptain.vercel.app"><img src="assets/say-now.svg" width="80%" alt="Mew: look what he's making now. aye aye makes the person shipping a risky AI-written change explain it out loud, graded against the real diff." /></a>
+  <a href="https://ayeayecaptain.vercel.app"><img src="assets/say-now.svg" width="80%" alt="Mew: look what he's making now. aye aye makes the person shipping a risky AI-written change explain it out loud, analysed against the real diff." /></a>
   <img src="assets/pets/mew.gif" width="17%" alt="Mew" />
 </p>
 
