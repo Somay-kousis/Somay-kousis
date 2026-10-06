@@ -4,7 +4,7 @@
 
 <p>
   <img src="assets/pets/cat.gif" width="24%" alt="the cat" />
-  <img src="assets/say-intro.svg" width="73%" alt="The cat: hmph. fine. I'll do the intro. This is Somay, third-year CS at ABV-IIITM Gwalior. He builds AI agents and the parts that keep them honest. Co-founder at aye aye, freelancing at Standout, interned at RYSE." />
+  <img src="assets/say-intro.svg" width="73%" alt="The cat: hmph. fine. I'll do the intro. This is Somay, third-year CS at ABV-IIITM Gwalior. He builds AI agents and the parts that keep them honest. Co-founder at aye aye, freelancing at Standout, AI Systems Engineer Intern at RYSE before that." />
 </p>
 
 <p align="right">
@@ -32,7 +32,7 @@
 </p>
 
 <p align="right">
-  <img src="assets/say-wins.svg" width="80%" alt="Lapras sings his wins: 1st Egoistic Ideathon 2026, 2nd Hacksagon 2024, 3rd CockroachDB Hackathon (solo), 6th Smart India Hackathon 2025." />
+  <img src="assets/say-wins.svg" width="80%" alt="Lapras sings his wins: 1st Egoistic Ideathon 2026, 2nd Hacksagon 2024, 3rd CockroachDB Hackathon (solo), 6th of 500 on our Smart India Hackathon 2025 problem statement." />
   <img src="assets/pets/lapras.gif" width="17%" alt="Lapras" />
 </p>
 
