@@ -367,9 +367,6 @@ CARDS = {
     "something": ("Something", "#d9d4e4", "R.I.P.",
                   "founder-investor matching. 573 people joined in the first month. it still didn't make it. open source now.",
                   [("573 waitlist", YELLOW), ("open source", MINT)]),
-    "portfolio": ("Portfolio", "#c9b8ff", "WEB",
-                  "his site. every project gets a case study and a link to its repo.",
-                  [("next.js", YELLOW), ("framer motion", PINK)]),
 }
 
 
@@ -385,8 +382,7 @@ def main() -> None:
     files = {f"say-{name}.svg": section(name) for name in SECTIONS}
     for slug, args in CARDS.items():
         files[f"card-{slug}.svg"] = card(*args)
-    for slug, (s, color) in {"aye": ("AYE AYE", YELLOW), "portfolio": ("PORTFOLIO", SKY), "linkedin": ("LINKEDIN", MINT),
-                             "x": ("X", PINK)}.items():
+    for slug, (s, color) in {"aye": ("AYE AYE", YELLOW), "linkedin": ("LINKEDIN", MINT), "x": ("X", PINK)}.items():
         files[f"btn-{slug}.svg"] = button(s, color)
     for name, content in files.items():
         (OUT / name).write_text(content)

@@ -29,7 +29,6 @@
   <a href="https://github.com/Somay-kousis/Co-Founder-Memory"><img src="assets/card-cofounder-memory.svg" width="49%" alt="Co-Founder Memory" /></a>
   <a href="https://github.com/Somay-kousis/pixels"><img src="assets/card-pixels.svg" width="49%" alt="Pixels" /></a>
   <a href="https://github.com/SomethingDuality/Somethingv1"><img src="assets/card-something.svg" width="49%" alt="Something (rest in peace)" /></a>
-  <a href="https://github.com/Somay-kousis/Portfolio"><img src="assets/card-portfolio.svg" width="49%" alt="Portfolio" /></a>
 </p>
 
 <p align="right">
@@ -53,7 +52,6 @@
 
 <p align="center">
   <a href="https://ayeayecaptain.vercel.app"><img src="assets/btn-aye.svg" height="52" alt="aye aye" /></a>
-  <a href="https://portfolio-sable-psi-56.vercel.app"><img src="assets/btn-portfolio.svg" height="52" alt="portfolio" /></a>
   <a href="https://linkedin.com/in/somay-kousis-630ab1313"><img src="assets/btn-linkedin.svg" height="52" alt="linkedin" /></a>
   <a href="https://x.com/somaykousis"><img src="assets/btn-x.svg" height="52" alt="x" /></a>
 </p>
