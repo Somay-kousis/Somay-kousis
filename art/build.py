@@ -1,6 +1,6 @@
 """Builds the profile's SVGs into assets/: the pets' speech bubbles, project cards, and link buttons.
 
-The pets themselves (GIFs, the animated header, grid frames) come from art/pets.py. Everything here is plain SVG
+The pets themselves (GIFs, grid frames) come from art/pets.py; the banner comes from art/header.py. Everything here is plain SVG
 with a built-in pixel font, so it renders the same inside GitHub's <img> tags. Standard library only.
 
     python3 art/build.py
@@ -247,7 +247,8 @@ SECTIONS = {
         "this is somay. third-year cs at abv-iiitm gwalior. he builds ai agents, and then the boring parts that keep "
         "them honest: memory that stays right after it's proven wrong, permissions a sub-agent can't sneak around, "
         "proof that a human actually read the code before it shipped.",
-        "ceo at aye aye. intern at ryse technologies, where his orchestrator routes work across 3,000+ subagents. "
+        "co-founder at aye aye, freelancing at standout. before that he interned at ryse, where his orchestrator "
+        "routed 10,000+ tasks a day. "
         "he also made me, to remind him to drink water. he ignores me. so i take over his screen.",
     ]),
     "now": dict(voice="MEW! LOOK WHAT HE'S MAKING NOW", tail="right", paragraphs=[
@@ -261,7 +262,7 @@ SECTIONS = {
         "every card opens its repo, except graduation (client work, it's private). i'm hiding behind one of them.",
     ]),
     "wins": dict(voice="♪ LA LA~ HIS WINS ♪", tail="right", bullets=[
-        "1st at the egoist machines ideathon",
+        "1st at the egoistic ideathon 2026",
         "2nd at hacksagon 2024, hardware track",
         "3rd at the cockroachdb x aws hackathon, with paperplanes",
         "6th in the whole country at smart india hackathon 2025, leading a team of six",
