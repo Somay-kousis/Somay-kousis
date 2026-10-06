@@ -339,7 +339,7 @@ CARDS = {
                     [("25/25 writes held", MINT), ("flat file kept 1", PINK)]),
     "pocket-change": ("Pocket Change", YELLOW, "LIVE",
                       "permissions for ai agents that only shrink as they're handed down. a sub-agent never ends up with more than its parent.",
-                      [("400 tests, offline", SKY), ("10/12 attacks stopped", MINT)]),
+                      [("831 tests", SKY), ("394/400 blocked", MINT), ("10/12 vectors", PINK)]),
     "apocalypse": ("Apocalypse", PINK, "SPRINT",
                    "a containment standard for a real ai sandbox escape, with a broken lab and a fixed lab you can run in seconds.",
                    [("broken 0/9", PINK), ("fixed 9/9", MINT), ("118 tests", SKY)]),
