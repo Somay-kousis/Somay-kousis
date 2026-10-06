@@ -43,7 +43,7 @@
 
 <p>
   <img src="assets/pets/vaporeon.gif" width="17%" alt="Vaporeon" />
-  <img src="assets/say-offscreen.svg" width="80%" alt="Vaporeon: the off-screen stuff. Poetry published in CAMA Magazine, teaching kids with SGM, fest logistics, 7,000+ followers on dev.to." />
+  <img src="assets/say-offscreen.svg" width="80%" alt="Vaporeon: the off-screen stuff. Poetry published in Camas (Linfield University), teaching kids with SGM every week, fest logistics. Still bad at sticking with DSA." />
 </p>
 
 <p>
