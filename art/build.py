@@ -247,8 +247,8 @@ SECTIONS = {
         "this is somay. third-year cs at abv-iiitm gwalior. he builds ai agents, and then the boring parts that keep "
         "them honest: memory that stays right after it's proven wrong, permissions a sub-agent can't sneak around, "
         "proof that a human actually read the code before it shipped.",
-        "co-founder at aye aye, freelancing at standout. before that he interned at ryse, where his orchestrator "
-        "routed 10,000+ tasks a day. "
+        "co-founder at aye aye, freelancing at standout. before that he was an ai systems engineer intern at ryse, "
+        "where his orchestrator routed 10,000+ tasks a day. "
         "he also made me, to remind him to drink water. he ignores me. so i take over his screen.",
     ]),
     "now": dict(voice="MEW! LOOK WHAT HE'S MAKING NOW", tail="right", paragraphs=[
@@ -265,7 +265,7 @@ SECTIONS = {
         "1st at the egoistic ideathon 2026",
         "2nd at hacksagon 2024, hardware track",
         "3rd at the cockroachdb hackathon, solo, with paperplanes",
-        "6th in the whole country at smart india hackathon 2025, leading a team of six",
+        "6th of 500 on our problem statement at smart india hackathon 2025, leading a team of six",
         "also: the apart x cesia ai incident response sprint (that's apocalypse), and anthropic's mcp course",
     ], paragraphs=[], chip_list=[]),
     "stack": dict(voice="♪ AND I CARRY HIS TOOLBOX ♪", tail="right", chip_list=[
@@ -339,7 +339,7 @@ CARDS = {
                     [("25/25 writes held", MINT), ("flat file kept 1", PINK)]),
     "pocket-change": ("Pocket Change", YELLOW, "LIVE",
                       "permissions for ai agents that only shrink as they're handed down. a sub-agent never ends up with more than its parent.",
-                      [("400 tests, offline", SKY), ("10/12 attacks stopped", MINT)]),
+                      [("831 tests", SKY), ("394/400 blocked", MINT), ("10/12 vectors", YELLOW)]),
     "apocalypse": ("Apocalypse", PINK, "SPRINT",
                    "a containment standard for a real ai sandbox escape, with a broken lab and a fixed lab you can run in seconds.",
                    [("broken 0/9", PINK), ("fixed 9/9", MINT), ("118 tests", SKY)]),
