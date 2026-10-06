@@ -253,7 +253,7 @@ SECTIONS = {
     "now": dict(voice="MEW! LOOK WHAT HE'S MAKING NOW", tail="right", paragraphs=[
         "aye aye. ai writes more and more of the code that ships, and review is where it quietly breaks: someone hits "
         "approve on a diff they never read. aye aye makes the person shipping a risky change explain it out loud, and "
-        "a separate judge grades that against the real diff. boring changes get skipped on purpose.",
+        "a separate judge analyses that against the real diff. boring changes get skipped on purpose.",
         "the name: an aye-aye taps on wood and listens for the hollow spot before it trusts it. and \"aye aye\" means "
         "an order was heard and understood, not just received.",
     ], chip_list=[("pre-launch", PINK), ("waitlist open", MINT), ("with charlotte liu", SKY), ("ayeayecaptain.vercel.app", YELLOW)]),
