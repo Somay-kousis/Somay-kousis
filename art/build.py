@@ -264,7 +264,7 @@ SECTIONS = {
     "wins": dict(voice="♪ LA LA~ HIS WINS ♪", tail="right", bullets=[
         "1st at the egoistic ideathon 2026",
         "2nd at hacksagon 2024, hardware track",
-        "3rd at the cockroachdb x aws hackathon, with paperplanes",
+        "3rd at the cockroachdb hackathon, solo, with paperplanes",
         "6th in the whole country at smart india hackathon 2025, leading a team of six",
         "also: the apart x cesia ai incident response sprint (that's apocalypse), and anthropic's mcp course",
     ], paragraphs=[], chip_list=[]),
@@ -348,7 +348,7 @@ CARDS = {
                [("logs 76-93% smaller", YELLOW), ("zero deps", SKY)]),
     "oversight": ("Perceived Oversight", "#c9b8ff", "PAPER",
                   "will an ai hide less from a watcher it thinks is just a teammate? the spy on the team vs the camera on the wall.",
-                  [("6 conditions", SKY), ("AAAI-27 UC submitted", PINK)]),
+                  [("6 conditions", SKY), ("in progress", PINK)]),
     "graduation": ("Graduation", SKY, "CLIENT",
                    "find the right people on linkedin, then actually talk to them. it drafts the message. you press send. always.",
                    [("chrome extension", YELLOW), ("langgraph + claude", MINT)]),
@@ -368,7 +368,7 @@ CARDS = {
                   "founder-investor matching. 573 people joined in the first month. it still didn't make it. open source now.",
                   [("573 waitlist", YELLOW), ("open source", MINT)]),
     "portfolio": ("Portfolio", "#c9b8ff", "WEB",
-                  "his site. every number on it links to the repo that proves it, which was the only rule.",
+                  "his site. every project gets a case study and a link to its repo.",
                   [("next.js", YELLOW), ("framer motion", PINK)]),
 }
 

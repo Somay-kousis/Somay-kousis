@@ -33,7 +33,7 @@
 </p>
 
 <p align="right">
-  <img src="assets/say-wins.svg" width="80%" alt="Lapras sings his wins: 1st Egoistic Ideathon 2026, 2nd Hacksagon 2024, 3rd CockroachDB x AWS hackathon, 6th Smart India Hackathon 2025." />
+  <img src="assets/say-wins.svg" width="80%" alt="Lapras sings his wins: 1st Egoistic Ideathon 2026, 2nd Hacksagon 2024, 3rd CockroachDB Hackathon (solo), 6th Smart India Hackathon 2025." />
   <img src="assets/pets/lapras.gif" width="17%" alt="Lapras" />
 </p>
 
