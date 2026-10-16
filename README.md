@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg" />
-  <img src="assets/title-light.svg" width="520" alt="ME!?" />
+  <img src="assets/title-light.svg" width="300" alt="ME!?" />
 </picture>
 
 <img align="right" src="assets/knight.png" width="150" alt="" />
