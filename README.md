@@ -1,22 +1,25 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg" />
-  <img src="assets/title-light.svg" width="260" alt="Somay Kousis" />
+  <img src="assets/title-light.svg" width="110" alt="ME!?" />
 </picture>
 
-<img align="right" src="assets/knight.png" width="150" alt="" />
+<img align="left" src="assets/knight.svg" width="150" alt="" />
 
-I build agent systems, and the checks that keep them honest.
+**Somay Kousis**, I build agent systems, and the checks that keep them honest.
 
 Co-founder of [aye aye](https://ayeayecaptain.vercel.app). The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff. I also freelance for Standout, where I shipped a live LinkedIn networking product from an empty repo in 7 days as the only engineer. Third year of CS at ABV-IIITM Gwalior.
 
 Right now I am writing an AI control paper and getting fixes merged upstream.
 
-<br clear="right" />
+<br clear="left" />
 
-<sub><b>MERGED UPSTREAM INTO</b></sub><br />
+<p><sub><b>MERGED UPSTREAM INTO</b></sub></p>
+
+<p>
 <a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/NVIDIA-NeMo_Agent_Toolkit-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=111111" alt="NVIDIA NeMo Agent Toolkit" /></a>&nbsp;
 <a href="https://github.com/microsoft/agent-framework/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/Microsoft-Agent_Framework-0078D4?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI%2BPHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTEgMWgxMHYxMEgxeiIvPjxwYXRoIGZpbGw9IiM3ZmJhMDAiIGQ9Ik0xMiAxaDEwdjEwSDEyeiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0xIDEyaDEwdjEwSDF6Ii8%2BPHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDEwdjEwSDEyeiIvPjwvc3ZnPg%3D%3D&labelColor=111111" alt="Microsoft Agent Framework" /></a>&nbsp;
 <a href="https://github.com/google/adk-python/pull/7541"><img src="https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=111111" alt="Google ADK" /></a>
+</p>
 
 <br />
 
@@ -108,7 +111,7 @@ The paper. Does an untrusted agent reveal more of a hidden objective to an overs
 
 ## On the record
 
-<img align="left" src="assets/hornet.png" width="130" alt="" />
+<img align="right" src="assets/hornet.svg" width="130" alt="" />
 
 - Top 10%, Apart x CeSIA AI Incident Response Sprint
 - Winner, Egoistic Ideathon 2026, captain of a team of 4
@@ -122,6 +125,6 @@ I also teach math and English to kids every week with the SGM social initiative.
 
 Still getting DSA wrong. I open a problem, get an idea, and build that instead. Most of the list above started that way.
 
-<br clear="left" />
+<br clear="right" />
 
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313) · [X](https://x.com/somaykousis) · somaykousis@gmail.com
