@@ -1,8 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg" />
-  <img src="assets/title-light.svg" width="110" alt="ME!?" />
-</picture>
-
 <img align="left" src="assets/knight.svg" width="150" alt="" />
 
 **Somay Kousis**, I build agent systems, and the checks that keep them honest.
