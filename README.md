@@ -6,13 +6,6 @@
 
 <div align="center">
 
-![Stars](https://img.shields.io/github/stars/Somay-kousis?style=for-the-badge&color=111111&label=STARS)&nbsp;&nbsp;
-![Followers](https://img.shields.io/github/followers/Somay-kousis?style=for-the-badge&color=111111&label=FOLLOWERS)
-
-</div>
-
-<div align="center">
-
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1200&color=111111&center=true&vCenter=true&width=680&lines=I+build+the+version+that+survives+contact.;An+agent+never+gets+more+than+it+was+given.;394+of+400+attacks+blocked.+Offline.;Every+number+here+ships+with+the+command+that+proves+it.)](https://git.io/typing-svg)
 
 </div>
