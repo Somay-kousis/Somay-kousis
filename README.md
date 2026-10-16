@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg" />
-  <img src="assets/title-light.svg" width="300" alt="ME!?" />
+  <img src="assets/title-light.svg" width="260" alt="Somay Kousis" />
 </picture>
 
 <img align="right" src="assets/knight.png" width="150" alt="" />
 
-**Somay Kousis?** I build agent systems, and the checks that keep them honest.
+I build agent systems, and the checks that keep them honest.
 
 Co-founder of [aye aye](https://ayeayecaptain.vercel.app). The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff. I also freelance for Standout, where I shipped a live LinkedIn networking product from an empty repo in 7 days as the only engineer. Third year of CS at ABV-IIITM Gwalior.
 
