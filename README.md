@@ -1,4 +1,4 @@
-<img align="left" src="assets/knight.svg" width="150" alt="" />
+<img align="left" src="assets/knight.svg" width="130" alt="" />
 
 **Somay Kousis**, I build agent systems, and the checks that keep them honest.
 
