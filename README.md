@@ -6,6 +6,16 @@
 
 <div align="center">
 
+<sub><b>MERGED UPSTREAM INTO</b></sub>
+
+<a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/NVIDIA-NeMo_Agent_Toolkit-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=111111" alt="NVIDIA NeMo Agent Toolkit" /></a>&nbsp;
+<a href="https://github.com/microsoft/agent-framework/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/Microsoft-Agent_Framework-0078D4?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI%2BPHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTEgMWgxMHYxMEgxeiIvPjxwYXRoIGZpbGw9IiM3ZmJhMDAiIGQ9Ik0xMiAxaDEwdjEwSDEyeiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0xIDEyaDEwdjEwSDF6Ii8%2BPHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDEwdjEwSDEyeiIvPjwvc3ZnPg%3D%3D&labelColor=111111" alt="Microsoft Agent Framework" /></a>&nbsp;
+<a href="https://github.com/google/adk-python/pull/7541"><img src="https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=111111" alt="Google ADK" /></a>
+
+</div>
+
+<div align="center">
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1200&color=111111&center=true&vCenter=true&width=680&lines=I+build+the+version+that+survives+contact.;An+agent+never+gets+more+than+it+was+given.;394+of+400+attacks+blocked.+Offline.;Every+number+here+ships+with+the+command+that+proves+it.)](https://git.io/typing-svg)
 
 </div>
