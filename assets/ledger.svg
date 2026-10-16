@@ -27,8 +27,8 @@
   <g transform="translate(28, 78)">
     <rect x="0" y="-14" width="72" height="19" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)"/>
     <text x="10" y="0" class="mono op" fill="#4ADE80">ADD</text>
-    <text x="92" y="0" class="mono txt">An orchestrator routing 10,000+ tasks a day.</text>
-    <text x="92" y="18" class="mono sub">RYSE Technologies / misrouted payloads -33% / dispatch latency -24%</text>
+    <text x="92" y="0" class="mono txt">An agent never holds more authority than its parent.</text>
+    <text x="92" y="18" class="mono sub">Pocket Change / 394 of 400 attacks blocked / 831 offline tests</text>
   </g>
   <line x1="28" y1="108" x2="872" y2="108" class="rule"/>
 
@@ -36,8 +36,8 @@
   <g transform="translate(28, 142)">
     <rect x="0" y="-14" width="72" height="19" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)"/>
     <text x="10" y="0" class="mono op" fill="#4ADE80">ADD</text>
-    <text x="92" y="0" class="mono txt">Abstention is a verdict, not a failure to answer.</text>
-    <text x="92" y="18" class="mono sub">podman-flake-agent / a confident wrong answer costs more than silence</text>
+    <text x="92" y="0" class="mono txt">Containment is checked, not assumed.</text>
+    <text x="92" y="18" class="mono sub">Apocalypse / broken lab 0 of 9, fixed lab 9 of 9 / Apart top 10%</text>
   </g>
   <line x1="28" y1="172" x2="872" y2="172" class="rule"/>
 
@@ -54,9 +54,9 @@
   <g transform="translate(28, 270)">
     <rect x="0" y="-14" width="72" height="19" fill="rgba(248,113,113,0.12)" stroke="rgba(248,113,113,0.45)"/>
     <text x="10" y="0" class="mono op" fill="#F87171">INVALID</text>
-    <text x="92" y="0" class="mono txt" fill="rgba(255,255,255,0.34)">A vector store plus a chatbot is a memory system.</text>
+    <text x="92" y="0" class="mono txt" fill="rgba(255,255,255,0.34)">An agent acts the same whether or not it thinks it is watched.</text>
     <line x1="92" y1="-4" x2="452" y2="-4" class="strike"/>
-    <text x="92" y="18" class="mono sub">superseded by PaperPlanes / 25 of 25 writes held where a flat file kept 1</text>
+    <text x="92" y="18" class="mono sub">Perceived Oversight / prior work says no / measuring what it hides, and from whom</text>
   </g>
   <line x1="28" y1="300" x2="872" y2="300" class="rule"/>
 
