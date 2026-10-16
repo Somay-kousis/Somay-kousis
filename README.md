@@ -122,4 +122,4 @@ Still getting DSA wrong. I open a problem, get an idea, and build that instead. 
 
 <br clear="right" />
 
-[LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313) · [insta](https://www.instagram.com/somay.ipynb/) · somaykousis@gmail.com
+[LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313) · [Insta](https://www.instagram.com/somay.ipynb/) · somaykousis@gmail.com
