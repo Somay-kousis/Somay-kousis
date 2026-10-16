@@ -14,13 +14,13 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1200&color=111111&center=true&vCenter=true&width=680&lines=I+build+the+version+that+survives+contact.;Memory+that+stays+correct+after+it+is+contradicted.;25+of+25+writes+held.+A+flat+file+kept+1.;Every+number+here+ships+with+the+command+that+proves+it.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1200&color=111111&center=true&vCenter=true&width=680&lines=I+build+the+version+that+survives+contact.;An+agent+never+gets+more+than+it+was+given.;394+of+400+attacks+blocked.+Offline.;Every+number+here+ships+with+the+command+that+proves+it.)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-## I build memory systems, agentic workflows, and interfaces that feel a little alive.
+## I build agent systems, and the checks that keep them honest.
 
 <img align="left" src="assets/knight.png" width="180" alt="profile art" />
 
@@ -28,9 +28,11 @@ Hi, I am **Somay Kousis**.
 
 CS student at **ABV-IIITM Gwalior**. Co-founder of **[aye aye](https://ayeayecaptain.vercel.app)**, which makes the person shipping a risky AI-written change explain it out loud, judged against the real diff. Freelancing at **Standout**, where I shipped a live LinkedIn networking product from an empty repo in 7 days as the sole engineer. Before that, **AI Systems Engineer Intern at RYSE Technologies**, where my orchestrator routed 10,000+ tasks a day, cutting misrouted payloads 33% and dispatch latency 24%.
 
-The thing I keep coming back to: most systems are built to work once, in the demo, on the happy path. I am more interested in the version that holds up afterwards. Under contention. Under a rate limit. After the fact it recorded last month turns out to be wrong.
+Right now I am writing an AI control paper, and getting fixes merged upstream in NVIDIA NeMo Agent Toolkit, Microsoft Agent Framework and Google ADK.
 
-That preference shows up in the code before it shows up in anything I say about it. Two of my projects independently converged on the same write path, and I did not plan that.
+Most of it comes back to one question. What does an agent do when nobody is checking, and how would you know? Pocket Change limits what it can take. Apocalypse checks whether it stays contained after it breaks out. aye aye checks whether the human understood what it wrote. Perceived Oversight asks whether it behaves differently when it thinks it is being watched.
+
+Most systems are built to work once, in the demo, on the happy path. I am more interested in the version that holds up afterwards. Under contention. Under a rate limit. Under an agent that has decided the rules are in its way.
 
 <br clear="left" />
 
@@ -44,27 +46,7 @@ That preference shows up in the code before it shows up in anything I say about 
 
 ## Proof Of Work
 
-Ordered by how much of it survives inspection, not by how recent it is.
-
-### [PaperPlanes](https://github.com/Somay-kousis/PaperPlanes)
-
-A research companion on a **CockroachDB memory substrate** with bi-temporal fact versioning, so a superseded claim is closed with `valid_to` and stays auditable instead of being overwritten. Not a vector store bolted to a chatbot.
-
-Every claim ships a reproduction command:
-
-| Claim | Result | Baseline |
-|---|---|---|
-| 25 concurrent writers, one counter | **25 / 25 held**, 58 SERIALIZABLE conflicts auto-retried | flat file kept **1**, silently lost 24 |
-| ANN over ~10,000 notes | **~15ms** C-SPANN vector search | O(n) full scan |
-| Live DB restart mid-conversation | next turn returns **200** | history gone |
-
-There is a test in there asserting the decision model is real Nova and not stubbed, because mocks agree with you and a real cluster does not.
-
-![LangGraph](https://img.shields.io/badge/LangGraph-111111?style=flat-square)
-![CockroachDB](https://img.shields.io/badge/CockroachDB-111111?style=flat-square&logo=cockroachlabs&logoColor=white)
-![AWS Bedrock](https://img.shields.io/badge/AWS_Bedrock-111111?style=flat-square&logo=amazonaws&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-111111?style=flat-square)
-![FastAPI](https://img.shields.io/badge/FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white)
+Ordered by how close it sits to what I work on now. Every claim ships with a way to check it.
 
 ### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
 
@@ -87,7 +69,7 @@ Deployed on Google Cloud Run with Vertex AI and Firestore. [Live](https://pocket
 
 ### [Apocalypse](https://github.com/Somay-kousis/Apocalypse)
 
-Apart x CeSIA AI Incident Response Sprint, Track 1, team of 3. The July 2026 frontier-model sandbox escape had no public standard you could test a lab against, so we wrote a 9-rule containment standard where every rule maps to one documented step of the real attack, then built what proves it: a broken lab with the real misconfiguration, a fixed lab, and checks that run on a laptop in seconds. I owned rules 4, 5 and 9, the scorecard runner, and the architecture.
+Apart x CeSIA AI Incident Response Sprint, Track 1, team of 3. The July 2026 frontier-model sandbox escape had no public standard you could test a lab against, so we wrote a 9-rule containment standard where every rule maps to one documented step of the real attack, then built what proves it: a broken lab with the real misconfiguration, a fixed lab, and checks that run on a laptop in seconds. I owned rules 4, 5 and 9, the scorecard runner, and the architecture. Placed in the **top 10%** of submissions.
 
 | Claim | Result | Baseline |
 |---|---|---|
@@ -101,10 +83,12 @@ Apart x CeSIA AI Incident Response Sprint, Track 1, team of 3. The July 2026 fro
 
 ### [Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight)
 
-Research in progress. Does an AI agent hide less from an overseer it sees as a teammate, a subagent on its own team, than from one presented as a monitor? Six oversight conditions, scored on attack success, concealment, omission, log tampering, and the gap between what the agent does and what it says it did. No results yet, so none are claimed.
+An AI control paper, in progress. Does an untrusted agent reveal more of a hidden objective to an overseer it sees as an ordinary collaborator than to one it knows is a monitor? Real monitoring stays fixed; only what the agent believes about its partner changes. Run in SHADE-Arena through ControlArena, scoped to detection: flag the attack early so the real monitor can stop it. No results yet, so none are claimed.
 
 ![Python](https://img.shields.io/badge/Python-111111?style=flat-square&logo=python&logoColor=white)
-![AI Control](https://img.shields.io/badge/AI_Control_Evals-111111?style=flat-square)
+![AI Control](https://img.shields.io/badge/AI_Control-111111?style=flat-square)
+![ControlArena](https://img.shields.io/badge/ControlArena-111111?style=flat-square)
+![SHADE-Arena](https://img.shields.io/badge/SHADE--Arena-111111?style=flat-square)
 
 ### [podman-flake-agent](https://github.com/Somay-kousis/podman-flake-agent)
 
@@ -122,6 +106,26 @@ Standard library only. Clone it and run the whole eval with no token and no API 
 ![LLM Evals](https://img.shields.io/badge/LLM_Evals-111111?style=flat-square)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-111111?style=flat-square&logo=githubactions&logoColor=white)
 ![Zero Deps](https://img.shields.io/badge/Zero_Dependencies-111111?style=flat-square)
+
+### [PaperPlanes](https://github.com/Somay-kousis/PaperPlanes)
+
+A research companion on a **CockroachDB memory substrate** with bi-temporal fact versioning, so a superseded claim is closed with `valid_to` and stays auditable instead of being overwritten. Not a vector store bolted to a chatbot.
+
+Every claim ships a reproduction command:
+
+| Claim | Result | Baseline |
+|---|---|---|
+| 25 concurrent writers, one counter | **25 / 25 held**, 58 SERIALIZABLE conflicts auto-retried | flat file kept **1**, silently lost 24 |
+| ANN over ~10,000 notes | **~15ms** C-SPANN vector search | O(n) full scan |
+| Live DB restart mid-conversation | next turn returns **200** | history gone |
+
+There is a test in there asserting the decision model is real Nova and not stubbed, because mocks agree with you and a real cluster does not.
+
+![LangGraph](https://img.shields.io/badge/LangGraph-111111?style=flat-square)
+![CockroachDB](https://img.shields.io/badge/CockroachDB-111111?style=flat-square&logo=cockroachlabs&logoColor=white)
+![AWS Bedrock](https://img.shields.io/badge/AWS_Bedrock-111111?style=flat-square&logo=amazonaws&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-111111?style=flat-square)
+![FastAPI](https://img.shields.io/badge/FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white)
 
 ### [RabbitHole](https://github.com/Somay-kousis/RabbitHole)
 
@@ -166,6 +170,23 @@ A **19-node stateful LangGraph** separating live conversational memory extractio
 
 ---
 
+## Merged Upstream
+
+| Repo | What was broken |
+|---|---|
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2354) | The profiler paired each LLM end event with the latest start, so overlapping calls dropped out of latency stats. Now paired by UUID. |
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325) | Environment variable values were re-read as YAML, so a `#` in a value cut it short. Now parsed as data. |
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`. Type inference off, regression test added. |
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2344) | An eval output section without `dir` ignored `output_dir`, so cleanup and S3 upload hit the wrong folder. |
+| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework/pull/9428) | Declarative `SetValue` ignored the `variable` field, so YAML using it wrote nothing. |
+| [Google ADK](https://github.com/google/adk-python/pull/7541) | SQLite memory search missed stored words starting with a capital dotted İ. |
+| [OpenVINO GenAI](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A string `stop_strings` in `generation_config.json` was silently dropped, so generation never stopped on it. |
+| [krkn](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed with a KeyError. |
+
+---
+
 <details>
 <summary><strong>Smaller Experiments</strong> (click to expand)</summary>
 <br />
@@ -192,6 +213,8 @@ A **19-node stateful LangGraph** separating live conversational memory extractio
 ![Ollama](https://img.shields.io/badge/Ollama-111111?style=for-the-badge&logo=ollama&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-111111?style=for-the-badge)
 ![AWS Bedrock](https://img.shields.io/badge/AWS_Bedrock-111111?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Google ADK](https://img.shields.io/badge/Google_ADK-111111?style=for-the-badge&logo=google&logoColor=white)
+![ControlArena](https://img.shields.io/badge/ControlArena-111111?style=for-the-badge)
 
 **Data / Memory**
 
@@ -224,12 +247,13 @@ A **19-node stateful LangGraph** separating live conversational memory extractio
 <!-- Hornet faces LEFT, so she sits on the RIGHT, looking back toward the text -->
 <img align="right" src="assets/hornet.png" width="180" alt="Hornet" />
 
+- **Apart x CeSIA AI Incident Response Sprint**, top 10%, Track 1, with Apocalypse.
 - **Egoistic Ideathon 2026**, winner (international), captaining a team of 4.
 - **CockroachDB Hackathon**, 3rd place (international), solo, with PaperPlanes.
 - **Smart India Hackathon 2025**, 6th of 500 on our problem statement, leading a team of 6.
 - **Hacksagon 2024**, 2nd place, Hardware Track.
-- **Apart x CeSIA AI Incident Response Sprint**, Track 1, with Apocalypse.
-- **MCP: Build Rich-Context AI Apps**, Anthropic.
+- **GDG on Campus ABV-IIITM**, Agentic AI domain lead. Sessions for 250+ students.
+- **MCP: Build Rich-Context AI Apps**, DeepLearning.AI x Anthropic.
 - **Published writer**, Camas (Linfield University). Poetry, performed to audiences of 350+.
 
 Teaching math, English, and life skills to underprivileged children every week with the SGM social initiative. Ran logistics for a 1000+ attendee fest. The writing and the systems work are the same skill: breaking a complex thing down until nothing is left vague.
