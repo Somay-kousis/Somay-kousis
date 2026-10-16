@@ -1,8 +1,11 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg" />
+  <img src="assets/title-light.svg" width="520" alt="ME!?" />
+</picture>
+
 <img align="right" src="assets/knight.png" width="150" alt="" />
 
-# Somay Kousis
-
-I build agent systems, and the checks that keep them honest.
+**Somay Kousis?** I build agent systems, and the checks that keep them honest.
 
 Co-founder of [aye aye](https://ayeayecaptain.vercel.app). The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff. I also freelance for Standout, where I shipped a live LinkedIn networking product from an empty repo in 7 days as the only engineer. Third year of CS at ABV-IIITM Gwalior.
 
@@ -105,7 +108,7 @@ The paper. Does an untrusted agent reveal more of a hidden objective to an overs
 
 ## On the record
 
-<img align="right" src="assets/hornet.png" width="130" alt="" />
+<img align="left" src="assets/hornet.png" width="130" alt="" />
 
 - Top 10%, Apart x CeSIA AI Incident Response Sprint
 - Winner, Egoistic Ideathon 2026, captain of a team of 4
@@ -119,6 +122,6 @@ I also teach math and English to kids every week with the SGM social initiative.
 
 Still getting DSA wrong. I open a problem, get an idea, and build that instead. Most of the list above started that way.
 
-<br clear="right" />
+<br clear="left" />
 
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313) · [X](https://x.com/somaykousis) · somaykousis@gmail.com
