@@ -6,7 +6,6 @@
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=Somay-kousis&style=for-the-badge&color=111111&label=VISITORS)&nbsp;&nbsp;
 ![Stars](https://img.shields.io/github/stars/Somay-kousis?style=for-the-badge&color=111111&label=STARS)&nbsp;&nbsp;
 ![Followers](https://img.shields.io/github/followers/Somay-kousis?style=for-the-badge&color=111111&label=FOLLOWERS)
 
