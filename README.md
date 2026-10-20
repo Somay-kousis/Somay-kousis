@@ -13,7 +13,7 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <p>
 <a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="https://img.shields.io/badge/NVIDIA-NeMo_Agent_Toolkit_%C2%B7_garak-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=111111" alt="NVIDIA NeMo Agent Toolkit and garak" /></a>&nbsp;
 <a href="https://github.com/microsoft/agent-framework/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/Microsoft-Agent_Framework-0078D4?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI%2BPHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTEgMWgxMHYxMEgxeiIvPjxwYXRoIGZpbGw9IiM3ZmJhMDAiIGQ9Ik0xMiAxaDEwdjEwSDEyeiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0xIDEyaDEwdjEwSDF6Ii8%2BPHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDEwdjEwSDEyeiIvPjwvc3ZnPg%3D%3D&labelColor=111111" alt="Microsoft Agent Framework" /></a>&nbsp;
-<a href="https://github.com/google/adk-python/pull/7541"><img src="https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=111111" alt="Google ADK" /></a>
+<a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=111111" alt="Google ADK" /></a>
 </p>
 
 <br />
@@ -69,21 +69,21 @@ The paper. Does an untrusted agent reveal more of a hidden objective to an overs
 
 ## Merged upstream
 
-| Repo | What was broken |
-|---|---|
-| [NVIDIA garak](https://github.com/NVIDIA/garak/pull/2315) | The WebSocket generator ignored `--target_name`, so a scan of your own endpoint sent every prompt to a public echo server and scored the echoes. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2361) | The MCP client dropped an explicit `null` for a required tool argument, so the server got a call missing a required key. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2352) | An eval run where no evaluator returned a result wrote no `workflow_output.json`, even though the workflow ran for every item. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2354) | The profiler paired each LLM end event with the latest start, so overlapping calls dropped out of latency stats. Now paired by UUID. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325) | Environment variable values were re-read as YAML, so a `#` in a value cut it short. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2344) | An eval output section without `dir` ignored `output_dir`, so cleanup and S3 upload hit the wrong folder. |
-| [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework/pull/9428) | Declarative `SetValue` ignored the `variable` field, so YAML using it wrote nothing. |
-| [Google ADK](https://github.com/google/adk-python/pull/7541) | SQLite memory search missed stored words starting with a capital dotted İ. |
-| [OpenVINO GenAI](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A string `stop_strings` in `generation_config.json` was silently dropped. |
-| [krkn](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed with a KeyError. |
+19 fixes merged into NVIDIA, Google, Microsoft, Intel and CNCF projects since October 13, each with a regression test that fails before the fix. [Every merged PR](https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged) · [Google ADK commits](https://github.com/google/adk-python/commits?author=Somay-kousis) (Google lands outside PRs through Copybara, so they show as closed).
+
+| | Fix | What was broken |
+|---|---|---|
+| **NVIDIA** NeMo Agent Toolkit · 12 merged | [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365) | Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1. |
+| | [#2325](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325) | `${VAR}` was spliced into raw YAML before parsing, so a `#` in a secret cut it short and a leading `*` or `!` crashed the load. Merged as a breaking change. |
+| | [#2369](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2369) | `nat serve` sent the A365 auth token to its workers as `**********`, because the token was masked when the config was copied for them. |
+| | [#2354](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2354) | The profiler paired each LLM end event with the latest start, so two overlapping 10 s calls became one 9 s sample. |
+| | [#2344](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2344) | An eval output section without `dir` ignored `output_dir`, so `cleanup: true` deleted the wrong folder. |
+| **NVIDIA** garak | [#2315](https://github.com/NVIDIA/garak/pull/2315) | The WebSocket generator ignored `--target_name`, so a scan of your own endpoint sent every prompt to a public echo server and scored the echoes. |
+| **Google** ADK · 3 merged | [7577](https://github.com/google/adk-python/commit/db432db) | The SQLite session store turned state integers beyond 64 bits into floats, even on later unrelated writes. |
+| | [7541](https://github.com/google/adk-python/commit/2416f66) | Memory search never found a stored word starting with a capital dotted İ, because lowercasing it adds a combining dot that split the token. |
+| **Microsoft** Agent Framework | [#9428](https://github.com/microsoft/agent-framework/pull/9428) | Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset. |
+| **Intel** OpenVINO GenAI | [#4627](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A single-string `stop_strings` in `generation_config.json` was dropped, so those models never stopped on it. |
+| **CNCF** krkn | [#1632](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed before injecting any fault. |
 
 ## Also built
 
