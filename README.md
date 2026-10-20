@@ -69,22 +69,15 @@ The paper. Does an untrusted agent reveal more of a hidden objective to an overs
 
 ## Merged upstream
 
-19 fixes merged into NVIDIA, Google, Microsoft, Intel and CNCF projects since October 13. [Every merged PR](https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged) · [Google ADK commits](https://github.com/google/adk-python/commits?author=Somay-kousis) (Google lands outside PRs through Copybara, so they show as closed).
+<p><img src="assets/merged-banner.svg" width="100%" alt="19 fixes merged upstream since October 13: NVIDIA 13, Google 3, Microsoft 1, Intel 1, CNCF 1" /></p>
 
-**NVIDIA NeMo Agent Toolkit** · [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365)<br>
-Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
+<p><a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365"><img src="assets/merged-nat-2365.svg" width="100%" alt="NeMo Agent Toolkit 2365" /></a></p>
+<p><a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325"><img src="assets/merged-nat-2325.svg" width="100%" alt="NeMo Agent Toolkit 2325" /></a></p>
+<p><a href="https://github.com/NVIDIA/garak/pull/2315"><img src="assets/merged-garak-2315.svg" width="100%" alt="garak 2315" /></a></p>
+<p><a href="https://github.com/google/adk-python/commit/2416f66"><img src="assets/merged-adk-7541.svg" width="100%" alt="Google ADK 7541" /></a></p>
+<p><a href="https://github.com/microsoft/agent-framework/pull/9428"><img src="assets/merged-af-9428.svg" width="100%" alt="Microsoft Agent Framework 9428" /></a></p>
 
-**NVIDIA NeMo Agent Toolkit** · [#2325](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325)<br>
-`${VAR}` was spliced into raw YAML before parsing, so a `#` in a secret cut it short and a leading `*` or `!` crashed the load. Merged as a breaking change.
-
-**NVIDIA garak** · [#2315](https://github.com/NVIDIA/garak/pull/2315)<br>
-The WebSocket generator ignored `--target_name`, so a scan of your own endpoint sent every prompt to a public echo server and scored the echoes.
-
-**Google ADK** · [7541](https://github.com/google/adk-python/commit/2416f66)<br>
-Memory search never found a stored word starting with a capital dotted İ, because lowercasing it adds a combining dot that split the token.
-
-**Microsoft Agent Framework** · [#9428](https://github.com/microsoft/agent-framework/pull/9428)<br>
-Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
+<sub>[Every merged PR](https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged) · [Google ADK commits](https://github.com/google/adk-python/commits?author=Somay-kousis) (Google lands outside PRs through Copybara, so they show as closed)</sub>
 
 <details>
 <summary><b>14 more</b></summary>

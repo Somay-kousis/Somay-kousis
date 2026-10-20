@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="200" viewBox="0 0 840 200">
+<rect width="840" height="200" rx="18" fill="#FFE614"/>
+<text x="36" y="48" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="2" fill="#000">MERGED UPSTREAM</text>
+<text x="804" y="48" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="2" fill="#000">SINCE OCT 13</text>
+<line x1="36" y1="62" x2="804" y2="62" stroke="#000" stroke-width="2"/>
+<text x="30" y="168" font-family="'Darker Grotesque', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="900" font-size="110" fill="#000">19</text>
+<text x="180" y="122" font-family="'Darker Grotesque', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" font-size="34" fill="#000">fixes, in code other people ship.</text>
+<text x="182" y="160" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="1" fill="#000">NVIDIA 13 · GOOGLE 3 · MICROSOFT 1 · INTEL 1 · CNCF 1</text>
+</svg>
