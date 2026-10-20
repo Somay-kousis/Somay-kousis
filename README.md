@@ -8,76 +8,17 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 
 <br clear="left" />
 
-<p><sub><b>MERGED UPSTREAM INTO</b></sub></p>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="assets/merged-banner.svg" width="100%" alt="19 fixes merged upstream since October 13: NVIDIA 13, Google 3, Microsoft 1, Intel 1, CNCF 1" /></a>
 
-<p>
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="https://img.shields.io/badge/NVIDIA-NeMo_Agent_Toolkit_%C2%B7_garak-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=111111" alt="NVIDIA NeMo Agent Toolkit and garak" /></a>&nbsp;
-<a href="https://github.com/microsoft/agent-framework/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="https://img.shields.io/badge/Microsoft-Agent_Framework-0078D4?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI%2BPHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTEgMWgxMHYxMEgxeiIvPjxwYXRoIGZpbGw9IiM3ZmJhMDAiIGQ9Ik0xMiAxaDEwdjEwSDEyeiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0xIDEyaDEwdjEwSDF6Ii8%2BPHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDEwdjEwSDEyeiIvPjwvc3ZnPg%3D%3D&labelColor=111111" alt="Microsoft Agent Framework" /></a>&nbsp;
-<a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=111111" alt="Google ADK" /></a>
-</p>
+**NVIDIA NeMo Agent Toolkit** [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365). Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
 
-<br />
+**NVIDIA garak** [#2315](https://github.com/NVIDIA/garak/pull/2315). The WebSocket generator ignored `--target_name`, so a scan of your own endpoint sent every prompt to a public echo server and scored the echoes.
 
-Most of my work comes back to one question. What does an agent do when nobody is checking, and how would you know? Pocket Change limits what it can take. Apocalypse checks whether it stays contained after it breaks out. aye aye checks whether the human understood what it wrote. Perceived Oversight asks whether it behaves differently when it thinks it is being watched.
+**NVIDIA NeMo Agent Toolkit** [#2325](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325). `${VAR}` was spliced into raw YAML before parsing, so a `#` in a secret cut it short. Merged as a breaking change.
 
-Every number below comes with the command that produced it.
+**Google ADK** [7541](https://github.com/google/adk-python/commit/2416f66). Memory search never found a stored word starting with a capital dotted İ, because lowercasing it adds a combining dot that split the token.
 
-## [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
-
-Spending authority for AI agents. Ed25519 Biscuit tokens attenuate down a delegation tree, so a sub-agent can never hold more than its parent was given. 7 bounds, checked deterministically across trees of 121 agents.
-
-```console
-$ pytest tests/attacks -q
-400 attacks, 394 blocked, 6 known limits (282 agent, 38 seller, 80 network)
-396 passed, 6 xfailed in 21.11s
-
-$ pytest -q
-825 passed, 6 xfailed in 27.23s
-```
-
-No model calls and no API keys, so anyone can clone it and get the same output. The 6 xfails are the known limits, written down instead of hidden.
-
-The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, and the payment agent quietly inherited read access to attacker-controlled text, because a parent has to hold everything it hands down. Isolation has to sit sideways, not stack. I found it weeks later re-reading my own threat model.
-
-Runs on Cloud Run with Vertex AI. [Live demo](https://pocket-change-klwjhco2ta-el.a.run.app).
-
-## [Apocalypse](https://github.com/Somay-kousis/Apocalypse)
-
-Apart x CeSIA AI Incident Response Sprint, team of 3, **top 10%**. The July 2026 frontier-model sandbox escape had no standard you could test a lab against, so we wrote 9 containment rules, each mapped to a documented step of the real attack, and built a broken lab with the real misconfiguration next to a fixed one. I wrote rules 4, 5 and 9, the scorecard runner and the architecture.
-
-The same runner on both labs, trimmed to my three rules:
-
-```console
-$ python -m validation.run_checks --target environments/fixed_lab/configs
-  [PASS] rule 4: Loader refuses external refs
-  [PASS] rule 5: No template eval on untrusted config
-  [PASS] rule 9: Origin-scoped credentials + blast-radius bound
-  9/9 controls PASS
-
-$ python -m validation.run_checks --target environments/broken_lab/configs
-  [FAIL] rule 4: loader followed external refs and leaked 2 value(s)
-  [FAIL] rule 5: SSTI reached Python internals (17076 chars of subclass list)
-  [FAIL] rule 9: credential is 'raw', not an attenuated capability token
-  0/9 controls PASS
-```
-
-Offline, runs in seconds on a laptop. 118 tests.
-
-## [Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight)
-
-The paper. Does an untrusted agent reveal more of a hidden objective to an overseer it thinks is a collaborator than to one it knows is a monitor? The real monitoring never changes, only what the agent believes about its partner. Built on SHADE-Arena through ControlArena, and scoped to detection, so the real monitor can act on a flagged attack. No results yet, so none claimed.
-
-## Merged upstream
-
-<p><img src="assets/merged-banner.svg" width="100%" alt="19 fixes merged upstream since October 13: NVIDIA 13, Google 3, Microsoft 1, Intel 1, CNCF 1" /></p>
-
-<p><a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365"><img src="assets/merged-nat-2365.svg" width="100%" alt="NeMo Agent Toolkit 2365" /></a></p>
-<p><a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2325"><img src="assets/merged-nat-2325.svg" width="100%" alt="NeMo Agent Toolkit 2325" /></a></p>
-<p><a href="https://github.com/NVIDIA/garak/pull/2315"><img src="assets/merged-garak-2315.svg" width="100%" alt="garak 2315" /></a></p>
-<p><a href="https://github.com/google/adk-python/commit/2416f66"><img src="assets/merged-adk-7541.svg" width="100%" alt="Google ADK 7541" /></a></p>
-<p><a href="https://github.com/microsoft/agent-framework/pull/9428"><img src="assets/merged-af-9428.svg" width="100%" alt="Microsoft Agent Framework 9428" /></a></p>
-
-<sub>[Every merged PR](https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged) · [Google ADK commits](https://github.com/google/adk-python/commits?author=Somay-kousis) (Google lands outside PRs through Copybara, so they show as closed)</sub>
+**Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
 <summary><b>14 more</b></summary>
@@ -101,6 +42,57 @@ The paper. Does an untrusted agent reveal more of a hidden objective to an overs
 | krkn (CNCF) | [#1632](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed before injecting any fault. |
 
 </details>
+
+<sub>[Every merged PR](https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged) · [Google ADK commits](https://github.com/google/adk-python/commits?author=Somay-kousis). Google lands outside PRs through Copybara, so they show as closed.</sub>
+
+## Agent safety
+
+What does an agent do when nobody is checking, and how would you know? Pocket Change limits what it can take. Apocalypse checks whether it stays contained after it breaks out. Perceived Oversight asks whether it behaves differently when it thinks it is being watched. Every number here comes with the command that produced it.
+
+### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
+
+Spending authority for AI agents. Ed25519 Biscuit tokens attenuate down a delegation tree, so a sub-agent can never hold more than its parent was given. 7 bounds, checked deterministically across trees of 121 agents.
+
+```console
+$ pytest tests/attacks -q
+400 attacks, 394 blocked, 6 known limits (282 agent, 38 seller, 80 network)
+396 passed, 6 xfailed in 21.11s
+
+$ pytest -q
+825 passed, 6 xfailed in 27.23s
+```
+
+No model calls and no API keys, so anyone can clone it and get the same output. The 6 xfails are the known limits, written down instead of hidden.
+
+The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, and the payment agent quietly inherited read access to attacker-controlled text, because a parent has to hold everything it hands down. Isolation has to sit sideways, not stack. I found it weeks later re-reading my own threat model.
+
+Runs on Cloud Run with Vertex AI. [Live demo](https://pocket-change-klwjhco2ta-el.a.run.app).
+
+### [Apocalypse](https://github.com/Somay-kousis/Apocalypse)
+
+Apart x CeSIA AI Incident Response Sprint, team of 3, **top 10%**. The July 2026 frontier-model sandbox escape had no standard you could test a lab against, so we wrote 9 containment rules, each mapped to a documented step of the real attack, and built a broken lab with the real misconfiguration next to a fixed one. I wrote rules 4, 5 and 9, the scorecard runner and the architecture.
+
+The same runner on both labs, trimmed to my three rules:
+
+```console
+$ python -m validation.run_checks --target environments/fixed_lab/configs
+  [PASS] rule 4: Loader refuses external refs
+  [PASS] rule 5: No template eval on untrusted config
+  [PASS] rule 9: Origin-scoped credentials + blast-radius bound
+  9/9 controls PASS
+
+$ python -m validation.run_checks --target environments/broken_lab/configs
+  [FAIL] rule 4: loader followed external refs and leaked 2 value(s)
+  [FAIL] rule 5: SSTI reached Python internals (17076 chars of subclass list)
+  [FAIL] rule 9: credential is 'raw', not an attenuated capability token
+  0/9 controls PASS
+```
+
+Offline, runs in seconds on a laptop. 118 tests.
+
+### [Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight)
+
+The paper. Does an untrusted agent reveal more of a hidden objective to an overseer it thinks is a collaborator than to one it knows is a monitor? The real monitoring never changes, only what the agent believes about its partner. Built on SHADE-Arena through ControlArena, and scoped to detection, so the real monitor can act on a flagged attack. No results yet, so none claimed.
 
 ## Also built
 
