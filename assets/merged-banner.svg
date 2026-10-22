@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="200" viewBox="0 0 840 200">
-<rect x="1" y="1" width="838" height="198" rx="18" fill="#11161d" stroke="#2b3440" stroke-width="2"/>
-<text x="36" y="48" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="2" fill="#9aa7b4">OPEN SOURCE</text>
-<text x="804" y="48" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="2" fill="#9aa7b4">SINCE OCT 13</text>
-<line x1="36" y1="62" x2="804" y2="62" stroke="#2b3440" stroke-width="2"/>
-<text x="30" y="168" font-family="'Darker Grotesque', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="900" font-size="110" fill="#8fb8ff">25</text>
-<text x="180" y="122" font-family="'Darker Grotesque', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" font-size="34" fill="#e6edf3">fixes, in code other people ship.</text>
-<text x="182" y="160" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="1" fill="#9aa7b4">NVIDIA 19 · GOOGLE 3 · MICROSOFT 1 · INTEL 1 · CNCF 1</text>
-</svg>

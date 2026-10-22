@@ -8,7 +8,16 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 
 <br clear="left" />
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="assets/merged-banner.svg" width="100%" alt="25 fixes merged upstream since October 13: NVIDIA 19, Google 3, Microsoft 1, Intel 1, CNCF 1" /></a>
+```
+merged upstream since Oct 13          25
+
+NVIDIA     NeMo Agent Toolkit         18
+NVIDIA     garak                       1
+Google     ADK                         3
+Microsoft  Agent Framework             1
+Intel      OpenVINO GenAI              1
+CNCF       krkn                        1
+```
 
 **NVIDIA NeMo Agent Toolkit** [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365). Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
 
