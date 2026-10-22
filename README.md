@@ -8,7 +8,7 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 
 <br clear="left" />
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="assets/merged-banner.svg" width="100%" alt="19 fixes merged upstream since October 13: NVIDIA 13, Google 3, Microsoft 1, Intel 1, CNCF 1" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged"><img src="assets/merged-banner.svg" width="100%" alt="25 fixes merged upstream since October 13: NVIDIA 19, Google 3, Microsoft 1, Intel 1, CNCF 1" /></a>
 
 **NVIDIA NeMo Agent Toolkit** [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365). Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
 
@@ -21,11 +21,17 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>14 more</b></summary>
+<summary><b>20 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
 |---|---|---|
+| NeMo Agent Toolkit | [#2410](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2410) | The Semantic Kernel clients ignored `temperature`, `top_p`, `seed` and `max_retries` from the LLM config. |
+| NeMo Agent Toolkit | [#2408](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2408) | Turning on `thinking` turned off automatic retries, because the second patch replaced the first on the same methods. |
+| NeMo Agent Toolkit | [#2406](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2406) | ADK clients ignored the retry and `thinking` options that every other framework wrapper honoured. |
+| NeMo Agent Toolkit | [#2404](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2404) | The reasoning agent ignored its configured `description`, so calling agents always saw a hard-coded one. |
+| NeMo Agent Toolkit | [#2394](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2394) | An interrupted `nat eval` lost every finished item and started over. Items now stay on disk and `--resume` runs only the rest. |
+| NeMo Agent Toolkit | [#2377](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2377) | The ReAct and ReWOO agents reported word counts as token usage instead of what the model reported. |
 | NeMo Agent Toolkit | [#2369](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2369) | `nat serve` sent the A365 auth token to its workers as `**********`, because it was masked when the config was copied for them. |
 | NeMo Agent Toolkit | [#2371](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2371) | The router agent sent `web_search` requests to the `search` branch, because it took the first name that matched. |
 | NeMo Agent Toolkit | [#2367](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2367) | The per-user ReAct agent ignored `raise_on_parsing_failure` and `use_native_tool_calling`. |
