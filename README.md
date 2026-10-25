@@ -9,12 +9,13 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          25
+merged upstream since Oct 13          32
 
-NVIDIA     NeMo Agent Toolkit         18
+NVIDIA     NeMo Agent Toolkit         20
 NVIDIA     garak                       1
-Google     ADK                         3
-Microsoft  Agent Framework             1
+Google     ADK                         5
+Microsoft  Agent Framework             2
+Intel      OpenVINO                    2
 Intel      OpenVINO GenAI              1
 CNCF       krkn                        1
 ```
@@ -30,11 +31,13 @@ CNCF       krkn                        1
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>20 more</b></summary>
+<summary><b>27 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
 |---|---|---|
+| NeMo Agent Toolkit | [#2424](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2424) | A function that raised was exported to tracing as OK, even when the agent recovered from the failed tool. |
+| NeMo Agent Toolkit | [#2422](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2422) | A failed or cancelled run never exported its root span, so Phoenix, Langfuse and OTel got spans with no root. |
 | NeMo Agent Toolkit | [#2410](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2410) | The Semantic Kernel clients ignored `temperature`, `top_p`, `seed` and `max_retries` from the LLM config. |
 | NeMo Agent Toolkit | [#2408](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2408) | Turning on `thinking` turned off automatic retries, because the second patch replaced the first on the same methods. |
 | NeMo Agent Toolkit | [#2406](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2406) | ADK clients ignored the retry and `thinking` options that every other framework wrapper honoured. |
@@ -51,8 +54,13 @@ CNCF       krkn                        1
 | NeMo Agent Toolkit | [#2332](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`, so `.json` and `.jsonl` gave different eval inputs. |
 | NeMo Agent Toolkit | [#2327](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
 | NeMo Agent Toolkit | [#2320](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| Google ADK | [7596](https://github.com/google/adk-python/commit/12c7bed) | An AgentTool's wrapped agent never saw the caller's `temp:` state. |
+| Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
 | Google ADK | [7577](https://github.com/google/adk-python/commit/db432db) | The SQLite session store turned state integers beyond 64 bits into floats, even on later unrelated writes. |
 | Google ADK | [7561](https://github.com/google/adk-python/commit/8ff9941) | Client token-usage metrics came back empty when the last streamed response had no usage data. |
+| Microsoft Agent Framework | [#9399](https://github.com/microsoft/agent-framework/pull/9399) | Bedrock non-streaming responses, and the traces built from them, named the client's default model instead of the one requested. |
+| OpenVINO | [#38951](https://github.com/openvinotoolkit/openvino/pull/38951) | float32 data fed to a bf16 model input was read as raw bits, so `[1.5, 3.0]` came out as `[0.125, 32.0]` with no error. |
+| OpenVINO | [#38884](https://github.com/openvinotoolkit/openvino/pull/38884) | `from_torchvision` CenterCrop lost the last row or column, so a CLIP-style 224 crop came out 223x224 and failed a static-shape model. |
 | OpenVINO GenAI | [#4627](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A single-string `stop_strings` in `generation_config.json` was dropped, so those models never stopped on it. |
 | krkn (CNCF) | [#1632](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed before injecting any fault. |
 
