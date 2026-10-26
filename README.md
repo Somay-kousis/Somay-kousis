@@ -9,10 +9,10 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          39
+merged upstream since Oct 13          42
 
 NVIDIA     NeMo Agent Toolkit         26
-NVIDIA     NeMo Relay                  1
+NVIDIA     NeMo Relay                  4
 NVIDIA     garak                       1
 Google     ADK                         5
 Microsoft  Agent Framework             2
@@ -32,7 +32,7 @@ CNCF       krkn                        1
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>34 more</b></summary>
+<summary><b>37 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
@@ -61,6 +61,9 @@ CNCF       krkn                        1
 | NeMo Agent Toolkit | [#2332](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`, so `.json` and `.jsonl` gave different eval inputs. |
 | NeMo Agent Toolkit | [#2327](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
 | NeMo Agent Toolkit | [#2320](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| NeMo Relay | [#1513](https://github.com/NVIDIA/NeMo-Relay/pull/1513) | An empty or relative `XDG_CONFIG_HOME` put Relay's config and plugins in a `nemo-relay` folder under whatever directory you ran it from. |
+| NeMo Relay | [#1508](https://github.com/NVIDIA/NeMo-Relay/pull/1508) | Azure OpenAI streams kept the empty `id`, `model` and `created` from Azure's leading prompt-filter chunk instead of the real ones. |
+| NeMo Relay | [#1504](https://github.com/NVIDIA/NeMo-Relay/pull/1504) | The Python, Node and Go log helpers rejected level names the logging config accepts, like `"WARNING"` and `"Info"`. |
 | NeMo Relay | [#1509](https://github.com/NVIDIA/NeMo-Relay/pull/1509) | A streamed Anthropic tool call with no arguments came out as `"input": ""` instead of `{}`. |
 | Google ADK | [7596](https://github.com/google/adk-python/commit/12c7bed) | An AgentTool's wrapped agent never saw the caller's `temp:` state. |
 | Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
