@@ -9,9 +9,10 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          32
+merged upstream since Oct 13          39
 
-NVIDIA     NeMo Agent Toolkit         20
+NVIDIA     NeMo Agent Toolkit         26
+NVIDIA     NeMo Relay                  1
 NVIDIA     garak                       1
 Google     ADK                         5
 Microsoft  Agent Framework             2
@@ -31,11 +32,17 @@ CNCF       krkn                        1
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>27 more</b></summary>
+<summary><b>34 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
 |---|---|---|
+| NeMo Agent Toolkit | [#2462](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2462) | A failed streamed request logged `QueueClosed` "Task exception was never retrieved" tracebacks next to the real error. |
+| NeMo Agent Toolkit | [#2460](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2460) | A logging handler set to `DEBUG` got nothing below the CLI's `--log-level`, because the root level could only be raised, never lowered. |
+| NeMo Agent Toolkit | [#2458](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2458) | A workflow that failed mid-stream sent its error as a bare line SSE parsers drop, so `nat serve` clients saw a stream that just stopped. |
+| NeMo Agent Toolkit | [#2456](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2456) | `nat mcp serve` failed to start with a function group that had no `include`, because the builder only looked in the global registry. |
+| NeMo Agent Toolkit | [#2454](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2454) | Span batching stopped after the first run of a long-lived workflow, so `nat serve` and `nat eval` made one export call per span. |
+| NeMo Agent Toolkit | [#2450](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2450) | Automatic retries used a fixed backoff and gave up before a rate-limited provider's `Retry-After` ran out. Now LiteLLM, Bedrock and OpenAI wait for it. |
 | NeMo Agent Toolkit | [#2424](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2424) | A function that raised was exported to tracing as OK, even when the agent recovered from the failed tool. |
 | NeMo Agent Toolkit | [#2422](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2422) | A failed or cancelled run never exported its root span, so Phoenix, Langfuse and OTel got spans with no root. |
 | NeMo Agent Toolkit | [#2410](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2410) | The Semantic Kernel clients ignored `temperature`, `top_p`, `seed` and `max_retries` from the LLM config. |
@@ -54,6 +61,7 @@ CNCF       krkn                        1
 | NeMo Agent Toolkit | [#2332](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`, so `.json` and `.jsonl` gave different eval inputs. |
 | NeMo Agent Toolkit | [#2327](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
 | NeMo Agent Toolkit | [#2320](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| NeMo Relay | [#1509](https://github.com/NVIDIA/NeMo-Relay/pull/1509) | A streamed Anthropic tool call with no arguments came out as `"input": ""` instead of `{}`. |
 | Google ADK | [7596](https://github.com/google/adk-python/commit/12c7bed) | An AgentTool's wrapped agent never saw the caller's `temp:` state. |
 | Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
 | Google ADK | [7577](https://github.com/google/adk-python/commit/db432db) | The SQLite session store turned state integers beyond 64 bits into floats, even on later unrelated writes. |
