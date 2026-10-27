@@ -9,16 +9,16 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          42
+merged upstream since Oct 13          52
 
 NVIDIA     NeMo Agent Toolkit         26
-NVIDIA     NeMo Relay                  4
+NVIDIA     NeMo Relay                  7
 NVIDIA     garak                       1
-Google     ADK                         5
-Microsoft  Agent Framework             2
-Intel      OpenVINO                    2
+Google     ADK                         6
+Microsoft  Agent Framework             3
+Intel      OpenVINO                    6
 Intel      OpenVINO GenAI              1
-CNCF       krkn                        1
+CNCF       krkn                        2
 ```
 
 **NVIDIA NeMo Agent Toolkit** [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365). Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
@@ -32,7 +32,7 @@ CNCF       krkn                        1
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>37 more</b></summary>
+<summary><b>47 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
@@ -61,18 +61,28 @@ CNCF       krkn                        1
 | NeMo Agent Toolkit | [#2332](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`, so `.json` and `.jsonl` gave different eval inputs. |
 | NeMo Agent Toolkit | [#2327](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
 | NeMo Agent Toolkit | [#2320](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| NeMo Relay | [#1531](https://github.com/NVIDIA/NeMo-Relay/pull/1531) | With a codec active, hints written to `metadata.relay_hints` replaced the request's own `metadata` instead of adding to it. |
+| NeMo Relay | [#1525](https://github.com/NVIDIA/NeMo-Relay/pull/1525) | `adaptive_hints.inject_header` and `inject_body_path` did nothing: hints always went in a header and in `nvext.agent_hints`. |
+| NeMo Relay | [#1511](https://github.com/NVIDIA/NeMo-Relay/pull/1511) | A typo'd key in `[gateway]`, `[upstream]` or `[agents]` was ignored without a word. Now it logs a warning and the rest still loads. |
 | NeMo Relay | [#1513](https://github.com/NVIDIA/NeMo-Relay/pull/1513) | An empty or relative `XDG_CONFIG_HOME` put Relay's config and plugins in a `nemo-relay` folder under whatever directory you ran it from. |
 | NeMo Relay | [#1508](https://github.com/NVIDIA/NeMo-Relay/pull/1508) | Azure OpenAI streams kept the empty `id`, `model` and `created` from Azure's leading prompt-filter chunk instead of the real ones. |
 | NeMo Relay | [#1504](https://github.com/NVIDIA/NeMo-Relay/pull/1504) | The Python, Node and Go log helpers rejected level names the logging config accepts, like `"WARNING"` and `"Info"`. |
 | NeMo Relay | [#1509](https://github.com/NVIDIA/NeMo-Relay/pull/1509) | A streamed Anthropic tool call with no arguments came out as `"input": ""` instead of `{}`. |
+| Google ADK | [7634](https://github.com/google/adk-python/commit/da786ed) | `AnthropicLlm` always sent `tool_choice: auto`, so `NONE`, `ANY` and a single allowed function never reached Claude. |
 | Google ADK | [7596](https://github.com/google/adk-python/commit/12c7bed) | An AgentTool's wrapped agent never saw the caller's `temp:` state. |
 | Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
 | Google ADK | [7577](https://github.com/google/adk-python/commit/db432db) | The SQLite session store turned state integers beyond 64 bits into floats, even on later unrelated writes. |
 | Google ADK | [7561](https://github.com/google/adk-python/commit/8ff9941) | Client token-usage metrics came back empty when the last streamed response had no usage data. |
+| Microsoft Agent Framework | [#9720](https://github.com/microsoft/agent-framework/pull/9720) | A workflow agent run with `stream=True` ended with no token usage, though the same run without streaming reported it. |
 | Microsoft Agent Framework | [#9399](https://github.com/microsoft/agent-framework/pull/9399) | Bedrock non-streaming responses, and the traces built from them, named the client's default model instead of the one requested. |
+| OpenVINO | [#39181](https://github.com/openvinotoolkit/openvino/pull/39181) | `ops.read_value(variable_id=..., ...)` with keywords only picked the wrong overload and failed on a missing `init_value`. |
+| OpenVINO | [#39179](https://github.com/openvinotoolkit/openvino/pull/39179) | `OVDict.to_dict()` returned the result's own dict, so `.clear()` on it emptied the inference result. |
+| OpenVINO | [#39174](https://github.com/openvinotoolkit/openvino/pull/39174) | `ops.read_value` rejected a type name like `"f32"` for `variable_type`, though its signature accepts strings. |
+| OpenVINO | [#38810](https://github.com/openvinotoolkit/openvino/pull/38810) | `pack_data` kept only the low bits, so u4 `16` packed as `0` and i4 `8` became `-8`, with no error. |
 | OpenVINO | [#38951](https://github.com/openvinotoolkit/openvino/pull/38951) | float32 data fed to a bf16 model input was read as raw bits, so `[1.5, 3.0]` came out as `[0.125, 32.0]` with no error. |
 | OpenVINO | [#38884](https://github.com/openvinotoolkit/openvino/pull/38884) | `from_torchvision` CenterCrop lost the last row or column, so a CLIP-style 224 crop came out 223x224 and failed a static-shape model. |
 | OpenVINO GenAI | [#4627](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A single-string `stop_strings` in `generation_config.json` was dropped, so those models never stopped on it. |
+| krkn (CNCF) | [#1657](https://github.com/krkn-chaos/krkn/pull/1657) | An `exclude_label` value like `true` or `1.0` reached the NetworkPolicy as a bool or float instead of a string. |
 | krkn (CNCF) | [#1632](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed before injecting any fault. |
 
 </details>
