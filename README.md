@@ -9,14 +9,14 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          52
+merged upstream since Oct 13          57
 
-NVIDIA     NeMo Agent Toolkit         26
+NVIDIA     NeMo Agent Toolkit         27
 NVIDIA     NeMo Relay                  7
 NVIDIA     garak                       1
-Google     ADK                         6
+Google     ADK                         9
 Microsoft  Agent Framework             3
-Intel      OpenVINO                    6
+Intel      OpenVINO                    7
 Intel      OpenVINO GenAI              1
 CNCF       krkn                        2
 ```
@@ -32,11 +32,12 @@ CNCF       krkn                        2
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>47 more</b></summary>
+<summary><b>52 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
 |---|---|---|
+| NeMo Agent Toolkit | [#2469](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2469) | Framework workflows needed `nvidia-nat-profiler` installed to attach callback handlers, so tracing without the profiler got no LLM spans or token usage. |
 | NeMo Agent Toolkit | [#2462](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2462) | A failed streamed request logged `QueueClosed` "Task exception was never retrieved" tracebacks next to the real error. |
 | NeMo Agent Toolkit | [#2460](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2460) | A logging handler set to `DEBUG` got nothing below the CLI's `--log-level`, because the root level could only be raised, never lowered. |
 | NeMo Agent Toolkit | [#2458](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2458) | A workflow that failed mid-stream sent its error as a bare line SSE parsers drop, so `nat serve` clients saw a stream that just stopped. |
@@ -68,6 +69,9 @@ CNCF       krkn                        2
 | NeMo Relay | [#1508](https://github.com/NVIDIA/NeMo-Relay/pull/1508) | Azure OpenAI streams kept the empty `id`, `model` and `created` from Azure's leading prompt-filter chunk instead of the real ones. |
 | NeMo Relay | [#1504](https://github.com/NVIDIA/NeMo-Relay/pull/1504) | The Python, Node and Go log helpers rejected level names the logging config accepts, like `"WARNING"` and `"Info"`. |
 | NeMo Relay | [#1509](https://github.com/NVIDIA/NeMo-Relay/pull/1509) | A streamed Anthropic tool call with no arguments came out as `"input": ""` instead of `{}`. |
+| Google ADK | [7673](https://github.com/google/adk-python/commit/58332a2) | A function tool parameter typed `list[Enum]` got raw string values instead of the Enum members when validation was off. |
+| Google ADK | [7638](https://github.com/google/adk-python/commit/42a8a87) | `ReflectAndRetry` plugins never removed an invocation's tracking entry, leaking state across long-running sessions. |
+| Google ADK | [7636](https://github.com/google/adk-python/commit/82fe029) | A function tool with an `Enum` parameter got the raw string value instead of the member on the default path. |
 | Google ADK | [7634](https://github.com/google/adk-python/commit/da786ed) | `AnthropicLlm` always sent `tool_choice: auto`, so `NONE`, `ANY` and a single allowed function never reached Claude. |
 | Google ADK | [7596](https://github.com/google/adk-python/commit/12c7bed) | An AgentTool's wrapped agent never saw the caller's `temp:` state. |
 | Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
@@ -79,6 +83,7 @@ CNCF       krkn                        2
 | OpenVINO | [#39179](https://github.com/openvinotoolkit/openvino/pull/39179) | `OVDict.to_dict()` returned the result's own dict, so `.clear()` on it emptied the inference result. |
 | OpenVINO | [#39174](https://github.com/openvinotoolkit/openvino/pull/39174) | `ops.read_value` rejected a type name like `"f32"` for `variable_type`, though its signature accepts strings. |
 | OpenVINO | [#38810](https://github.com/openvinotoolkit/openvino/pull/38810) | `pack_data` kept only the low bits, so u4 `16` packed as `0` and i4 `8` became `-8`, with no error. |
+| OpenVINO | [#38778](https://github.com/openvinotoolkit/openvino/pull/38778) | `pack_data` and `unpack_data` used MSB-first packing for u2, u4 and i4, swapping adjacent sub-byte elements relative to core. |
 | OpenVINO | [#38951](https://github.com/openvinotoolkit/openvino/pull/38951) | float32 data fed to a bf16 model input was read as raw bits, so `[1.5, 3.0]` came out as `[0.125, 32.0]` with no error. |
 | OpenVINO | [#38884](https://github.com/openvinotoolkit/openvino/pull/38884) | `from_torchvision` CenterCrop lost the last row or column, so a CLIP-style 224 crop came out 223x224 and failed a static-shape model. |
 | OpenVINO GenAI | [#4627](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A single-string `stop_strings` in `generation_config.json` was dropped, so those models never stopped on it. |
