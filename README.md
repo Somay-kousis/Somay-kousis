@@ -9,12 +9,12 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          57
+merged upstream since Oct 13          58
 
 NVIDIA     NeMo Agent Toolkit         27
 NVIDIA     NeMo Relay                  7
 NVIDIA     garak                       1
-Google     ADK                         9
+Google     ADK                        10
 Microsoft  Agent Framework             3
 Intel      OpenVINO                    7
 Intel      OpenVINO GenAI              1
@@ -32,7 +32,7 @@ CNCF       krkn                        2
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>52 more</b></summary>
+<summary><b>53 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
@@ -69,6 +69,7 @@ CNCF       krkn                        2
 | NeMo Relay | [#1508](https://github.com/NVIDIA/NeMo-Relay/pull/1508) | Azure OpenAI streams kept the empty `id`, `model` and `created` from Azure's leading prompt-filter chunk instead of the real ones. |
 | NeMo Relay | [#1504](https://github.com/NVIDIA/NeMo-Relay/pull/1504) | The Python, Node and Go log helpers rejected level names the logging config accepts, like `"WARNING"` and `"Info"`. |
 | NeMo Relay | [#1509](https://github.com/NVIDIA/NeMo-Relay/pull/1509) | A streamed Anthropic tool call with no arguments came out as `"input": ""` instead of `{}`. |
+| Google ADK | [7718](https://github.com/google/adk-python/commit/73b6790) | An `output_schema` agent that could only transfer still sent a JSON response schema next to `transfer_to_agent`, a pairing some models reject. |
 | Google ADK | [7673](https://github.com/google/adk-python/commit/58332a2) | A function tool parameter typed `list[Enum]` got raw string values instead of the Enum members when validation was off. |
 | Google ADK | [7638](https://github.com/google/adk-python/commit/42a8a87) | `ReflectAndRetry` plugins never removed an invocation's tracking entry, leaking state across long-running sessions. |
 | Google ADK | [7636](https://github.com/google/adk-python/commit/82fe029) | A function tool with an `Enum` parameter got the raw string value instead of the member on the default path. |
