@@ -9,16 +9,16 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          58
+merged upstream since Oct 13          60
 
 NVIDIA     NeMo Agent Toolkit         27
-NVIDIA     NeMo Relay                  7
+NVIDIA     NeMo Relay                  8
 NVIDIA     garak                       1
 Google     ADK                        10
 Microsoft  Agent Framework             3
 Intel      OpenVINO                    7
 Intel      OpenVINO GenAI              1
-CNCF       krkn                        2
+CNCF       krkn                        3
 ```
 
 **NVIDIA NeMo Agent Toolkit** [#2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365). Agents ran one tool call past `max_tool_calls`, and no `recursion_limit` could stop it, because the graph counts node steps, not tool calls. All four agent types now stop before call N+1.
@@ -32,7 +32,7 @@ CNCF       krkn                        2
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>53 more</b></summary>
+<summary><b>55 more</b></summary>
 <br />
 
 | Repo | Fix | What was broken |
@@ -62,6 +62,7 @@ CNCF       krkn                        2
 | NeMo Agent Toolkit | [#2332](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2332) | The JSON dataset loader turned `"001"` into `1`, so `.json` and `.jsonl` gave different eval inputs. |
 | NeMo Agent Toolkit | [#2327](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2327) | `--override 0.7` was rejected for a setting written as `0` in YAML. |
 | NeMo Agent Toolkit | [#2320](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2320) | Resuming an eval crashed on items whose output was a list. |
+| NeMo Relay | [#1614](https://github.com/NVIDIA/NeMo-Relay/pull/1614) | A collector could answer 200 with `partial_success` and drop spans, and `runtime_diagnostics()` stayed empty. Now it reports them. |
 | NeMo Relay | [#1531](https://github.com/NVIDIA/NeMo-Relay/pull/1531) | With a codec active, hints written to `metadata.relay_hints` replaced the request's own `metadata` instead of adding to it. |
 | NeMo Relay | [#1525](https://github.com/NVIDIA/NeMo-Relay/pull/1525) | `adaptive_hints.inject_header` and `inject_body_path` did nothing: hints always went in a header and in `nvext.agent_hints`. |
 | NeMo Relay | [#1511](https://github.com/NVIDIA/NeMo-Relay/pull/1511) | A typo'd key in `[gateway]`, `[upstream]` or `[agents]` was ignored without a word. Now it logs a warning and the rest still loads. |
@@ -88,6 +89,7 @@ CNCF       krkn                        2
 | OpenVINO | [#38951](https://github.com/openvinotoolkit/openvino/pull/38951) | float32 data fed to a bf16 model input was read as raw bits, so `[1.5, 3.0]` came out as `[0.125, 32.0]` with no error. |
 | OpenVINO | [#38884](https://github.com/openvinotoolkit/openvino/pull/38884) | `from_torchvision` CenterCrop lost the last row or column, so a CLIP-style 224 crop came out 223x224 and failed a static-shape model. |
 | OpenVINO GenAI | [#4627](https://github.com/openvinotoolkit/openvino.genai/pull/4627) | A single-string `stop_strings` in `generation_config.json` was dropped, so those models never stopped on it. |
+| krkn-ai (CNCF) | [#503](https://github.com/krkn-chaos/krkn-ai/pull/503) | Config file `parameters:` only applied when `-p` was passed, so a plain `HOST: example.com` failed validation. |
 | krkn (CNCF) | [#1657](https://github.com/krkn-chaos/krkn/pull/1657) | An `exclude_label` value like `true` or `1.0` reached the NetworkPolicy as a bool or float instead of a string. |
 | krkn (CNCF) | [#1632](https://github.com/krkn-chaos/krkn/pull/1632) | Container chaos scenarios without `expected_recovery_time` crashed before injecting any fault. |
 
