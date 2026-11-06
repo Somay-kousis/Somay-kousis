@@ -47,7 +47,7 @@ What does an agent do when nobody is checking, and how would you know?
 
 ```console
 $ pytest tests/attacks -q
-400 attacks, 394 blocked, 6 known limits (282 agent, 38 seller, 80 network)
+400 attacks, 394 blocked, 6 known limits
 ```
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, so the payment agent inherited read access to attacker-controlled text. I found it weeks later, re-reading my own threat model.
