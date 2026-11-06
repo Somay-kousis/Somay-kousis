@@ -1,6 +1,12 @@
+<img align="left" src="assets/knight.svg" width="130" alt="" />
+
 **Somay Kousis.** I fix bugs in AI agent frameworks and build agent safety tools. Third year of CS at ABV-IIITM Gwalior.
 
+Right now I'm writing an AI control paper and getting fixes merged upstream.
+
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313)&nbsp;&nbsp; [Instagram](https://www.instagram.com/somay.ipynb/)&nbsp;&nbsp; somaykousis@gmail.com
+
+<br clear="left" />
 
 ## Experience
 
@@ -76,8 +82,6 @@ With [aye aye](https://ayeayecaptain.vercel.app), the person shipping a risky AI
 
 ## On the record
 
-<img align="left" src="assets/knight.svg" width="130" alt="" />
-
 - Top 10%, Apart x CeSIA AI Incident Response Sprint
 - Winner, Egoist Machines (YC S26) Ideathon 2026, captain of a team of 4
 - 3rd, CockroachDB Hackathon, solo
@@ -88,5 +92,3 @@ With [aye aye](https://ayeayecaptain.vercel.app), the person shipping a risky AI
 I teach math, English and life skills to kids every week with the SGM Social Initiative.
 
 Still getting DSA wrong. I open a problem, get an idea, and build that instead. Most of this page started that way.
-
-<br clear="left" />
