@@ -9,16 +9,16 @@ Right now I am writing an AI control paper and getting fixes merged upstream.
 <br clear="left" />
 
 ```
-merged upstream since Oct 13          64
+merged upstream since Oct 13          71
 
 NVIDIA     NeMo Agent Toolkit         27
-NVIDIA     NeMo Relay                  9
+NVIDIA     NeMo Relay                 13
 NVIDIA     garak                       1
 Google     ADK                        10
 Microsoft  Agent Framework             3
 Intel      OpenVINO                    7
 Intel      OpenVINO GenAI              1
-CNCF       krkn                        3
+CNCF       krkn                        6
 LLM4S      llm4s                       3
 ```
 
