@@ -16,7 +16,7 @@ The full list of merged fixes and the long version of each project.
 <summary><b>66 more</b></summary>
 <br />
 
-| Repo | Fix | What was broken |
+| Repo | Link | What changed |
 |---|---|---|
 | NeMo Agent Toolkit | [#2469](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2469) | Framework workflows needed `nvidia-nat-profiler` installed to attach callback handlers, so tracing without the profiler got no LLM spans or token usage. |
 | NeMo Agent Toolkit | [#2462](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2462) | A failed streamed request logged `QueueClosed` "Task exception was never retrieved" tracebacks next to the real error. |
