@@ -25,7 +25,7 @@ Led a recruitment platform. The scheduling I automated saved about 15 hours a we
 + The WebSocket generator takes its target from --target_name
 
 # NVIDIA NeMo Agent Toolkit
-- Agents ran one tool call past max_tool_calls, and no recursion_limit could stop it
+- Agents ran one tool call past max_tool_calls, whatever the recursion_limit
 + All four agent types stop before call N+1
 
 # OpenVINO
