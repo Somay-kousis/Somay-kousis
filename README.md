@@ -19,11 +19,11 @@ Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. 
 **[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
 Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
-## Merged upstream
+## 71 merged upstream since Oct 13
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="https://github.com/NVIDIA.png" height="46" alt="NVIDIA" /></a>&nbsp;&nbsp;<a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="https://github.com/google.png" height="46" alt="google" /></a>&nbsp;&nbsp;<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="https://github.com/openvinotoolkit.png" height="46" alt="openvinotoolkit" /></a>&nbsp;&nbsp;<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="https://github.com/krkn-chaos.png" height="46" alt="krkn-chaos" /></a>&nbsp;&nbsp;<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="https://github.com/microsoft.png" height="46" alt="microsoft" /></a>&nbsp;&nbsp;<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="https://github.com/llm4s.png" height="46" alt="llm4s" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="15%" alt="NVIDIA 41 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="15%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="15%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="15%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="15%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="15%" alt="LLM4S 3 merged" /></a>
 
-71 since Oct 13: NVIDIA 41, Google 10, OpenVINO 8, CNCF krkn 6, Microsoft 3, LLM4S 3. A few I like:
+A few I like:
 
 ```diff
 # NVIDIA garak
@@ -49,36 +49,41 @@ Led a recruitment platform. The scheduling I automated saved about 15 hours a we
 
 What does an agent do when nobody is checking, and how would you know?
 
-[Pocket Change](https://github.com/Somay-kousis/Pocket-Change) gives AI agents spending limits, so a sub-agent can never hold more than its parent was given. [Try the demo](https://pocket-change-klwjhco2ta-el.a.run.app).
+### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
 
-```console
-$ pytest tests/attacks -q
+Spending limits for AI agents. A sub-agent can never hold more than its parent was given. [Try the demo](https://pocket-change-klwjhco2ta-el.a.run.app).
+
+```text
 400 attacks, 394 blocked, 6 known limits
 ```
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, so the payment agent inherited read access to attacker-controlled text. I found it weeks later, re-reading my own threat model.
 
-[Apocalypse](https://github.com/Somay-kousis/Apocalypse) came out of the Apart x CeSIA AI Incident Response Sprint, top 10%, team of 3. The July 2026 frontier-model sandbox escape had no standard you could test a lab against, so we wrote 9 containment rules from the real attack and built a broken lab next to a fixed one. The broken lab passes 0 of 9. The fixed one passes all 9.
+### [Apocalypse](https://github.com/Somay-kousis/Apocalypse)
 
-[Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight) is the paper I'm writing.
+Top 10% at the Apart x CeSIA AI Incident Response Sprint, team of 3. The July 2026 frontier-model sandbox escape had no standard you could test a lab against, so we wrote 9 containment rules from the real attack.
+
+```text
+broken lab   0/9 controls pass
+fixed lab    9/9 controls pass
+```
+
+### [Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight)
+
+The paper I'm writing. The real monitoring never changes, only what the agent believes. No results yet.
 
 > Does an untrusted agent reveal more of a hidden objective to an overseer it thinks is a collaborator than to one it knows is a monitor?
 
-The real monitoring never changes, only what the agent believes. No results yet.
-
 ## Also built
 
-[PaperPlanes](https://github.com/Somay-kousis/PaperPlanes) is research memory where an old fact gets closed instead of overwritten. I crashed the database live and it held 25 of 25 writes, where a flat file lost 24. 3rd at the CockroachDB Hackathon, solo.
-
-[RabbitHole](https://github.com/Somay-kousis/RabbitHole) is a LangGraph courtroom. Asked for 2 perspectives, it kept generating 6 to 8 and hit Groq's rate limit. Rewording the prompt never fixed it, so I moved the count into a state schema, and time to verdict went from 19.8s to 9.8s.
-
-With [aye aye](https://ayeayecaptain.vercel.app), the person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff.
-
-[podman-flake-agent](https://github.com/Somay-kousis/podman-flake-agent) triages CI flakes, and `unknown` is a valid verdict, because calling a real race condition a flake tells a maintainer to re-run a genuine bug.
-
-[Something](https://github.com/SomethingDuality/Somethingv1) was my first startup, Apr to Jun 2026. 573 people joined the waitlist in the first month with no paid distribution. It did not become a company, and the code is open now.
-
-[pixels](https://github.com/Somay-kousis/pixels) is macOS desktop pets that remind you to drink water and take walks.
+<table>
+<tr><td><a href="https://github.com/Somay-kousis/PaperPlanes">PaperPlanes</a></td><td>Research memory where old facts get closed instead of overwritten. Held 25 of 25 writes through a live database crash, where a flat file lost 24. 3rd at the CockroachDB Hackathon, solo.</td></tr>
+<tr><td><a href="https://github.com/Somay-kousis/RabbitHole">RabbitHole</a></td><td>A LangGraph courtroom that kept generating 6 to 8 perspectives when asked for 2. Moving the count into a state schema fixed it and cut time to verdict from 19.8s to 9.8s.</td></tr>
+<tr><td><a href="https://ayeayecaptain.vercel.app">aye aye</a></td><td>The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff.</td></tr>
+<tr><td><a href="https://github.com/Somay-kousis/podman-flake-agent">podman-flake-agent</a></td><td>CI flake triage where <code>unknown</code> is a valid verdict, because calling a real race condition a flake tells a maintainer to re-run a genuine bug.</td></tr>
+<tr><td><a href="https://github.com/SomethingDuality/Somethingv1">Something</a></td><td>My first startup, Apr to Jun 2026. 573 people on the waitlist in the first month with no paid distribution. It did not become a company, and the code is open now.</td></tr>
+<tr><td><a href="https://github.com/Somay-kousis/pixels">pixels</a></td><td>macOS desktop pets that remind you to drink water and take walks.</td></tr>
+</table>
 
 ## On the record
 
