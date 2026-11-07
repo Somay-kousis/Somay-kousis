@@ -40,7 +40,7 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
-      - run: pip install biscuit-python==0.4.0
+      - run: pip install biscuit-python==0.4.0 fonttools==4.68.0
 
       - name: Rate limit
         id: limit
@@ -71,7 +71,7 @@ jobs:
           for i in 1 2 3 4 5; do
             git pull --rebase --quiet
             python overspend/tally.py add "$RUNNER_TEMP/out/record.json"
-            git add data/overspend.json README.md
+            git add data/overspend.json README.md assets/overspend-receipt.svg
             git commit --quiet -m "overspend: attempt #$ISSUE"
             if git push --quiet; then exit 0; fi
             git reset --hard --quiet HEAD~1

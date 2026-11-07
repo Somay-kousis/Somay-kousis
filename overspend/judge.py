@@ -232,6 +232,9 @@ def main(event_path: str, out_dir: str) -> None:
         "paid_paise": summary.get("paid_paise", 0),
         "blocked_paise": sum(r.amount_paise for r in results if r.verdict != "paid" and r.amount_paise > 0),
         "breach": summary.get("breach", False),
+        "hops": len(a.hops),
+        "lines": [{"tool": r.tool or "sub-agent", "amount_paise": max(r.amount_paise, 0),
+                   "verdict": r.verdict, "reason": r.reason} for r in results],
     }
     (out / "record.json").write_text(json.dumps(record))
 

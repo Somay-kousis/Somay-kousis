@@ -10,5 +10,31 @@
    "at": "2026-11-07T15:13:04+00:00",
    "breach": false
   }
- ]
+ ],
+ "last": {
+  "issue": 2,
+  "login": "Somay-kousis",
+  "paid_paise": 90000,
+  "hops": 1,
+  "lines": [
+   {
+    "tool": "pay.electronics",
+    "amount_paise": 4500000,
+    "verdict": "blocked",
+    "reason": "I only allowed pay.groceries; over my \u20b91,500 limit"
+   },
+   {
+    "tool": "pay.groceries",
+    "amount_paise": 90000,
+    "verdict": "paid",
+    "reason": "inside every limit"
+   },
+   {
+    "tool": "pay.groceries",
+    "amount_paise": 90000,
+    "verdict": "blocked",
+    "reason": "the ledger only had \u20b9600 of \u20b91,500 left"
+   }
+  ]
+ }
 }

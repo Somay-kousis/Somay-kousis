@@ -67,9 +67,12 @@ def add(record_path: str) -> None:
     d["blocked_paise"] += int(rec["blocked_paise"])
     d["breaches"] += 1 if rec["breach"] else 0
     d["recent"] = (d["recent"] + [{k: rec[k] for k in ("issue", "login", "at", "breach")}])[-50:]
+    d["last"] = {k: rec.get(k) for k in ("issue", "login", "paid_paise", "hops", "lines")}
     DATA.parent.mkdir(exist_ok=True)
     DATA.write_text(json.dumps(d, indent=1) + "\n")
     write_readme(d)
+    import receipt
+    receipt.write(d)
 
 
 if __name__ == "__main__":

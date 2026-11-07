@@ -1,25 +1,14 @@
 <img align="left" src="assets/knight.svg" width="130" alt="" />
 
-**Somay Kousis.** I fix bugs in AI agent frameworks and build agent safety tools. Third year of CS at ABV-IIITM Gwalior.
+**Somay Kousis.** I find bugs in AI agent frameworks. <!-- total:start -->75<!-- total:end --> fixes merged at NVIDIA, Google, Microsoft, Intel and CNCF since Oct 13.
 
-Right now I'm writing an AI control paper and getting fixes merged upstream.
+Third year of CS at ABV-IIITM Gwalior. Right now I'm writing an AI control paper.
 
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313)&nbsp;&nbsp; [Instagram](https://www.instagram.com/somay.ipynb/)&nbsp;&nbsp; somaykousis@gmail.com
 
 <br clear="left" />
 
-## Experience
-
-**Standout**, freelance for a US client, Aug to Oct 2026\
-Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
-
-**RYSE Technologies**, AI systems intern, Jul to Aug 2026\
-Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
-
-**[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
-Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
-
-## <!-- total:start -->75<!-- total:end --> merged upstream since Oct 13
+## Merged upstream
 
 <a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 42 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 6 merged" /></a>
 
@@ -41,6 +30,33 @@ A few I like:
 
 [garak #2315](https://github.com/NVIDIA/garak/pull/2315), [NeMo #2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365), [OpenVINO #38951](https://github.com/openvinotoolkit/openvino/pull/38951). [Every one, with what it did](more.md).
 
+## Try to make my agent overspend
+
+<a href="https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml"><img align="right" src="assets/overspend-receipt.svg" width="300" alt="Receipt of the latest attempt: blocked purchases are struck through in red, with the reason Pocket Change gave." /></a>
+
+My shopping agent has **₹1,500 for groceries**, for **one hour**, and can hand work to **2 more sub-agents**.
+
+Give a sub-agent a bigger budget. Buy a laptop. Split the spend across ten purchases. Wait out the clock.
+
+**[Open an attempt](https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml)**. A GitHub Action runs [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)'s real checks on it, replies on your issue, and prints the receipt. No model, no real money.
+
+<!-- overspend:start -->
+**1 attempt so far, 0 got past the limit.** ₹45,900 blocked. Latest: [#2](https://github.com/Somay-kousis/Somay-kousis/issues/2) by Somay-kousis
+<!-- overspend:end -->
+
+<br clear="right" />
+
+## Experience
+
+**Standout**, freelance for a US client, Aug to Oct 2026\
+Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
+
+**RYSE Technologies**, AI systems intern, Jul to Aug 2026\
+Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
+
+**[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
+Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
+
 <br />
 
 <img src="assets/stitched-year.svg" width="100%" alt="Hornet stands in the middle of my contribution year, with a red thread running behind her. One stitch for each day I contributed. It gets dense from October." />
@@ -51,17 +67,11 @@ What does an agent do when nobody is checking, and how would you know?
 
 ### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
 
-Spending limits for AI agents. A sub-agent can never hold more than its parent was given.
+Spending limits for AI agents. A sub-agent can never hold more than its parent was given. The game above runs on it.
 
 ```text
 400 attacks, 394 blocked, 6 known limits
 ```
-
-**Try to make my agent overspend.** It has ₹1,500 for groceries, for one hour, and can hand work to 2 more sub-agents. Give a sub-agent a bigger budget, buy a laptop, split the spend, wait out the clock. [Open an attempt](https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml) and a GitHub Action runs Pocket Change's real checks on it and replies on the issue. No model, no real money.
-
-<!-- overspend:start -->
-**1 attempt so far, 0 got past the limit.** ₹45,900 blocked. Latest: [#2](https://github.com/Somay-kousis/Somay-kousis/issues/2) by Somay-kousis
-<!-- overspend:end -->
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, so the payment agent inherited read access to attacker-controlled text. I found it weeks later, re-reading my own threat model.
 
