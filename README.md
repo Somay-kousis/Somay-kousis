@@ -32,7 +32,7 @@ A few I like:
 
 ## Try to make my agent overspend
 
-<a href="https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml"><img align="right" src="assets/overspend-receipt.svg" width="300" alt="Receipt of the latest attempt: blocked purchases are struck through in red, with the reason Pocket Change gave." /></a>
+<a href="https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml"><img align="right" src="assets/overspend-receipt.svg" width="340" alt="Receipt of the latest attempt: blocked purchases are struck through in red, with the reason Pocket Change gave." /></a>
 
 My shopping agent has **₹1,500 for groceries**, for **one hour**, and can hand work to **2 more sub-agents**.
 
