@@ -1,25 +1,16 @@
 <img align="left" src="assets/knight.svg" width="130" alt="" />
 
-**Somay Kousis.** I fix bugs in AI agent frameworks and build agent safety tools. Third year of CS at ABV-IIITM Gwalior.
+**Somay Kousis**
 
-Right now I'm writing an AI control paper and getting fixes merged upstream.
+I find bugs in AI agent frameworks. <!-- total:start -->75<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel and CNCF, all since Oct 13.
+
+Third year of CS at ABV-IIITM Gwalior. Right now I'm writing an AI control paper.
 
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313)&nbsp;&nbsp; [Instagram](https://www.instagram.com/somay.ipynb/)&nbsp;&nbsp; somaykousis@gmail.com
 
 <br clear="left" />
 
-## Experience
-
-**Standout**, freelance for a US client, Aug to Oct 2026\
-Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
-
-**RYSE Technologies**, AI systems intern, Jul to Aug 2026\
-Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
-
-**[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
-Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
-
-## <!-- total:start -->75<!-- total:end --> merged upstream since Oct 13
+## Merged upstream
 
 <a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 42 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 6 merged" /></a>
 
@@ -40,6 +31,17 @@ A few I like:
 ```
 
 [garak #2315](https://github.com/NVIDIA/garak/pull/2315), [NeMo #2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365), [OpenVINO #38951](https://github.com/openvinotoolkit/openvino/pull/38951). [Every one, with what it did](more.md).
+
+## Experience
+
+**Standout**, freelance for a US client, Aug to Oct 2026\
+Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
+
+**RYSE Technologies**, AI systems intern, Jul to Aug 2026\
+Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
+
+**[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
+Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
 <br />
 
