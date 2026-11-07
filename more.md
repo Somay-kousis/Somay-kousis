@@ -13,7 +13,7 @@ The full list of merged fixes and the long version of each project.
 **Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
-<summary><b>66 more</b></summary>
+<summary><b>70 more</b></summary>
 <br />
 
 | Repo | Link | What changed |
@@ -81,6 +81,10 @@ The full list of merged fixes and the long version of each project.
 | krkn-ai (CNCF) | [#535](https://github.com/krkn-chaos/krkn-ai/pull/535) | Composite scenarios never ran. A `$` in node ids broke Docker container names, krknctl still exited 0, and the run scored as a success with no chaos. |
 | krkn-ai (CNCF) | [#530](https://github.com/krkn-chaos/krkn-ai/pull/530) | Runs with `-f json` lost per-scenario results in the dashboard and report, because the loader only read the yaml tree. |
 | krkn-ai (CNCF) | [#528](https://github.com/krkn-chaos/krkn-ai/pull/528) | `discover --save-strategy merge` refused any config using a `-p` placeholder like `$HOST`. |
+| NeMo Relay | [#1669](https://github.com/NVIDIA/NeMo-Relay/pull/1669) | One slow ATIF receiver held up every other session's Stop hook, because remote uploads ran on the subscriber dispatcher thread. They now run on their own queue. |
+| llm4s | [#2550](https://github.com/llm4s/llm4s/pull/2550) | A stream that was cut off passed as a finished reply, and 400 or 401 errors got retried. Unfinished streams now fail, and those errors keep their status. |
+| llm4s | [#2538](https://github.com/llm4s/llm4s/pull/2538) | A failed batch write leaked the stored memory rows into the error's context. The error now carries only the server's own message. |
+| llm4s | [#2537](https://github.com/llm4s/llm4s/pull/2537) | A slow secret store could hold every other Azure call hostage while refreshing a key. Waiting callers can now be cancelled. |
 | llm4s | [#2530](https://github.com/llm4s/llm4s/pull/2530) | No sample used `TraceCollectorTracing`. Added one that records and queries traces with no provider or config. |
 | llm4s | [#2529](https://github.com/llm4s/llm4s/pull/2529) | Nothing tested what a failed future turns into. Added tests for the `AsyncResult` helpers and `Result.fromFuture`. |
 | llm4s | [#2469](https://github.com/llm4s/llm4s/pull/2469) | Tests pin every remaining event's span name and typed attributes on an in-memory exporter. |

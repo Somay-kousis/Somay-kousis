@@ -19,9 +19,9 @@ Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. 
 **[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
 Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
-## 71 merged upstream since Oct 13
+## 75 merged upstream since Oct 13
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 41 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 3 merged" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 42 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 6 merged" /></a>
 
 A few I like:
 
