@@ -60,7 +60,7 @@ Spending limits for AI agents. A sub-agent can never hold more than its parent w
 **Try to make my agent overspend.** It has ₹1,500 for groceries, for one hour, and can hand work to 2 more sub-agents. Give a sub-agent a bigger budget, buy a laptop, split the spend, wait out the clock. [Open an attempt](https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml) and a GitHub Action runs Pocket Change's real checks on it and replies on the issue. No model, no real money.
 
 <!-- overspend:start -->
-**No attempts yet.** Be the first.
+**1 attempt so far, 0 got past the limit.** ₹45,900 blocked. Latest: [#2](https://github.com/Somay-kousis/Somay-kousis/issues/2) by Somay-kousis
 <!-- overspend:end -->
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, so the payment agent inherited read access to attacker-controlled text. I found it weeks later, re-reading my own threat model.
