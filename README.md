@@ -40,7 +40,7 @@ Built a paying LinkedIn networking product alone in 7 days, then red-teamed it a
 **RYSE Technologies**, AI systems intern, Jul to Aug 2026\
 Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
 
-**[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
+**SteelCareer**, software engineer, Jan to Mar 2026\
 Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
 <br />
