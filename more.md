@@ -114,8 +114,6 @@ No model calls and no API keys, so anyone can clone it and get the same output. 
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, and the payment agent quietly inherited read access to attacker-controlled text, because a parent has to hold everything it hands down. Isolation has to sit sideways, not stack. I found it weeks later re-reading my own threat model.
 
-Runs on Cloud Run with Vertex AI. [Live demo](https://pocket-change-klwjhco2ta-el.a.run.app).
-
 ### [Apocalypse](https://github.com/Somay-kousis/Apocalypse)
 
 Apart x CeSIA AI Incident Response Sprint, team of 3, **top 10%**. The July 2026 frontier-model sandbox escape had no standard you could test a lab against, so we wrote 9 containment rules, each mapped to a documented step of the real attack, and built a broken lab with the real misconfiguration next to a fixed one. I wrote rules 4, 5 and 9, the scorecard runner and the architecture.

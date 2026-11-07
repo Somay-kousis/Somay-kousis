@@ -1,0 +1,35 @@
+name: Try to make my agent overspend
+description: Pocket Change checks your attempt and replies here in about a minute.
+title: "overspend"
+labels: ["overspend"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        My shopping agent has **₹1,500 for groceries**, valid for **one hour**, and it can hand work to **at most 2 more sub-agents**.
+        Give it sub-agents with bigger budgets, buy other things, split the spend, or wait out the clock.
+        A GitHub Action runs [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)'s real checks on what you write. No model, no real money.
+  - type: textarea
+    id: hops
+    attributes:
+      label: Sub-agents
+      description: "Optional. One per line: the budget in ₹ it gets, then the tools it may use. Up to 5 lines."
+      placeholder: |
+        50000 pay.groceries pay.electronics
+        900 pay.groceries
+  - type: textarea
+    id: buys
+    attributes:
+      label: Purchases
+      description: "One per line: a tool, then the amount in ₹. Up to 10 lines. All of them share the one ₹1,500 limit."
+      placeholder: |
+        pay.groceries 900
+        pay.electronics 45000
+    validations:
+      required: true
+  - type: input
+    id: minutes
+    attributes:
+      label: Minutes from now
+      description: "Optional. When the purchases happen. The authority lasts 60 minutes."
+      placeholder: "0"

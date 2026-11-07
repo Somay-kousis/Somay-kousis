@@ -14,12 +14,12 @@ Right now I'm writing an AI control paper and getting fixes merged upstream.
 Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
 
 **RYSE Technologies**, AI systems intern, Jul to Aug 2026\
-Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I assigned work to the 3 who came after.
+Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
 
 **[SteelCareer](https://github.com/Somay-kousis/SteelCareer)**, software engineer, Jan to Mar 2026\
 Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
-## 75 merged upstream since Oct 13
+## <!-- total:start -->75<!-- total:end --> merged upstream since Oct 13
 
 <a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 42 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 6 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 6 merged" /></a>
 
@@ -39,7 +39,7 @@ A few I like:
 + The values get converted instead of read as raw bits
 ```
 
-[garak #2315](https://github.com/NVIDIA/garak/pull/2315), [NeMo #2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365), [OpenVINO #38951](https://github.com/openvinotoolkit/openvino/pull/38951). [All 71, with what each one did](more.md).
+[garak #2315](https://github.com/NVIDIA/garak/pull/2315), [NeMo #2365](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2365), [OpenVINO #38951](https://github.com/openvinotoolkit/openvino/pull/38951). [Every one, with what it did](more.md).
 
 <br />
 
@@ -51,11 +51,17 @@ What does an agent do when nobody is checking, and how would you know?
 
 ### [Pocket Change](https://github.com/Somay-kousis/Pocket-Change)
 
-Spending limits for AI agents. A sub-agent can never hold more than its parent was given. [Try the demo](https://pocket-change-klwjhco2ta-el.a.run.app).
+Spending limits for AI agents. A sub-agent can never hold more than its parent was given.
 
 ```text
 400 attacks, 394 blocked, 6 known limits
 ```
+
+**Try to make my agent overspend.** It has ₹1,500 for groceries, for one hour, and can hand work to 2 more sub-agents. Give a sub-agent a bigger budget, buy a laptop, split the spend, wait out the clock. [Open an attempt](https://github.com/Somay-kousis/Somay-kousis/issues/new?template=overspend.yml) and a GitHub Action runs Pocket Change's real checks on it and replies on the issue. No model, no real money.
+
+<!-- overspend:start -->
+**No attempts yet.** Be the first.
+<!-- overspend:end -->
 
 The bug I learned the most from never failed a test. I made a payment agent the parent of a page-reading agent, so the payment agent inherited read access to attacker-controlled text. I found it weeks later, re-reading my own threat model.
 
@@ -77,7 +83,7 @@ The paper I'm writing. The real monitoring never changes, only what the agent be
 ## Also built
 
 <table>
-<tr><td><a href="https://github.com/Somay-kousis/PaperPlanes">PaperPlanes</a></td><td>Research memory where old facts get closed instead of overwritten. Held 25 of 25 writes through a live database crash, where a flat file lost 24. 3rd at the CockroachDB Hackathon, solo.</td></tr>
+<tr><td><a href="https://github.com/Somay-kousis/PaperPlanes">PaperPlanes</a></td><td>Research memory where old facts get closed instead of overwritten. 25 writers updating one counter at once: CockroachDB kept all 25 updates, a flat file kept 1. 3rd at the CockroachDB Hackathon, solo.</td></tr>
 <tr><td><a href="https://github.com/Somay-kousis/RabbitHole">RabbitHole</a></td><td>A LangGraph courtroom that kept generating 6 to 8 perspectives when asked for 2. Moving the count into a state schema fixed it and cut time to verdict from 19.8s to 9.8s.</td></tr>
 <tr><td><a href="https://ayeayecaptain.vercel.app">aye aye</a></td><td>The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff.</td></tr>
 <tr><td><a href="https://github.com/Somay-kousis/podman-flake-agent">podman-flake-agent</a></td><td>CI flake triage where <code>unknown</code> is a valid verdict, because calling a real race condition a flake tells a maintainer to re-run a genuine bug.</td></tr>

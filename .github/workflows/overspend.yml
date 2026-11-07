@@ -1,0 +1,80 @@
+name: overspend
+
+# A visitor opens an issue from the "Try to make my agent overspend" template.
+# This job judges it with Pocket Change's real checks, replies, closes the issue
+# and updates the scoreboard in the README.
+#
+# Hardening, because the issue body is written by strangers:
+#  - the body is never put in a shell command or an expression; judge.py reads
+#    it from the event file and parses it with strict patterns
+#  - the only inputs used in `run:` are numbers and the login, passed as env
+#  - minimal permissions, actions pinned to commit SHAs, Pocket Change pinned
+#  - 3 attempts per person per day; scoreboard writes retry on a push race
+#    (no concurrency group: GitHub keeps only one pending run and would drop attempts)
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  judge:
+    if: startsWith(github.event.issue.title, 'overspend')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      ISSUE: ${{ github.event.issue.number }}
+      LOGIN: ${{ github.event.issue.user.login }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Somay-kousis/Pocket-Change
+          ref: e8772703568fefb4fb83cb473108fd3f002ed63f
+          path: .pocket-change
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - run: pip install biscuit-python==0.4.0
+
+      - name: Rate limit
+        id: limit
+        run: |
+          if python overspend/tally.py allowed "$LOGIN"; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            gh issue comment "$ISSUE" --body "You have had 3 attempts in the last 24 hours. Try again tomorrow."
+            gh issue close "$ISSUE" --reason "not planned"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Judge
+        if: steps.limit.outputs.ok == 'true'
+        run: PYTHONPATH=.pocket-change:overspend python overspend/judge.py "$GITHUB_EVENT_PATH" "$RUNNER_TEMP/out"
+
+      - name: Reply and close
+        if: steps.limit.outputs.ok == 'true'
+        run: |
+          gh issue comment "$ISSUE" --body-file "$RUNNER_TEMP/out/comment.md"
+          gh issue close "$ISSUE" --reason completed
+
+      - name: Update the scoreboard
+        if: steps.limit.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --quiet
+            python overspend/tally.py add "$RUNNER_TEMP/out/record.json"
+            git add data/overspend.json README.md
+            git commit --quiet -m "overspend: attempt #$ISSUE"
+            if git push --quiet; then exit 0; fi
+            git reset --hard --quiet HEAD~1
+            sleep $((RANDOM % 7 + 2))
+          done
+          exit 1
