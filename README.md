@@ -4,7 +4,7 @@
 
 I find bugs in AI agent frameworks. <!-- total:start -->84<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel and CNCF, all since Oct 13.
 
-Third year of CS at ABV-IIITM Gwalior. Right now I'm writing an AI control paper.
+Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an AAAI-27 workshop.
 
 [LinkedIn](https://linkedin.com/in/somay-kousis-630ab1313)&nbsp;&nbsp; [Instagram](https://www.instagram.com/somay.ipynb/)&nbsp;&nbsp; somaykousis@gmail.com
 
@@ -34,14 +34,11 @@ A few I like:
 
 ## Experience
 
-**Standout**, freelance for a US client, Aug to Oct 2026\
-Built a paying LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
+**Standout**, freelance for a US client, Aug to Nov 2026\
+Built a launch-ready LinkedIn networking product alone in 7 days, then red-teamed it and landed 21 security fixes.
 
 **RYSE Technologies**, AI systems intern, Jul to Aug 2026\
 Built the orchestrator behind 10,000+ daily tasks. Misrouted payloads fell 33%. I was the first intern, and I delegated work to the 3 junior interns who joined after.
-
-**SteelCareer**, software engineer, Jan to Mar 2026\
-Led a recruitment platform. The scheduling I automated saved about 15 hours a week.
 
 <br />
 
@@ -78,7 +75,7 @@ fixed lab    9/9 controls pass
 
 ### [Perceived Oversight](https://github.com/Somay-kousis/Perceived-Oversight)
 
-The paper I'm writing. The real monitoring never changes, only what the agent believes. No results yet.
+My paper, sole author, under review at the Loyal Agents workshop at AAAI-27 ([preprint](https://doi.org/10.5281/zenodo.24081592)). The real monitoring never changes, only what the agent believes. In a 108-episode pilot, 12 of 15 attacks scored above the highest honest run through the broker, against 0 of 5 without it. The main study is next.
 
 > Does an untrusted agent reveal more of a hidden objective to an overseer it thinks is a collaborator than to one it knows is a monitor?
 
