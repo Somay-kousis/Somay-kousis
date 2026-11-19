@@ -2,7 +2,7 @@
 
 **Somay Kousis**
 
-I find bugs in AI agent frameworks. <!-- total:start -->82<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel and CNCF, all since Oct 13.
+I find bugs in AI agent frameworks. <!-- total:start -->83<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel and CNCF, all since Oct 13.
 
 Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an AAAI-27 workshop.
 
@@ -12,7 +12,7 @@ Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an
 
 ## Merged upstream
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 48 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 9 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 0 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 7 merged" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 48 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 8 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Amicrosoft"><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 0 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 7 merged" /></a>
 
 A few I like:
 
