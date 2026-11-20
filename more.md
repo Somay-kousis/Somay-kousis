@@ -10,7 +10,7 @@ The full list of merged fixes and the long version of each project.
 
 **Google ADK** [7541](https://github.com/google/adk-python/commit/2416f66). Memory search never found a stored word starting with a capital dotted İ, because lowercasing it adds a combining dot that split the token.
 
-**Microsoft Agent Framework** [#9428](https://github.com/microsoft/agent-framework/pull/9428). Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
+**Microsoft Agent Framework** #9428. Declarative `SetValue` accepted a `variable` field the executor never read, so the workflow ran and the value stayed unset.
 
 <details>
 <summary><b>70 more</b></summary>
@@ -60,8 +60,8 @@ The full list of merged fixes and the long version of each project.
 | Google ADK | [7605](https://github.com/google/adk-python/commit/6727f8f) | After a paused single-turn sub-agent, the next turn went to the wrong agent instead of back to its delegator. |
 | Google ADK | [7577](https://github.com/google/adk-python/commit/db432db) | The SQLite session store turned state integers beyond 64 bits into floats, even on later unrelated writes. |
 | Google ADK | [7561](https://github.com/google/adk-python/commit/8ff9941) | Client token-usage metrics came back empty when the last streamed response had no usage data. |
-| Microsoft Agent Framework | [#9720](https://github.com/microsoft/agent-framework/pull/9720) | A workflow agent run with `stream=True` ended with no token usage, though the same run without streaming reported it. |
-| Microsoft Agent Framework | [#9399](https://github.com/microsoft/agent-framework/pull/9399) | Bedrock non-streaming responses, and the traces built from them, named the client's default model instead of the one requested. |
+| Microsoft Agent Framework | #9720 | A workflow agent run with `stream=True` ended with no token usage, though the same run without streaming reported it. |
+| Microsoft Agent Framework | #9399 | Bedrock non-streaming responses, and the traces built from them, named the client's default model instead of the one requested. |
 | OpenVINO | [#39181](https://github.com/openvinotoolkit/openvino/pull/39181) | `ops.read_value(variable_id=..., ...)` with keywords only picked the wrong overload and failed on a missing `init_value`. |
 | OpenVINO | [#39179](https://github.com/openvinotoolkit/openvino/pull/39179) | `OVDict.to_dict()` returned the result's own dict, so `.clear()` on it emptied the inference result. |
 | OpenVINO | [#39174](https://github.com/openvinotoolkit/openvino/pull/39174) | `ops.read_value` rejected a type name like `"f32"` for `variable_type`, though its signature accepts strings. |

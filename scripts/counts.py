@@ -40,6 +40,11 @@ ORGS = {
     "llm4s": ("llm4s", "LLM4S"),
 }
 
+# Orgs whose merged PRs can no longer be found by search. microsoft/agent-framework
+# went private or was removed around 2026-11-18, taking its PR pages with it; these
+# three merged before that (#9399, #9428, #9720), so the count is fixed.
+FIXED = {"microsoft": 3}
+
 COUNT_FILL = "#8b949e"
 CENTER_X = 52.0     # logos are 104 wide
 BASELINE = 88.0
@@ -116,7 +121,7 @@ def update_readme(counts: dict[str, int], total: int) -> bool:
 
 
 def main() -> None:
-    counts = {name: merged_prs(org) for name, (org, _) in ORGS.items()}
+    counts = {name: FIXED.get(name) or merged_prs(org) for name, (org, _) in ORGS.items()}
     counts["google"] = adk_commits()
     total = sum(counts.values())
     changed = [n for n, (_, label) in {**ORGS, "google": ("", "Google")}.items() if redraw(n, label, counts[n])]
