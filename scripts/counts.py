@@ -45,6 +45,9 @@ ORGS = {
 # three merged before that (#9399, #9428, #9720), so the count is fixed.
 FIXED = {"microsoft": 3}
 
+# Counted in the total, with no logo in the row: search org per name.
+EXTRA = {"capa": "mandiant"}
+
 COUNT_FILL = "#8b949e"
 CENTER_X = 52.0     # logos are 104 wide
 BASELINE = 88.0
@@ -123,10 +126,11 @@ def update_readme(counts: dict[str, int], total: int) -> bool:
 def main() -> None:
     counts = {name: FIXED.get(name) or merged_prs(org) for name, (org, _) in ORGS.items()}
     counts["google"] = adk_commits()
-    total = sum(counts.values())
+    extra = {name: merged_prs(org) for name, org in EXTRA.items()}
+    total = sum(counts.values()) + sum(extra.values())
     changed = [n for n, (_, label) in {**ORGS, "google": ("", "Google")}.items() if redraw(n, label, counts[n])]
     readme = update_readme(counts, total)
-    print(json.dumps({"counts": counts, "total": total, "logos_changed": changed, "readme_changed": readme}))
+    print(json.dumps({"counts": counts, "extra": extra, "total": total, "logos_changed": changed, "readme_changed": readme}))
 
 
 if __name__ == "__main__":

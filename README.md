@@ -2,7 +2,7 @@
 
 **Somay Kousis**
 
-I find bugs in AI agent frameworks. <!-- total:start -->97<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel and CNCF, all since Oct 13.
+I find bugs in AI agent frameworks. <!-- total:start -->99<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel, Mandiant and CNCF, all since Oct 13.
 
 Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an AAAI-27 workshop.
 
@@ -12,7 +12,7 @@ Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an
 
 ## Merged upstream
 
-<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 49 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 11 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 8 merged" /></a><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 16 merged" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3ANVIDIA"><img src="assets/logos/nvidia.svg" width="7%" alt="NVIDIA 49 merged" /></a><a href="https://github.com/google/adk-python/commits?author=Somay-kousis"><img src="assets/logos/google.svg" width="7%" alt="Google 10 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Aopenvinotoolkit"><img src="assets/logos/intel.svg" width="7%" alt="Intel OpenVINO 11 merged" /></a><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Akrkn-chaos"><img src="assets/logos/krkn.svg" width="7%" alt="CNCF krkn 8 merged" /></a><img src="assets/logos/microsoft.svg" width="7%" alt="Microsoft 3 merged" /><a href="https://github.com/pulls?q=is%3Apr+author%3ASomay-kousis+is%3Amerged+org%3Allm4s"><img src="assets/logos/llm4s.svg" width="7%" alt="LLM4S 17 merged" /></a>
 
 A few I like:
 
@@ -84,7 +84,7 @@ My paper, sole author, under review at the Loyal Agents workshop at AAAI-27 ([pr
 <table>
 <tr><td><a href="https://github.com/Somay-kousis/PaperPlanes">PaperPlanes</a></td><td>Research memory where old facts get closed instead of overwritten. 25 writers updating one counter at once: CockroachDB kept all 25 updates, a flat file kept 1. 3rd at the CockroachDB Hackathon, solo.</td></tr>
 <tr><td><a href="https://github.com/Somay-kousis/RabbitHole">RabbitHole</a></td><td>A LangGraph courtroom that kept generating 6 to 8 perspectives when asked for 2. Moving the count into a state schema fixed it and cut time to verdict from 19.8s to 9.8s.</td></tr>
-<tr><td><a href="https://ayeayecaptain.vercel.app">aye aye</a></td><td>The person shipping a risky AI-written change explains it out loud, and an independent judge checks the answer against the real diff.</td></tr>
+<tr><td><a href="https://ayeayecaptain.vercel.app">aye aye</a></td><td>Records the file changes an AI coding agent makes, with the prompt behind them. The check is next.</td></tr>
 <tr><td><a href="https://github.com/Somay-kousis/podman-flake-agent">podman-flake-agent</a></td><td>CI flake triage where <code>unknown</code> is a valid verdict, because calling a real race condition a flake tells a maintainer to re-run a genuine bug.</td></tr>
 <tr><td><a href="https://github.com/SomethingDuality/Somethingv1">Something</a></td><td>My first startup, Apr to Jun 2026. 573 people on the waitlist in the first month with no paid distribution. It did not become a company, and the code is open now.</td></tr>
 <tr><td><a href="https://github.com/Somay-kousis/pixels">pixels</a></td><td>macOS desktop pets that remind you to drink water and take walks.</td></tr>
