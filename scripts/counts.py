@@ -46,7 +46,7 @@ ORGS = {
 FIXED = {"microsoft": 3}
 
 # Counted in the total, with no logo in the row: search org per name.
-EXTRA = {"capa": "mandiant"}
+EXTRA = {"capa": "mandiant", "wasmedge": "WasmEdge"}
 
 COUNT_FILL = "#8b949e"
 CENTER_X = 52.0     # logos are 104 wide

@@ -2,7 +2,7 @@
 
 **Somay Kousis**
 
-I find bugs in AI agent frameworks. <!-- total:start -->102<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel, Mandiant and CNCF, all since Oct 13.
+I find bugs in AI agent frameworks. <!-- total:start -->103<!-- total:end --> of my fixes are merged at NVIDIA, Google, Microsoft, Intel, Mandiant and CNCF, all since Oct 13.
 
 Third year of CS at ABV-IIITM Gwalior. My AI control paper is under review at an AAAI-27 workshop.
 
